@@ -295,7 +295,7 @@
               "Detach": ["cafe1ea44a66d714"],
               "Deactivate": ["cafe1ea44a66d723"],
               "MakeInvisible": ["cafe1ea44a66d721"],
-              "SetFalse": ["cafe1ea44a66d716"],
+              "SetFalse": ["cafe1ea44a66d716", "cafe1ea44a66d819"],
               "Stop": ["cafe1ea44a66d804", "cafe1ea44a66d817", "cafe1ea44a66d818"]
             }
           }
@@ -1418,7 +1418,7 @@
               "Add": ["cafe1ea44a66d742"],
               "Attach": ["cafe1ea44a66d714"],
               "SetFalse": ["cafe1ea44a66d71b"],
-              "SetTrue": ["cafe1ea44a66d716"],
+              "SetTrue": ["cafe1ea44a66d716", "cafe1ea44a66d819"],
               "In": ["cafe1ea44a66d718", "cafe1ea44a66d817", "cafe1ea44a66d818"]
             }
           }
@@ -1451,7 +1451,7 @@
             "Delay time (ms)": {"type": "int32", "value": 2000}
           },
           "events": {
-            "Out": {"In": ["cafe1ea44a66d718", "cafe1ea44a66d817"]}
+            "Out": {"Poll": ["cafe1ea44a66d820"]}
           }
         }
       ]
@@ -1469,6 +1469,53 @@
           },
           "events": {
             "Out": {
+              "Poll": ["cafe1ea44a66d821"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d819",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "ValueBool_Drunk47BlackoutActive",
+          "factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_basic.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_basic.entitytemplate].pc_entityblueprint"
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d820",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "Poll_Drunk47BlackoutActive_Puddle",
+          "factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_poll.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_poll.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_rValueEntity": {"type": "SEntityTemplateReference", "value": "cafe1ea44a66d819"}
+          },
+          "events": {
+            "PollTrue": {"In": ["cafe1ea44a66d718", "cafe1ea44a66d817"]}
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d821",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "Poll_Drunk47BlackoutActive_Voice",
+          "factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_poll.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_poll.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_rValueEntity": {"type": "SEntityTemplateReference", "value": "cafe1ea44a66d819"}
+          },
+          "events": {
+            "PollTrue": {
               "Start": ["cafe1ea44a66d791"],
               "In": ["cafe1ea44a66d818"]
             }
