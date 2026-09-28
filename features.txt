@@ -1,4 +1,4 @@
-[ ] 47 says "sorry" when NPCs slip
+[x] 47 says "sorry" when NPCs slip
 [ ] 10 continuous seconds in bathroom state reduces drunkenness by 1
 [ ] Vomiting at level 8
 [ ] Blackout drunk features

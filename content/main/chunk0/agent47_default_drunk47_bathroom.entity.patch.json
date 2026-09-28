@@ -1154,7 +1154,50 @@
           }
         }
       ]
-    },    {
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d802",
+        {
+          "parent": "cafe1ea44a66d740",
+          "name": "EventChannelReceiver_Drunk47BathroomPuddleNPCSlip",
+          "factory": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchannelreceiver_void.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchannelreceiver_void.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_rChannelToken": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d803",
+              "postInit": true
+            }
+          },
+          "events": {
+            "EventReceived": {
+              "Start": [
+                "cafe1ea44a66d801"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d803",
+        {
+          "parent": "cafe1ea44a66d802",
+          "name": "TokenID_Drunk47_BathroomPuddleNPCSlip",
+          "factory": "[modules:/ztokenidentity.class].pc_entitytype",
+          "blueprint": "[modules:/ztokenidentity.class].pc_entityblueprint",
+          "properties": {
+            "m_sName": {
+              "type": "ZString",
+              "value": "Drunk47_BathroomPuddleNPCSlip"
+            }
+          }
+        }
+      ]
+    },
+    {
       "AddEntity": [
         "cafe1ea44a66d746",
         {

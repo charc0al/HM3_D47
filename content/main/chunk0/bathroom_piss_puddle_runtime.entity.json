@@ -367,6 +367,38 @@
 						"exposedEntity": "FX_Water_Leak_3x3m_A"
 					}
 				}
+			},
+			"events": {
+				"OnSprung": {
+					"TransmitEvent": [
+						"cafe7a11c0ffee23"
+					]
+				}
+			}
+		},
+		"cafe7a11c0ffee23": {
+			"parent": "975617a94a7708b2",
+			"name": "EventChannelTransmitter_Drunk47BathroomPuddleNPCSlip",
+			"factory": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchanneltransmitter_void.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchanneltransmitter_void.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_rChannelToken": {
+					"type": "SEntityTemplateReference",
+					"value": "cafe7a11c0ffee24",
+					"postInit": true
+				}
+			}
+		},
+		"cafe7a11c0ffee24": {
+			"parent": "cafe7a11c0ffee23",
+			"name": "TokenID_Drunk47_BathroomPuddleNPCSlip",
+			"factory": "[modules:/ztokenidentity.class].pc_entitytype",
+			"blueprint": "[modules:/ztokenidentity.class].pc_entityblueprint",
+			"properties": {
+				"m_sName": {
+					"type": "ZString",
+					"value": "Drunk47_BathroomPuddleNPCSlip"
+				}
 			}
 		},
 		"beef1ea44a66b209": {
