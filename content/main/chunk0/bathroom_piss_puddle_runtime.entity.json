@@ -76,7 +76,11 @@
 						"dbc101917b6c0c62"
 					],
 					"In": [
-						"beef1ea44a66b209"
+						"beef1ea44a66b209",
+						"d47b000000000003"
+					],
+					"SetTrue": [
+						"d47b000000000001"
 					]
 				}
 			},
@@ -417,6 +421,109 @@
 					"Detach": [
 						"dbc101917b6c0c62"
 					]
+				}
+			}
+		},
+		"d47b000000000001": {
+			"parent": "975617a94a7708b2",
+			"name": "ValueBool_Drunk47BathroomPuddleRearmActive",
+			"factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_basic.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_basic.entitytemplate].pc_entityblueprint"
+		},
+		"d47b000000000002": {
+			"parent": "975617a94a7708b2",
+			"name": "Poll_Drunk47BathroomPuddleRearmActive",
+			"factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_poll.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_poll.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_rValueEntity": {
+					"type": "SEntityTemplateReference",
+					"value": "d47b000000000001"
+				}
+			},
+			"events": {
+				"PollTrue": {
+					"Activate": ["dbc101917b6c0c62"],
+					"In": ["d47b000000000003"]
+				}
+			}
+		},
+		"d47b000000000003": {
+			"parent": "975617a94a7708b2",
+			"name": "Drunk47BathroomPuddleElectricRearmTimer",
+			"factory": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"Delay time (ms)": {
+					"type": "int32",
+					"value": 1000
+				}
+			},
+			"events": {
+				"Out": {
+					"Poll": ["d47b000000000002"]
+				}
+			}
+		},
+		"d47b000000000004": {
+			"parent": "975617a94a7708b2",
+			"name": "EventChannelReceiver_Drunk47BathroomEffectsStart_PuddleRearm",
+			"factory": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchannelreceiver_void.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchannelreceiver_void.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_rChannelToken": {
+					"type": "SEntityTemplateReference",
+					"value": "d47b000000000005",
+					"postInit": true
+				}
+			},
+			"events": {
+				"EventReceived": {
+					"SetTrue": ["d47b000000000001"],
+					"In": ["d47b000000000003"]
+				}
+			}
+		},
+		"d47b000000000005": {
+			"parent": "d47b000000000004",
+			"name": "TokenID_Drunk47_BathroomEffectsStart_PuddleRearm",
+			"factory": "[modules:/ztokenidentity.class].pc_entitytype",
+			"blueprint": "[modules:/ztokenidentity.class].pc_entityblueprint",
+			"properties": {
+				"m_sName": {
+					"type": "ZString",
+					"value": "Drunk47_BathroomEffectsStart"
+				}
+			}
+		},
+		"d47b000000000006": {
+			"parent": "975617a94a7708b2",
+			"name": "EventChannelReceiver_Drunk47BathroomStop_PuddleRearm",
+			"factory": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchannelreceiver_void.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchannelreceiver_void.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_rChannelToken": {
+					"type": "SEntityTemplateReference",
+					"value": "d47b000000000007",
+					"postInit": true
+				}
+			},
+			"events": {
+				"EventReceived": {
+					"SetFalse": ["d47b000000000001"],
+					"Stop": ["d47b000000000003"]
+				}
+			}
+		},
+		"d47b000000000007": {
+			"parent": "d47b000000000006",
+			"name": "TokenID_Drunk47_BathroomStop_PuddleRearm",
+			"factory": "[modules:/ztokenidentity.class].pc_entitytype",
+			"blueprint": "[modules:/ztokenidentity.class].pc_entityblueprint",
+			"properties": {
+				"m_sName": {
+					"type": "ZString",
+					"value": "Drunk47_BathroomStop"
 				}
 			}
 		}

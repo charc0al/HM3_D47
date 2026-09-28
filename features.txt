@@ -1,3 +1,4 @@
+------ TO-DO TASKS ------
 [x] 47 says "i need to use the bathroom" at different drunk levels
 [x] 47 says "sorry" when NPCs slip
 [x] 10 continuous seconds in bathroom state reduces drunkenness by 1
@@ -10,7 +11,8 @@
 [x] Fix invisible piss
 [x] Fix beer prompt showing when not equipped
 [x] Dynamically sized piss particles - bigger stream of piss when more drunk
-[ ] Blackout state illegal the whole time
+[x] Blackout state illegal the whole time
+[ ] Fine tune raycast piss trajectory
 
 ----- Maybe Happening -----
 [ ] Legally use in-level toilets
