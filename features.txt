@@ -10,7 +10,8 @@
 [ ] Electric trap on puddles
 [x] Fix invisible piss
 [ ] Fix beer prompt showing when not equipped
-[x] Dynamically sized piss particles
+[x] Dynamically sized piss particles - bigger stream of piss when more drunk
+[ ] Blackout state illegal the whole time
 
 ----- Maybe Happening -----
 [ ] Stealing NPC drinks and drinking them
