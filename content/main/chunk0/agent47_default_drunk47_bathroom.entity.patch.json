@@ -1404,6 +1404,135 @@
     },
     {
       "AddEntity": [
+        "cafe1ea44a66d813",
+        {
+          "parent": "cafe1ea44a66d740",
+          "name": "ValueInt_Ten_Drunk47Blackout",
+          "factory": "[assembly:/_pro/design/logic/valueint.template?/valueint.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic/valueint.template?/valueint.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_nValue": {"type": "int32", "value": 10}
+          },
+          "events": {
+            "OnValue": {"SetValue": ["cafe1ea44a66d741"]}
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d814",
+        {
+          "parent": "cafe1ea44a66d740",
+          "name": "ValueInt_Zero_Drunk47Blackout",
+          "factory": "[assembly:/_pro/design/logic/valueint.template?/valueint.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic/valueint.template?/valueint.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_nValue": {"type": "int32", "value": 0}
+          },
+          "events": {
+            "OnValue": {"SetValue": ["cafe1ea44a66d741"]}
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d815",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "EventChannelReceiver_Drunk47BlackoutStart",
+          "factory": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchannelreceiver_void.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchannelreceiver_void.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_rChannelToken": {"type": "SEntityTemplateReference", "value": "cafe1ea44a66d816", "postInit": true}
+          },
+          "events": {
+            "EventReceived": {
+              "Get": ["cafe1ea44a66d813"],
+              "Attach": ["cafe1ea44a66d714"],
+              "SetFalse": ["cafe1ea44a66d71b"],
+              "SetTrue": ["cafe1ea44a66d716"],
+              "In": ["cafe1ea44a66d718", "cafe1ea44a66d817", "cafe1ea44a66d818"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d816",
+        {
+          "parent": "cafe1ea44a66d815",
+          "name": "TokenID_Drunk47_BlackoutStart",
+          "factory": "[modules:/ztokenidentity.class].pc_entitytype",
+          "blueprint": "[modules:/ztokenidentity.class].pc_entityblueprint",
+          "properties": {
+            "m_sName": {"type": "ZString", "value": "Drunk47_BlackoutStart"}
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d817",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "Drunk47BlackoutPuddleTimer",
+          "factory": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "Delay time (ms)": {"type": "int32", "value": 2000}
+          },
+          "events": {
+            "Out": {"In": ["cafe1ea44a66d718", "cafe1ea44a66d817"]}
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d818",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "Drunk47BlackoutDurationTimer",
+          "factory": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "Delay time (ms)": {"type": "int32", "value": 30000}
+          },
+          "events": {
+            "Out": {
+              "Stop": ["cafe1ea44a66d817", "cafe1ea44a66d804"],
+              "Detach": ["cafe1ea44a66d714"],
+              "Deactivate": ["cafe1ea44a66d723"],
+              "MakeInvisible": ["cafe1ea44a66d721"],
+              "SetFalse": ["cafe1ea44a66d716"],
+              "In": ["cafe1ea44a66d819"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d819",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "Drunk47BlackoutResetDelay",
+          "factory": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "Delay time (ms)": {"type": "int32", "value": 1}
+          },
+          "events": {
+            "Out": {"Get": ["cafe1ea44a66d814"]}
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
         "cafe1ea44a66d746",
         {
           "parent": "cafe1ea44a66d740",
