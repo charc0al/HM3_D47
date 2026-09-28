@@ -1237,14 +1237,18 @@
           "type": "TArray<SEntityTemplateReference>",
           "value": [
             "cafe1ea44a66b14c",
-            "cafe1ea44a66b206"
+            "cafe1ea44a66b206",
+            "cafe1ea44a66b20a",
+            "cafe1ea44a66b20b"
           ]
         },
         "m_ConditionList_Usable": {
           "type": "TArray<SEntityTemplateReference>",
           "value": [
             "cafe1ea44a66b14c",
-            "cafe1ea44a66b206"
+            "cafe1ea44a66b206",
+            "cafe1ea44a66b20a",
+            "cafe1ea44a66b20b"
           ]
         },
         "m_RuntimeNetworkResourceID": {
@@ -1283,11 +1287,17 @@
         "Started": {
           "In": [
             "cafe1ea44a66b134"
+          ],
+          "SetTrue": [
+            "cafe1ea44a66b20c"
           ]
         },
         "Completed": {
           "Poll": [
             "cafe1ea44a66b135"
+          ],
+          "SetFalse": [
+            "cafe1ea44a66b20c"
           ]
         }
       }
@@ -1327,13 +1337,17 @@
         "m_ConditionList_Visible": {
           "type": "TArray<SEntityTemplateReference>",
           "value": [
-            "cafe1ea44a66b124"
+            "cafe1ea44a66b124",
+            "cafe1ea44a66b20a",
+            "cafe1ea44a66b20b"
           ]
         },
         "m_ConditionList_Usable": {
           "type": "TArray<SEntityTemplateReference>",
           "value": [
-            "cafe1ea44a66b124"
+            "cafe1ea44a66b124",
+            "cafe1ea44a66b20a",
+            "cafe1ea44a66b20b"
           ]
         },
         "m_RuntimeNetworkResourceID": {
@@ -1962,13 +1976,17 @@
         "m_ConditionList_Visible": {
           "type": "TArray<SEntityTemplateReference>",
           "value": [
-            "cafe1ea44a66b14a"
+            "cafe1ea44a66b14a",
+            "cafe1ea44a66b20a",
+            "cafe1ea44a66b20b"
           ]
         },
         "m_ConditionList_Usable": {
           "type": "TArray<SEntityTemplateReference>",
           "value": [
-            "cafe1ea44a66b14a"
+            "cafe1ea44a66b14a",
+            "cafe1ea44a66b20a",
+            "cafe1ea44a66b20b"
           ]
         },
         "m_RuntimeNetworkResourceID": {
@@ -2007,11 +2025,17 @@
         "Started": {
           "In": [
             "cafe1ea44a66b14f"
+          ],
+          "SetTrue": [
+            "cafe1ea44a66b20c"
           ]
         },
         "Completed": {
           "Poll": [
             "cafe1ea44a66b135"
+          ],
+          "SetFalse": [
+            "cafe1ea44a66b20c"
           ]
         }
       }
@@ -2504,6 +2528,26 @@
       "events": {
         "Completed": {"TransmitEvent": ["cafe1ea44a66b202"]}
       }
+    },
+    "cafe1ea44a66b20a": {
+      "parent": "89d1f4f46e0d4adb",
+      "name": "Not_BeerDrinkAnimationActive",
+      "factory": "[modules:/zinvertedcondition.class].pc_entitytype",
+      "blueprint": "[modules:/zinvertedcondition.class].pc_entityblueprint",
+      "properties": {"m_rCondition": {"type": "SEntityTemplateReference", "value": "cafe1ea44a66b20c"}}
+    },
+    "cafe1ea44a66b20b": {
+      "parent": "89d1f4f46e0d4adb",
+      "name": "Not_BeerBathroomAnimationActive",
+      "factory": "[modules:/zinvertedcondition.class].pc_entitytype",
+      "blueprint": "[modules:/zinvertedcondition.class].pc_entityblueprint",
+      "properties": {"m_rCondition": {"type": "SEntityTemplateReference", "value": "cafe1ea44a66b10e"}}
+    },
+    "cafe1ea44a66b20c": {
+      "parent": "89d1f4f46e0d4adb",
+      "name": "ValueBool_BeerDrinkAnimationActive",
+      "factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_basic.entitytemplate].pc_entitytype",
+      "blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_basic.entitytemplate].pc_entityblueprint"
     },
     "cafe1ea44a66b208": {
       "parent": "89d1f4f46e0d4adb",

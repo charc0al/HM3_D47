@@ -4,14 +4,18 @@
 [ ] Vomiting at level 8
 [x] Blackout drunk features
 [ ] Fix hand attacher offset during drinking animation
-[ ] Stealing NPC drinks and drinking them
 [ ] Drinking restores health
-[ ] Having beer / alcohol in inventory prevents health regen
 [ ] Legally use in-level toilets
 [ ] Fix prompts showing when busy
 [ ] Electric trap on puddles
-[ ] Dynamic sized piss puddles
 [x] Fix invisible piss
 [ ] Fix beer prompt showing when not equipped
-[ ] Different walking animations for drunk
 [x] Dynamically sized piss particles
+
+----- Maybe Happening -----
+[ ] Stealing NPC drinks and drinking them
+[ ] Having beer / alcohol in inventory prevents health regen
+
+------ Probably Not -------
+[ ] Dynamic sized piss puddles
+[ ] Different walking animations for drunk
