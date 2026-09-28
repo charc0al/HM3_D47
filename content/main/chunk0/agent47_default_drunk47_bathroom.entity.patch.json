@@ -1404,23 +1404,6 @@
     },
     {
       "AddEntity": [
-        "cafe1ea44a66d813",
-        {
-          "parent": "cafe1ea44a66d740",
-          "name": "ValueInt_Ten_Drunk47Blackout",
-          "factory": "[assembly:/_pro/design/logic/valueint.template?/valueint.entitytemplate].pc_entitytype",
-          "blueprint": "[assembly:/_pro/design/logic/valueint.template?/valueint.entitytemplate].pc_entityblueprint",
-          "properties": {
-            "m_nValue": {"type": "int32", "value": 10}
-          },
-          "events": {
-            "OnValue": {"SetValue": ["cafe1ea44a66d741"]}
-          }
-        }
-      ]
-    },
-    {
-      "AddEntity": [
         "cafe1ea44a66d814",
         {
           "parent": "cafe1ea44a66d740",
@@ -1449,7 +1432,7 @@
           },
           "events": {
             "EventReceived": {
-              "Get": ["cafe1ea44a66d813"],
+              "Add": ["cafe1ea44a66d742"],
               "Attach": ["cafe1ea44a66d714"],
               "SetFalse": ["cafe1ea44a66d71b"],
               "SetTrue": ["cafe1ea44a66d716"],

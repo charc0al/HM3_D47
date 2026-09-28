@@ -446,7 +446,8 @@
           "value": [
             "cafe1ea44a66b101",
             "cafe1ea44a66b125",
-            "cafe1ea44a66b14d"
+            "cafe1ea44a66b14d",
+            "cafe1ea44a66b207"
           ]
         }
       },
@@ -1235,13 +1236,15 @@
         "m_ConditionList_Visible": {
           "type": "TArray<SEntityTemplateReference>",
           "value": [
-            "cafe1ea44a66b14c"
+            "cafe1ea44a66b14c",
+            "cafe1ea44a66b206"
           ]
         },
         "m_ConditionList_Usable": {
           "type": "TArray<SEntityTemplateReference>",
           "value": [
-            "cafe1ea44a66b14c"
+            "cafe1ea44a66b14c",
+            "cafe1ea44a66b206"
           ]
         },
         "m_RuntimeNetworkResourceID": {
@@ -1412,8 +1415,8 @@
       },
       "events": {
         "PollTrue": {
-          "TransmitEvent": [
-            "cafe1ea44a66b202"
+          "In": [
+            "cafe1ea44a66b14e"
           ]
         }
       }
@@ -1487,7 +1490,8 @@
           "Get": [
             "cafe1ea44a66b13c",
             "cafe1ea44a66b14b",
-            "cafe1ea44a66b170"
+            "cafe1ea44a66b170",
+            "cafe1ea44a66b205"
           ]
         }
       }
@@ -2447,6 +2451,61 @@
       "factory": "[modules:/ztokenidentity.class].pc_entitytype",
       "blueprint": "[modules:/ztokenidentity.class].pc_entityblueprint",
       "properties": {"m_sName": {"type": "ZString", "value": "Drunk47_BlackoutStart"}}
+    },
+    "cafe1ea44a66b204": {
+      "parent": "89d1f4f46e0d4adb",
+      "name": "ValueBool_DrunkennessIsNine_BlackoutAvailable",
+      "factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_basic.entitytemplate].pc_entitytype",
+      "blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_basic.entitytemplate].pc_entityblueprint"
+    },
+    "cafe1ea44a66b205": {
+      "parent": "89d1f4f46e0d4adb",
+      "name": "DrunkennessIsNine_BlackoutAvailability",
+      "factory": "[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entitytype",
+      "blueprint": "[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entityblueprint",
+      "properties": {
+        "m_rFirstValueInt": {"type": "SEntityTemplateReference", "value": "cafe1ea44a66b139"},
+        "m_rSecondValueInt": {"type": "SEntityTemplateReference", "value": "cafe1ea44a66b13e"},
+        "m_eEvaluation": {"type": "ZValueInt_Comparator_Poll.EEvaluationType", "value": "EQUAL"}
+      },
+      "events": {
+        "GetTrue": {"SetTrue": ["cafe1ea44a66b204"]},
+        "GetFalse": {"SetFalse": ["cafe1ea44a66b204"]}
+      }
+    },
+    "cafe1ea44a66b206": {
+      "parent": "89d1f4f46e0d4adb",
+      "name": "Not_DrunkennessIsNine_BlackoutAvailable",
+      "factory": "[modules:/zinvertedcondition.class].pc_entitytype",
+      "blueprint": "[modules:/zinvertedcondition.class].pc_entityblueprint",
+      "properties": {
+        "m_rCondition": {"type": "SEntityTemplateReference", "value": "cafe1ea44a66b204"}
+      }
+    },
+    "cafe1ea44a66b207": {
+      "parent": "89d1f4f46e0d4adb",
+      "name": "Interaction_Subaction_BlackOut",
+      "factory": "[assembly:/_pro/design/gamecore/interactionbase.template?/interaction_subaction.entitytemplate].pc_entitytype",
+      "blueprint": "[assembly:/_pro/design/gamecore/interactionbase.template?/interaction_subaction.entitytemplate].pc_entityblueprint",
+      "properties": {
+        "m_eActionType": {"type": "EActionType", "value": "AT_REMOTE"},
+        "m_bCanBeOperatedFromAnyAngle": {"type": "bool", "value": true},
+        "m_sPromptText": {"type": "ZString", "value": "Black out"},
+        "m_sPromptTextPassive": {"type": "ZString", "value": ""},
+        "m_bCanBeOperatedWithItemsInHand": {"type": "bool", "value": true},
+        "m_ConditionList_Visible": {"type": "TArray<SEntityTemplateReference>", "value": ["cafe1ea44a66b204"]},
+        "m_ConditionList_Usable": {"type": "TArray<SEntityTemplateReference>", "value": ["cafe1ea44a66b204"]},
+        "m_RuntimeNetworkResourceID": {"type": "ZRuntimeResourceID", "value": {"resource": "00A822EF038BFB69", "flag": "9F"}},
+        "m_bUseAnimlayer": {"type": "bool", "value": true},
+        "m_nAnimlayerTime": {"type": "float32", "value": 7},
+        "m_bInterruptibleAction": {"type": "bool", "value": false},
+        "m_bUseRightHandItemGrip": {"type": "bool", "value": true},
+        "m_bIsIllegal": {"type": "bool", "value": false},
+        "m_eInputAction": {"type": "EHM5GameInputFlag", "value": "eGameInputActionShoot"}
+      },
+      "events": {
+        "Completed": {"TransmitEvent": ["cafe1ea44a66b202"]}
+      }
     }
   },
   "propertyOverrides": [],
