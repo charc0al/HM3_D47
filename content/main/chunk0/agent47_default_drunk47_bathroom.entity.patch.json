@@ -1,0 +1,1168 @@
+{
+  "tempHash": "00D347CBA29EE6BA",
+  "tbluHash": "000A263E54999100",
+  "patch": [
+    {
+      "AddEntity": [
+        "cafe1ea44a66d700",
+        {
+          "parent": "158cb860b1fce56d",
+          "name": "Drunk47BathroomActivity",
+          "factory": "[modules:/zentity.class].pc_entitytype",
+          "blueprint": "[modules:/zentity.class].pc_entityblueprint"
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d701",
+        {
+          "parent": "cafe1ea44a66d700",
+          "name": "Drunk47BathroomNetworkSelector",
+          "factory": "[modules:/zchildnetworkselectorentity.class].pc_entitytype",
+          "blueprint": "[modules:/zchildnetworkselectorentity.class].pc_entityblueprint",
+          "properties": {
+            "m_aChildNetworks": {
+              "type": "TArray<SEntityTemplateReference>",
+              "value": [
+                "cafe1ea44a66d702"
+              ],
+              "postInit": true
+            },
+            "m_rSelectedIndex": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d703",
+              "postInit": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d702",
+        {
+          "parent": "cafe1ea44a66d700",
+          "name": "MR_Stand_Piss_Drunk47Bathroom",
+          "factory": "[modules:/zchildnetworkentity.class].pc_entitytype",
+          "blueprint": "[modules:/zchildnetworkentity.class].pc_entityblueprint",
+          "properties": {
+            "m_RuntimeNetworkResourceID": {
+              "type": "ZRuntimeResourceID",
+              "value": {
+                "resource": "008655EF0E618E77",
+                "flag": "9F"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d703",
+        {
+          "parent": "cafe1ea44a66d700",
+          "name": "Drunk47BathroomNetworkIndex",
+          "factory": "[assembly:/_pro/design/logic/valueint.template?/valueint.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic/valueint.template?/valueint.entitytemplate].pc_entityblueprint"
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d704",
+        {
+          "parent": "cafe1ea44a66d700",
+          "name": "HM5DisguiseSafeZone_Drunk47Bathroom",
+          "factory": "[modules:/zhm5disguisesafezoneentity.class].pc_entitytype",
+          "blueprint": "[modules:/zhm5disguisesafezoneentity.class].pc_entityblueprint",
+          "properties": {
+            "m_pSafeZoneNetwork": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d701"
+            },
+            "m_bSetPositionOnExit": {
+              "type": "bool",
+              "value": false
+            },
+            "m_fPitchAngle": {
+              "type": "float32",
+              "value": 0
+            },
+            "m_fYawAngle": {
+              "type": "float32",
+              "value": 0
+            },
+            "m_bAlignPitchAngle": {
+              "type": "bool",
+              "value": false
+            },
+            "m_bAlignYawAngle": {
+              "type": "bool",
+              "value": false
+            },
+            "m_pSafeZoneOrigin": {
+              "type": "SEntityTemplateReference",
+              "value": null
+            },
+            "m_bBlendOutCloth": {
+              "type": "bool",
+              "value": true
+            },
+            "m_fClothBlendTime": {
+              "type": "float32",
+              "value": 2
+            },
+            "m_pSafeZoneLoopPosition": {
+              "type": "SEntityTemplateReference",
+              "value": null
+            },
+            "m_bHideItems": {
+              "type": "bool",
+              "value": true
+            },
+            "m_bDropAndPickupLeftHandItem": {
+              "type": "bool",
+              "value": true
+            },
+            "m_bHideNonLeftHandItems": {
+              "type": "bool",
+              "value": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d705",
+        {
+          "parent": "cafe1ea44a66d700",
+          "name": "EventChannelReceiver_Drunk47BathroomStart",
+          "factory": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchannelreceiver_void.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchannelreceiver_void.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_rChannelToken": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d706",
+              "postInit": true
+            }
+          },
+          "events": {
+            "EventReceived": {
+              "EnterSafeZone": [
+                "cafe1ea44a66d704"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d706",
+        {
+          "parent": "cafe1ea44a66d705",
+          "name": "TokenID_Drunk47_BathroomStart",
+          "factory": "[modules:/ztokenidentity.class].pc_entitytype",
+          "blueprint": "[modules:/ztokenidentity.class].pc_entityblueprint",
+          "properties": {
+            "m_sName": {
+              "type": "ZString",
+              "value": "Drunk47_BathroomStart"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d707",
+        {
+          "parent": "cafe1ea44a66d700",
+          "name": "EventChannelReceiver_Drunk47BathroomStop",
+          "factory": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchannelreceiver_void.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchannelreceiver_void.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_rChannelToken": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d708",
+              "postInit": true
+            }
+          },
+          "events": {
+            "EventReceived": {
+              "ExitSafeZoneNoAnim": [
+                "cafe1ea44a66d704"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d708",
+        {
+          "parent": "cafe1ea44a66d707",
+          "name": "TokenID_Drunk47_BathroomStop",
+          "factory": "[modules:/ztokenidentity.class].pc_entitytype",
+          "blueprint": "[modules:/ztokenidentity.class].pc_entityblueprint",
+          "properties": {
+            "m_sName": {
+              "type": "ZString",
+              "value": "Drunk47_BathroomStop"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d710",
+        {
+          "parent": "158cb860b1fce56d",
+          "name": "Drunk47BathroomEffects",
+          "factory": "[modules:/zentity.class].pc_entitytype",
+          "blueprint": "[modules:/zentity.class].pc_entityblueprint"
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d711",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "EventChannelReceiver_Drunk47BathroomEffectsStart",
+          "factory": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchannelreceiver_void.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchannelreceiver_void.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_rChannelToken": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d712",
+              "postInit": true
+            }
+          },
+          "events": {
+            "EventReceived": {
+              "Attach": ["cafe1ea44a66d714"],
+              "SetTrue": ["cafe1ea44a66d716"],
+              "SetFalse": ["cafe1ea44a66d71b"],
+              "In": ["cafe1ea44a66d718"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d712",
+        {
+          "parent": "cafe1ea44a66d711",
+          "name": "TokenID_Drunk47_BathroomEffectsStart",
+          "factory": "[modules:/ztokenidentity.class].pc_entitytype",
+          "blueprint": "[modules:/ztokenidentity.class].pc_entityblueprint",
+          "properties": {
+            "m_sName": {
+              "type": "ZString",
+              "value": "Drunk47_BathroomEffectsStart"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d713",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "EventChannelReceiver_Drunk47BathroomEffectsStop",
+          "factory": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchannelreceiver_void.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchannelreceiver_void.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_rChannelToken": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d708",
+              "postInit": true
+            }
+          },
+          "events": {
+            "EventReceived": {
+              "SetFalse": ["cafe1ea44a66d716"],
+              "Detach": ["cafe1ea44a66d714"],
+              "Deactivate": ["cafe1ea44a66d723"],
+              "MakeInvisible": ["cafe1ea44a66d721"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d714",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "HeroBoneAttach_Drunk47BathroomEffects",
+          "factory": "[modules:/zheroboneattachentity.class].pc_entitytype",
+          "blueprint": "[modules:/zheroboneattachentity.class].pc_entityblueprint",
+          "properties": {
+            "m_BoneName": {"type": "ZString", "value": "Pelvis"},
+            "m_spatial": {"type": "SEntityTemplateReference", "value": "cafe1ea44a66d715"},
+            "m_bStartAttached": {"type": "bool", "value": false}
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d715",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "Drunk47BathroomEffectsSpatial",
+          "factory": "[modules:/zspatialentity.class].pc_entitytype",
+          "blueprint": "[modules:/zspatialentity.class].pc_entityblueprint"
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d716",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "ValueBool_Drunk47BathroomEffectsActive",
+          "factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_basic.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_basic.entitytemplate].pc_entityblueprint",
+          "events": {
+            "OnTrue": {"Activate": ["cafe1ea44a66d717"]},
+            "OnFalse": {"Deactivate": ["cafe1ea44a66d717"]}
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d717",
+        {
+          "parent": "cafe1ea44a66d715",
+          "name": "FX_E_Liquid_Piss_Drunk47",
+          "factory": "[assembly:/_pro/effects/templates/liquid/fx_liquid.template?/fx_e_liquid_piss.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/effects/templates/liquid/fx_liquid.template?/fx_e_liquid_piss.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_mTransform": {
+              "type": "SMatrix43",
+              "value": {
+                "rotation": {"x": 97.51867083658354, "y": 0.7535178718294449, "z": -27.305880691722805},
+                "position": {"x": -0.0607759989798069, "y": 0.11294899880886078, "z": 0.000590000010561198},
+                "scale": {"x": 0.999999821422476, "y": 1.0000000136018228, "z": 1.000000876077821}
+              }
+            },
+            "m_eRoomBehaviour": {"type": "ZSpatialEntity.ERoomBehaviour", "value": "ROOM_DYNAMIC"},
+            "m_eidParent": {"type": "SEntityTemplateReference", "value": "cafe1ea44a66d715", "postInit": true}
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d718",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "Drunk47BathroomGroundStartDelay",
+          "factory": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "Delay time (ms)": {"type": "int32", "value": 100}
+          },
+          "events": {
+            "Out": {
+              "Get": ["cafe1ea44a66d71a"],
+              "In": ["cafe1ea44a66d719"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d719",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "Drunk47BathroomGroundFallbackDelay",
+          "factory": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "Delay time (ms)": {"type": "int32", "value": 250}
+          },
+          "events": {"Out": {"Poll": ["cafe1ea44a66d71c"]}}
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d71a",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "GetGroundPosition_Drunk47Bathroom",
+          "factory": "[modules:/zgetgroundpositionentity.class].pc_entitytype",
+          "blueprint": "[modules:/zgetgroundpositionentity.class].pc_entityblueprint",
+          "properties": {
+            "498320989": {"type": "float32", "value": 0.3},
+            "920014207": {"type": "float32", "value": -3},
+            "m_rSpatial": {"type": "SEntityTemplateReference", "value": "cafe1ea44a66d71d", "postInit": true}
+          },
+          "events": {
+            "Position": {
+              "SetTrue": ["cafe1ea44a66d71b"],
+              "Value": ["cafe1ea44a66d71f"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d71b",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "ValueBool_Drunk47BathroomGroundFound",
+          "factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_basic.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_basic.entitytemplate].pc_entityblueprint"
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d71c",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "Poll_Drunk47BathroomGroundFound",
+          "factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_poll.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_poll.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_rValueEntity": {"type": "SEntityTemplateReference", "value": "cafe1ea44a66d71b"}
+          },
+          "events": {"PollFalse": {"Get": ["cafe1ea44a66d71e"]}}
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d71d",
+        {
+          "parent": "cafe1ea44a66d715",
+          "name": "Drunk47BathroomGroundOrigin",
+          "factory": "[modules:/zspatialentity.class].pc_entitytype",
+          "blueprint": "[modules:/zspatialentity.class].pc_entityblueprint",
+          "properties": {
+            "m_mTransform": {
+              "type": "SMatrix43",
+              "value": {
+                "rotation": {"x": 0, "y": 0, "z": 0},
+                "position": {"x": 0, "y": 1, "z": 0}
+              }
+            },
+            "m_eidParent": {"type": "SEntityTemplateReference", "value": "cafe1ea44a66d715", "postInit": true}
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d71e",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "GetGroundPosition_Drunk47BathroomFallback",
+          "factory": "[modules:/zgetgroundpositionentity.class].pc_entitytype",
+          "blueprint": "[modules:/zgetgroundpositionentity.class].pc_entityblueprint",
+          "properties": {
+            "498320989": {"type": "float32", "value": 0.3},
+            "920014207": {"type": "float32", "value": -20},
+            "m_rSpatial": {"type": "SEntityTemplateReference", "value": "cafe1ea44a66d720", "postInit": true}
+          },
+          "events": {"Position": {"Value": ["cafe1ea44a66d71f"]}}
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d71f",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "Drunk47BathroomGroundPosition",
+          "factory": "[assembly:/_pro/design/logic.template?/vector3_debuffer.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic.template?/vector3_debuffer.entitytemplate].pc_entityblueprint",
+          "events": {
+            "Value": {
+              "Position": [
+                "cafe1ea44a66d722",
+                "cafe1ea44a66d728"
+              ]
+            },
+            "Done": {
+              "MakeVisible": ["cafe1ea44a66d721"],
+              "Activate": ["cafe1ea44a66d721", "cafe1ea44a66d723"],
+              "In": ["cafe1ea44a66d729", "cafe1ea44a66d734"],
+              "EnableSlipping": ["cafe1ea44a66d732"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d720",
+        {
+          "parent": "cafe1ea44a66d715",
+          "name": "Drunk47BathroomFallbackGroundOrigin",
+          "factory": "[modules:/zspatialentity.class].pc_entitytype",
+          "blueprint": "[modules:/zspatialentity.class].pc_entityblueprint",
+          "properties": {
+            "m_mTransform": {
+              "type": "SMatrix43",
+              "value": {
+                "rotation": {"x": 0, "y": 0, "z": 0},
+                "position": {"x": 0, "y": 2, "z": 0}
+              }
+            },
+            "m_eidParent": {"type": "SEntityTemplateReference", "value": "cafe1ea44a66d715", "postInit": true}
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d721",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "FX_Water_Leak_Drunk47Bathroom",
+          "factory": "[assembly:/_pro/effects/templates/water/fx_water_leaks.template?/fx_water_leak_3x3m_a.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/effects/templates/water/fx_water_leaks.template?/fx_water_leak_3x3m_a.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_PrimitiveScale": {"type": "SVector3", "value": {"x": 0.001, "y": 0.001, "z": 0.001}},
+            "m_bVisible": {"type": "bool", "value": false},
+            "m_bRemovePhysics": {"type": "bool", "value": true},
+            "m_bKinematic": {"type": "bool", "value": true},
+            "LeakSpeed": {"type": "float32", "value": 0.4},
+            "ConstantColorRGB_01_Value": {"type": "SColorRGB", "value": "#000000"},
+            "m_eidParent": {"type": "SEntityTemplateReference", "value": null, "postInit": true}
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d722",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "SetPosition_Drunk47BathroomSplash",
+          "factory": "[modules:/zsetpositionentity.class].pc_entitytype",
+          "blueprint": "[modules:/zsetpositionentity.class].pc_entityblueprint",
+          "properties": {
+            "m_Entity": {"type": "SEntityTemplateReference", "value": "cafe1ea44a66d721", "postInit": true}
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d723",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "FX_E_Piss_Puddle_Splash_Drunk47Bathroom",
+          "factory": "00E1A44A66B118C0",
+          "blueprint": "00E1A44A66B118C1",
+          "properties": {
+            "m_eidParent": {"type": "SEntityTemplateReference", "value": "cafe1ea44a66d721", "postInit": true},
+            "m_CollisionEntity": {"type": "SEntityTemplateReference", "value": "cafe1ea44a66d721", "postInit": true}
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d724",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "Drunk47BathroomPuddleSpawnAnchor",
+          "factory": "[modules:/zspatialentity.class].pc_entitytype",
+          "blueprint": "[modules:/zspatialentity.class].pc_entityblueprint",
+          "properties": {
+            "m_eidParent": {"type": "SEntityTemplateReference", "value": null, "postInit": true},
+            "m_eRoomBehaviour": {"type": "ZSpatialEntity.ERoomBehaviour", "value": "ROOM_DYNAMIC"}
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d725",
+        {
+          "parent": "cafe1ea44a66d724",
+          "name": "Spawn_Drunk47BathroomPissPuddle",
+          "factory": "[modules:/zitemspawner.class].pc_entitytype",
+          "blueprint": "[modules:/zitemspawner.class].pc_entityblueprint",
+          "properties": {
+            "m_eidParent": {"type": "SEntityTemplateReference", "value": "cafe1ea44a66d724", "postInit": true},
+            "m_bSpawnOnStart": {"type": "bool", "value": false},
+            "m_bUsePlacementAttach": {"type": "bool", "value": false},
+            "m_ePhysicsMode": {"type": "ZItemSpawner.EPhysicsMode", "value": "EPM_KINEMATIC"},
+            "m_eRoomBehaviour": {"type": "ZSpatialEntity.ERoomBehaviour", "value": "ROOM_DYNAMIC"},
+            "m_rMainItemKey": {"type": "SEntityTemplateReference", "value": "cafe1ea44a66d726", "postInit": true}
+          },
+          "events": {
+            "ItemSpawned": {"SetItem": ["cafe1ea44a66d727"]},
+            "Item": {"SetItem": ["cafe1ea44a66d727"]}
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d726",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "ItemKey_Drunk47BathroomPissPuddle",
+          "factory": "[modules:/zitemrepositorykeyentity.class].pc_entitytype",
+          "blueprint": "[modules:/zitemrepositorykeyentity.class].pc_entityblueprint",
+          "properties": {
+            "m_RepositoryId": {"type": "ZGuid", "value": "c5f5c688-6f3f-44e9-9be8-13099d17d7f4"}
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d727",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "Drunk47BathroomPissPuddleItemProxy",
+          "factory": "[modules:/zhm5itemproxy.class].pc_entitytype",
+          "blueprint": "[modules:/zhm5itemproxy.class].pc_entityblueprint"
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d728",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "SetPosition_Drunk47BathroomPuddleSpawner",
+          "factory": "[modules:/zsetpositionentity.class].pc_entitytype",
+          "blueprint": "[modules:/zsetpositionentity.class].pc_entityblueprint",
+          "properties": {
+            "m_Entity": {"type": "SEntityTemplateReference", "value": "cafe1ea44a66d725", "postInit": true}
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d729",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "Drunk47BathroomPuddleSpawnDelay",
+          "factory": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "Delay time (ms)": {"type": "int32", "value": 100}
+          },
+          "events": {"Out": {"SpawnItem": ["cafe1ea44a66d725"]}}
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d730",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "Sound_Drunk47BathroomLeak",
+          "factory": "[assembly:/templates/sound/customsoundtemplates.template?/sound_interactiveprop.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/templates/sound/customsoundtemplates.template?/sound_interactiveprop.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "Loop_SFX_Event": {
+              "type": "ZRuntimeResourceID",
+              "value": {
+                "resource": "[assembly:/sound/wwise/exportedwwisedata/events/props_events/setpieces/traps/setpiece_trap_watercooler/play_sfx_trap_watercooler_leak.wwiseevent].pc_wwisebank",
+                "flag": "5F"
+              }
+            },
+            "DeviceOn": {
+              "type": "TArray<SEntityTemplateReference>",
+              "value": ["cafe1ea44a66d716"],
+              "postInit": true
+            },
+            "m_mTransform": {
+              "type": "SMatrix43",
+              "value": {
+                "rotation": {"x": 0, "y": 0, "z": 0},
+                "position": {"x": 0, "y": 0, "z": 0.5}
+              }
+            },
+            "m_bUseRaycastObstruction": {"type": "bool", "value": false},
+            "m_eidParent": {"type": "SEntityTemplateReference", "value": "cafe1ea44a66d721", "postInit": true}
+          },
+          "subsets": {
+            "AudioEmitters": ["cafe1ea44a66d710"]
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d731",
+        {
+          "parent": "cafe1ea44a66d721",
+          "name": "Drunk47BathroomSlipVolume",
+          "factory": "[modules:/zspherevolumeentity.class].pc_entitytype",
+          "blueprint": "[modules:/zspherevolumeentity.class].pc_entityblueprint",
+          "properties": {
+            "m_fRadius": {"type": "float32", "value": 0.45},
+            "m_eidParent": {"type": "SEntityTemplateReference", "value": "cafe1ea44a66d721", "postInit": true}
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d732",
+        {
+          "parent": "cafe1ea44a66d721",
+          "name": "PropHelper_SlipperyFloors_Drunk47Bathroom",
+          "factory": "[assembly:/_pro/design/gamecore/prophelpers.template?/prophelper_slipperyfloors.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/gamecore/prophelpers.template?/prophelper_slipperyfloors.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_eRoomBehaviour": {"type": "ZSpatialEntity.ERoomBehaviour", "value": "ROOM_DYNAMIC"},
+            "WaterPresent": {"type": "TArray<SEntityTemplateReference>", "value": ["cafe1ea44a66d733"]},
+            "AllowSoap": {"type": "bool", "value": true},
+            "m_eidParent": {"type": "SEntityTemplateReference", "value": "cafe1ea44a66d721", "postInit": true},
+            "m_Boxes": {"type": "TArray<SEntityTemplateReference>", "value": ["cafe1ea44a66d731"]}
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d733",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "WaterPresent_Drunk47Bathroom",
+          "factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_bValue": {"type": "bool", "value": true}
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d734",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "Drunk47BathroomSlipRearmTimer",
+          "factory": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "Delay time (ms)": {"type": "int32", "value": 1000}
+          },
+          "events": {"Out": {"Poll": ["cafe1ea44a66d735"]}}
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d735",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "Poll_Drunk47BathroomEffectsActive",
+          "factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_poll.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_poll.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_rValueEntity": {"type": "SEntityTemplateReference", "value": "cafe1ea44a66d716"}
+          },
+          "events": {
+            "PollTrue": {
+              "EnableSlipping": ["cafe1ea44a66d732"],
+              "In": ["cafe1ea44a66d734"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d740",
+        {
+          "parent": "158cb860b1fce56d",
+          "name": "Drunk47DrunkennessController",
+          "factory": "[modules:/zentity.class].pc_entitytype",
+          "blueprint": "[modules:/zentity.class].pc_entityblueprint"
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d741",
+        {
+          "parent": "cafe1ea44a66d740",
+          "name": "ValueInt_Drunk47Drunkenness",
+          "factory": "[assembly:/_pro/design/logic/valueint.template?/valueint_basic.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic/valueint.template?/valueint_basic.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_nValue": {
+              "type": "int32",
+              "value": 0
+            },
+            "m_bSetValueAlwaysTriggerChangedEvent": {
+              "type": "bool",
+              "value": true
+            }
+          },
+          "events": {
+            "OnValue": {
+              "TransmitEvent": [
+                "cafe1ea44a66d746"
+              ],
+              "Get": [
+                "cafe1ea44a66d750", "cafe1ea44a66d751", "cafe1ea44a66d752",
+                "cafe1ea44a66d753", "cafe1ea44a66d754", "cafe1ea44a66d755",
+                "cafe1ea44a66d756", "cafe1ea44a66d757", "cafe1ea44a66d758"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d742",
+        {
+          "parent": "cafe1ea44a66d740",
+          "name": "AddOrSubtract_Drunk47Drunkenness",
+          "factory": "[assembly:/_pro/design/logic/valueint.template?/valueint_operation.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic/valueint.template?/valueint_operation.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_rValue1": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d741"
+            },
+            "m_rValue2": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d743"
+            },
+            "m_rResult": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d741"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d743",
+        {
+          "parent": "cafe1ea44a66d740",
+          "name": "ValueInt_One_Drunk47",
+          "factory": "[assembly:/_pro/design/logic/valueint.template?/valueint.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic/valueint.template?/valueint.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_nValue": {
+              "type": "int32",
+              "value": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d744",
+        {
+          "parent": "cafe1ea44a66d740",
+          "name": "EventChannelReceiver_Drunk47AddOne",
+          "factory": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchannelreceiver_void.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchannelreceiver_void.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_rChannelToken": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d745",
+              "postInit": true
+            }
+          },
+          "events": {
+            "EventReceived": {
+              "Add": [
+                "cafe1ea44a66d742"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d745",
+        {
+          "parent": "cafe1ea44a66d744",
+          "name": "TokenID_Drunk47_Drunkenness_AddOne",
+          "factory": "[modules:/ztokenidentity.class].pc_entitytype",
+          "blueprint": "[modules:/ztokenidentity.class].pc_entityblueprint",
+          "properties": {
+            "m_sName": {
+              "type": "ZString",
+              "value": "Drunk47_Drunkenness_AddOne"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d747",
+        {
+          "parent": "cafe1ea44a66d740",
+          "name": "EventChannelReceiver_Drunk47SubtractOne",
+          "factory": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchannelreceiver_void.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchannelreceiver_void.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_rChannelToken": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d748",
+              "postInit": true
+            }
+          },
+          "events": {
+            "EventReceived": {
+              "Subtract": [
+                "cafe1ea44a66d742"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d748",
+        {
+          "parent": "cafe1ea44a66d747",
+          "name": "TokenID_Drunk47_Drunkenness_SubtractOne",
+          "factory": "[modules:/ztokenidentity.class].pc_entitytype",
+          "blueprint": "[modules:/ztokenidentity.class].pc_entityblueprint",
+          "properties": {
+            "m_sName": {
+              "type": "ZString",
+              "value": "Drunk47_Drunkenness_SubtractOne"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d750",
+        {"parent":"cafe1ea44a66d740","name":"DrunkennessIs1_Filter","factory":"[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entityblueprint","properties":{"m_rFirstValueInt":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d741"},"m_rSecondValueInt":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d760"},"m_eEvaluation":{"type":"ZValueInt_Comparator_Poll.EEvaluationType","value":"EQUAL"}},"events":{"GetTrue":{"TransmitEvent":["cafe1ea44a66d770"]}}}
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d751",
+        {"parent":"cafe1ea44a66d740","name":"DrunkennessIs2_Filter","factory":"[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entityblueprint","properties":{"m_rFirstValueInt":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d741"},"m_rSecondValueInt":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d761"},"m_eEvaluation":{"type":"ZValueInt_Comparator_Poll.EEvaluationType","value":"EQUAL"}},"events":{"GetTrue":{"TransmitEvent":["cafe1ea44a66d771"]}}}
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d752",
+        {"parent":"cafe1ea44a66d740","name":"DrunkennessIs3_Filter","factory":"[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entityblueprint","properties":{"m_rFirstValueInt":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d741"},"m_rSecondValueInt":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d762"},"m_eEvaluation":{"type":"ZValueInt_Comparator_Poll.EEvaluationType","value":"EQUAL"}},"events":{"GetTrue":{"TransmitEvent":["cafe1ea44a66d772"]}}}
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d753",
+        {"parent":"cafe1ea44a66d740","name":"DrunkennessIs4_Filter","factory":"[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entityblueprint","properties":{"m_rFirstValueInt":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d741"},"m_rSecondValueInt":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d763"},"m_eEvaluation":{"type":"ZValueInt_Comparator_Poll.EEvaluationType","value":"EQUAL"}},"events":{"GetTrue":{"TransmitEvent":["cafe1ea44a66d773"]}}}
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d754",
+        {"parent":"cafe1ea44a66d740","name":"DrunkennessIs5_Filter","factory":"[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entityblueprint","properties":{"m_rFirstValueInt":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d741"},"m_rSecondValueInt":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d764"},"m_eEvaluation":{"type":"ZValueInt_Comparator_Poll.EEvaluationType","value":"EQUAL"}},"events":{"GetTrue":{"TransmitEvent":["cafe1ea44a66d774"]}}}
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d755",
+        {"parent":"cafe1ea44a66d740","name":"DrunkennessIs6_Filter","factory":"[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entityblueprint","properties":{"m_rFirstValueInt":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d741"},"m_rSecondValueInt":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d765"},"m_eEvaluation":{"type":"ZValueInt_Comparator_Poll.EEvaluationType","value":"EQUAL"}},"events":{"GetTrue":{"TransmitEvent":["cafe1ea44a66d775"]}}}
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d756",
+        {"parent":"cafe1ea44a66d740","name":"DrunkennessIs7_Filter","factory":"[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entityblueprint","properties":{"m_rFirstValueInt":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d741"},"m_rSecondValueInt":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d766"},"m_eEvaluation":{"type":"ZValueInt_Comparator_Poll.EEvaluationType","value":"EQUAL"}},"events":{"GetTrue":{"TransmitEvent":["cafe1ea44a66d776"]}}}
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d757",
+        {"parent":"cafe1ea44a66d740","name":"DrunkennessIs8_Filter","factory":"[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entityblueprint","properties":{"m_rFirstValueInt":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d741"},"m_rSecondValueInt":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d767"},"m_eEvaluation":{"type":"ZValueInt_Comparator_Poll.EEvaluationType","value":"EQUAL"}},"events":{"GetTrue":{"TransmitEvent":["cafe1ea44a66d777"]}}}
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d758",
+        {"parent":"cafe1ea44a66d740","name":"DrunkennessIs9_Filter","factory":"[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entityblueprint","properties":{"m_rFirstValueInt":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d741"},"m_rSecondValueInt":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d768"},"m_eEvaluation":{"type":"ZValueInt_Comparator_Poll.EEvaluationType","value":"EQUAL"}},"events":{"GetTrue":{"TransmitEvent":["cafe1ea44a66d778"]}}}
+      ]
+    },
+    {
+      "AddEntity": ["cafe1ea44a66d760", {"parent":"cafe1ea44a66d740","name":"ValueInt_1_Filter","factory":"[assembly:/_pro/design/logic/valueint.template?/valueint.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/logic/valueint.template?/valueint.entitytemplate].pc_entityblueprint","properties":{"m_nValue":{"type":"int32","value":1}}}]
+    },
+    {
+      "AddEntity": ["cafe1ea44a66d761", {"parent":"cafe1ea44a66d740","name":"ValueInt_2_Filter","factory":"[assembly:/_pro/design/logic/valueint.template?/valueint.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/logic/valueint.template?/valueint.entitytemplate].pc_entityblueprint","properties":{"m_nValue":{"type":"int32","value":2}}}]
+    },
+    {
+      "AddEntity": ["cafe1ea44a66d762", {"parent":"cafe1ea44a66d740","name":"ValueInt_3_Filter","factory":"[assembly:/_pro/design/logic/valueint.template?/valueint.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/logic/valueint.template?/valueint.entitytemplate].pc_entityblueprint","properties":{"m_nValue":{"type":"int32","value":3}}}]
+    },
+    {
+      "AddEntity": ["cafe1ea44a66d763", {"parent":"cafe1ea44a66d740","name":"ValueInt_4_Filter","factory":"[assembly:/_pro/design/logic/valueint.template?/valueint.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/logic/valueint.template?/valueint.entitytemplate].pc_entityblueprint","properties":{"m_nValue":{"type":"int32","value":4}}}]
+    },
+    {
+      "AddEntity": ["cafe1ea44a66d764", {"parent":"cafe1ea44a66d740","name":"ValueInt_5_Filter","factory":"[assembly:/_pro/design/logic/valueint.template?/valueint.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/logic/valueint.template?/valueint.entitytemplate].pc_entityblueprint","properties":{"m_nValue":{"type":"int32","value":5}}}]
+    },
+    {
+      "AddEntity": ["cafe1ea44a66d765", {"parent":"cafe1ea44a66d740","name":"ValueInt_6_Filter","factory":"[assembly:/_pro/design/logic/valueint.template?/valueint.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/logic/valueint.template?/valueint.entitytemplate].pc_entityblueprint","properties":{"m_nValue":{"type":"int32","value":6}}}]
+    },
+    {
+      "AddEntity": ["cafe1ea44a66d766", {"parent":"cafe1ea44a66d740","name":"ValueInt_7_Filter","factory":"[assembly:/_pro/design/logic/valueint.template?/valueint.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/logic/valueint.template?/valueint.entitytemplate].pc_entityblueprint","properties":{"m_nValue":{"type":"int32","value":7}}}]
+    },
+    {
+      "AddEntity": ["cafe1ea44a66d767", {"parent":"cafe1ea44a66d740","name":"ValueInt_8_Filter","factory":"[assembly:/_pro/design/logic/valueint.template?/valueint.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/logic/valueint.template?/valueint.entitytemplate].pc_entityblueprint","properties":{"m_nValue":{"type":"int32","value":8}}}]
+    },
+    {
+      "AddEntity": ["cafe1ea44a66d768", {"parent":"cafe1ea44a66d740","name":"ValueInt_9_Filter","factory":"[assembly:/_pro/design/logic/valueint.template?/valueint.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/logic/valueint.template?/valueint.entitytemplate].pc_entityblueprint","properties":{"m_nValue":{"type":"int32","value":9}}}]
+    },
+    {
+      "AddEntity": ["cafe1ea44a66d770", {"parent":"cafe1ea44a66d740","name":"EventChannelTransmitter_DrunkennessFilterLevel1","factory":"[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchanneltransmitter_void.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchanneltransmitter_void.entitytemplate].pc_entityblueprint","properties":{"m_rChannelToken":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d780","postInit":true}}}]
+    },
+    {
+      "AddEntity": ["cafe1ea44a66d771", {"parent":"cafe1ea44a66d740","name":"EventChannelTransmitter_DrunkennessFilterLevel2","factory":"[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchanneltransmitter_void.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchanneltransmitter_void.entitytemplate].pc_entityblueprint","properties":{"m_rChannelToken":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d781","postInit":true}}}]
+    },
+    {
+      "AddEntity": ["cafe1ea44a66d772", {"parent":"cafe1ea44a66d740","name":"EventChannelTransmitter_DrunkennessFilterLevel3","factory":"[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchanneltransmitter_void.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchanneltransmitter_void.entitytemplate].pc_entityblueprint","properties":{"m_rChannelToken":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d782","postInit":true}}}]
+    },
+    {
+      "AddEntity": ["cafe1ea44a66d773", {"parent":"cafe1ea44a66d740","name":"EventChannelTransmitter_DrunkennessFilterLevel4","factory":"[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchanneltransmitter_void.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchanneltransmitter_void.entitytemplate].pc_entityblueprint","properties":{"m_rChannelToken":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d783","postInit":true}}}]
+    },
+    {
+      "AddEntity": ["cafe1ea44a66d774", {"parent":"cafe1ea44a66d740","name":"EventChannelTransmitter_DrunkennessFilterLevel5","factory":"[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchanneltransmitter_void.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchanneltransmitter_void.entitytemplate].pc_entityblueprint","properties":{"m_rChannelToken":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d784","postInit":true}}}]
+    },
+    {
+      "AddEntity": ["cafe1ea44a66d775", {"parent":"cafe1ea44a66d740","name":"EventChannelTransmitter_DrunkennessFilterLevelSix","factory":"[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchanneltransmitter_void.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchanneltransmitter_void.entitytemplate].pc_entityblueprint","properties":{"m_rChannelToken":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d785","postInit":true}}}]
+    },
+    {
+      "AddEntity": ["cafe1ea44a66d776", {"parent":"cafe1ea44a66d740","name":"EventChannelTransmitter_DrunkennessFilterLevel7","factory":"[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchanneltransmitter_void.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchanneltransmitter_void.entitytemplate].pc_entityblueprint","properties":{"m_rChannelToken":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d786","postInit":true}}}]
+    },
+    {
+      "AddEntity": ["cafe1ea44a66d777", {"parent":"cafe1ea44a66d740","name":"EventChannelTransmitter_DrunkennessFilterLevel8","factory":"[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchanneltransmitter_void.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchanneltransmitter_void.entitytemplate].pc_entityblueprint","properties":{"m_rChannelToken":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d787","postInit":true}}}]
+    },
+    {
+      "AddEntity": ["cafe1ea44a66d778", {"parent":"cafe1ea44a66d740","name":"EventChannelTransmitter_DrunkennessFilterLevel9","factory":"[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchanneltransmitter_void.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchanneltransmitter_void.entitytemplate].pc_entityblueprint","properties":{"m_rChannelToken":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d788","postInit":true}}}]
+    },
+    {
+      "AddEntity": ["cafe1ea44a66d780", {"parent":"cafe1ea44a66d770","name":"TokenID_HM3_Shaker_DrunkennessFilterLevel1","factory":"[modules:/ztokenidentity.class].pc_entitytype","blueprint":"[modules:/ztokenidentity.class].pc_entityblueprint","properties":{"m_sName":{"type":"ZString","value":"HM3_Shaker_DrunkennessFilterLevel1"}}}]
+    },
+    {
+      "AddEntity": ["cafe1ea44a66d781", {"parent":"cafe1ea44a66d771","name":"TokenID_HM3_Shaker_DrunkennessFilterLevel2","factory":"[modules:/ztokenidentity.class].pc_entitytype","blueprint":"[modules:/ztokenidentity.class].pc_entityblueprint","properties":{"m_sName":{"type":"ZString","value":"HM3_Shaker_DrunkennessFilterLevel2"}}}]
+    },
+    {
+      "AddEntity": ["cafe1ea44a66d782", {"parent":"cafe1ea44a66d772","name":"TokenID_HM3_Shaker_DrunkennessFilterLevel3","factory":"[modules:/ztokenidentity.class].pc_entitytype","blueprint":"[modules:/ztokenidentity.class].pc_entityblueprint","properties":{"m_sName":{"type":"ZString","value":"HM3_Shaker_DrunkennessFilterLevel3"}}}]
+    },
+    {
+      "AddEntity": ["cafe1ea44a66d783", {"parent":"cafe1ea44a66d773","name":"TokenID_HM3_Shaker_DrunkennessFilterLevel4","factory":"[modules:/ztokenidentity.class].pc_entitytype","blueprint":"[modules:/ztokenidentity.class].pc_entityblueprint","properties":{"m_sName":{"type":"ZString","value":"HM3_Shaker_DrunkennessFilterLevel4"}}}]
+    },
+    {
+      "AddEntity": ["cafe1ea44a66d784", {"parent":"cafe1ea44a66d774","name":"TokenID_HM3_Shaker_DrunkennessFilterLevel5","factory":"[modules:/ztokenidentity.class].pc_entitytype","blueprint":"[modules:/ztokenidentity.class].pc_entityblueprint","properties":{"m_sName":{"type":"ZString","value":"HM3_Shaker_DrunkennessFilterLevel5"}}}]
+    },
+    {
+      "AddEntity": ["cafe1ea44a66d785", {"parent":"cafe1ea44a66d775","name":"TokenID_HM3_Shaker_DrunkennessFilterLevelSix","factory":"[modules:/ztokenidentity.class].pc_entitytype","blueprint":"[modules:/ztokenidentity.class].pc_entityblueprint","properties":{"m_sName":{"type":"ZString","value":"HM3_Shaker_DrunkennessFilterLevelSix"}}}]
+    },
+    {
+      "AddEntity": ["cafe1ea44a66d786", {"parent":"cafe1ea44a66d776","name":"TokenID_HM3_Shaker_DrunkennessFilterLevel7","factory":"[modules:/ztokenidentity.class].pc_entitytype","blueprint":"[modules:/ztokenidentity.class].pc_entityblueprint","properties":{"m_sName":{"type":"ZString","value":"HM3_Shaker_DrunkennessFilterLevel7"}}}]
+    },
+    {
+      "AddEntity": ["cafe1ea44a66d787", {"parent":"cafe1ea44a66d777","name":"TokenID_HM3_Shaker_DrunkennessFilterLevel8","factory":"[modules:/ztokenidentity.class].pc_entitytype","blueprint":"[modules:/ztokenidentity.class].pc_entityblueprint","properties":{"m_sName":{"type":"ZString","value":"HM3_Shaker_DrunkennessFilterLevel8"}}}]
+    },
+    {
+      "AddEntity": ["cafe1ea44a66d788", {"parent":"cafe1ea44a66d778","name":"TokenID_HM3_Shaker_DrunkennessFilterLevel9","factory":"[modules:/ztokenidentity.class].pc_entitytype","blueprint":"[modules:/ztokenidentity.class].pc_entityblueprint","properties":{"m_sName":{"type":"ZString","value":"HM3_Shaker_DrunkennessFilterLevel9"}}}]
+    },
+    {
+      "AddEntity": ["cafe1ea44a66d790", {"parent":"158cb860b1fce56d","name":"HeroStandIn_Drunk47BathroomVoice","factory":"[modules:/zherostandin.class].pc_entitytype","blueprint":"[modules:/zherostandin.class].pc_entityblueprint"}]
+    },
+    {
+      "AddEntity": ["cafe1ea44a66d791", {"parent":"cafe1ea44a66d740","name":"DialogLine_47NeedsBathroom","factory":"[assembly:/_pro/design/actor/spsystem.template?/dialogline.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/actor/spsystem.template?/dialogline.entitytemplate].pc_entityblueprint","properties":{"m_rCharacter":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d790"},"m_pAudioEvent":{"type":"ZRuntimeResourceID","value":"[assembly:/localization/hitman6/conversations/hokkaido/2000_snowcrane/2000_story/dr2132_47needstousebathroom.sweetdialog?/dr2132_47needstousebathroom_47_001.sweetdialogitem].pc_dialogevent"}}}]
+    },
+    {
+      "AddEntity": ["cafe1ea44a66d792", {"parent":"cafe1ea44a66d740","name":"Drunk47BathroomLineDelay","factory":"[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entityblueprint","properties":{"Delay time (ms)":{"type":"int32","value":7000}},"events":{"Out":{"Start":["cafe1ea44a66d791"]}}}]
+    },
+    {
+      "AddEntity": ["cafe1ea44a66d793", {"parent":"cafe1ea44a66d740","name":"EventChannelReceiver_Drunk47BathroomVoiceCheck","factory":"[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchannelreceiver_void.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchannelreceiver_void.entitytemplate].pc_entityblueprint","properties":{"m_rChannelToken":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d794","postInit":true}},"events":{"EventReceived":{"Get":["cafe1ea44a66d795","cafe1ea44a66d796","cafe1ea44a66d797"]}}}]
+    },
+    {
+      "AddEntity": ["cafe1ea44a66d794", {"parent":"cafe1ea44a66d793","name":"TokenID_Drunk47_BathroomVoiceCheck","factory":"[modules:/ztokenidentity.class].pc_entitytype","blueprint":"[modules:/ztokenidentity.class].pc_entityblueprint","properties":{"m_sName":{"type":"ZString","value":"Drunk47_BathroomVoiceCheck"}}}]
+    },
+    {
+      "AddEntity": ["cafe1ea44a66d795", {"parent":"cafe1ea44a66d740","name":"DrunkennessWillReachThree","factory":"[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entityblueprint","properties":{"m_rFirstValueInt":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d741"},"m_rSecondValueInt":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d798"},"m_eEvaluation":{"type":"ZValueInt_Comparator_Poll.EEvaluationType","value":"EQUAL"}},"events":{"GetTrue":{"In":["cafe1ea44a66d792"]}}}]
+    },
+    {
+      "AddEntity": ["cafe1ea44a66d796", {"parent":"cafe1ea44a66d740","name":"DrunkennessWillReachSix","factory":"[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entityblueprint","properties":{"m_rFirstValueInt":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d741"},"m_rSecondValueInt":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d799"},"m_eEvaluation":{"type":"ZValueInt_Comparator_Poll.EEvaluationType","value":"EQUAL"}},"events":{"GetTrue":{"In":["cafe1ea44a66d792"]}}}]
+    },
+    {
+      "AddEntity": ["cafe1ea44a66d797", {"parent":"cafe1ea44a66d740","name":"DrunkennessWillReachNine","factory":"[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entityblueprint","properties":{"m_rFirstValueInt":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d741"},"m_rSecondValueInt":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d800"},"m_eEvaluation":{"type":"ZValueInt_Comparator_Poll.EEvaluationType","value":"EQUAL"}},"events":{"GetTrue":{"In":["cafe1ea44a66d792"]}}}]
+    },
+    {
+      "AddEntity": ["cafe1ea44a66d798", {"parent":"cafe1ea44a66d740","name":"ValueInt_2_BathroomVoice","factory":"[assembly:/_pro/design/logic/valueint.template?/valueint.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/logic/valueint.template?/valueint.entitytemplate].pc_entityblueprint","properties":{"m_nValue":{"type":"int32","value":2}}}]
+    },
+    {
+      "AddEntity": ["cafe1ea44a66d799", {"parent":"cafe1ea44a66d740","name":"ValueInt_5_BathroomVoice","factory":"[assembly:/_pro/design/logic/valueint.template?/valueint.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/logic/valueint.template?/valueint.entitytemplate].pc_entityblueprint","properties":{"m_nValue":{"type":"int32","value":5}}}]
+    },
+    {
+      "AddEntity": ["cafe1ea44a66d800", {"parent":"cafe1ea44a66d740","name":"ValueInt_8_BathroomVoice","factory":"[assembly:/_pro/design/logic/valueint.template?/valueint.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/logic/valueint.template?/valueint.entitytemplate].pc_entityblueprint","properties":{"m_nValue":{"type":"int32","value":8}}}]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d746",
+        {
+          "parent": "cafe1ea44a66d740",
+          "name": "EventChannelTransmitter_Drunk47DrunkennessLevel",
+          "factory": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchanneltransmitter_int32.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchanneltransmitter_int32.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_rChannelToken": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d749",
+              "postInit": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d749",
+        {
+          "parent": "cafe1ea44a66d746",
+          "name": "TokenID_Drunk47_Drunkenness_LevelChanged",
+          "factory": "[modules:/ztokenidentity.class].pc_entitytype",
+          "blueprint": "[modules:/ztokenidentity.class].pc_entityblueprint",
+          "properties": {
+            "m_sName": {
+              "type": "ZString",
+              "value": "Drunk47_Drunkenness_LevelChanged"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "patchVersion": 6
+}
