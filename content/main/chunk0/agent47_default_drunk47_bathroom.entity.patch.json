@@ -1336,8 +1336,44 @@
           "events": {
             "PollTrue": {
               "TransmitEvent": [
-                "cafe1ea44a66d806"
+                "cafe1ea44a66d806",
+                "cafe1ea44a66d810"
               ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d810",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "EventChannelTransmitter_Drunk47BathroomAnimationStop",
+          "factory": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchanneltransmitter_void.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchanneltransmitter_void.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_rChannelToken": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d811",
+              "postInit": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d811",
+        {
+          "parent": "cafe1ea44a66d810",
+          "name": "TokenID_Drunk47_BathroomAnimationStop",
+          "factory": "[modules:/ztokenidentity.class].pc_entitytype",
+          "blueprint": "[modules:/ztokenidentity.class].pc_entityblueprint",
+          "properties": {
+            "m_sName": {
+              "type": "ZString",
+              "value": "Drunk47_BathroomAnimationStop"
             }
           }
         }
