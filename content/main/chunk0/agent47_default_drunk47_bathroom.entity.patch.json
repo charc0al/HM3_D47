@@ -1385,8 +1385,8 @@
         {
           "parent": "cafe1ea44a66d715",
           "name": "FX_E_WaterCoolerPissStream_Sanity",
-          "factory": "00E1A44A66B118C0",
-          "blueprint": "00E1A44A66B118C1",
+          "factory": "00E1A44A66B119C0",
+          "blueprint": "00E1A44A66B119C1",
           "properties": {
             "m_mTransform": {
               "type": "SMatrix43",
