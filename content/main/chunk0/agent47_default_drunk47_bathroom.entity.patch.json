@@ -296,7 +296,8 @@
               "Deactivate": ["cafe1ea44a66d723"],
               "MakeInvisible": ["cafe1ea44a66d721"],
               "SetFalse": ["cafe1ea44a66d716", "cafe1ea44a66d819"],
-              "Stop": ["cafe1ea44a66d804", "cafe1ea44a66d817", "cafe1ea44a66d818"]
+              "Stop": ["cafe1ea44a66d804", "cafe1ea44a66d817", "cafe1ea44a66d818"],
+              "TransmitEvent": ["cafe1ea44a66d827"]
             }
           }
         }
@@ -1433,7 +1434,8 @@
               "SetFalse": ["cafe1ea44a66d71b"],
               "SetTrue": ["cafe1ea44a66d716", "cafe1ea44a66d819"],
               "ActivateLarge": ["cafe1ea44a66d812"],
-              "In": ["cafe1ea44a66d718", "cafe1ea44a66d817", "cafe1ea44a66d818"]
+              "In": ["cafe1ea44a66d718", "cafe1ea44a66d817", "cafe1ea44a66d818"],
+              "TransmitEvent": ["cafe1ea44a66d825"]
             }
           }
         }
@@ -1559,6 +1561,76 @@
           "factory": "[modules:/ztokenidentity.class].pc_entitytype",
           "blueprint": "[modules:/ztokenidentity.class].pc_entityblueprint",
           "properties": {"m_sName": {"type": "ZString", "value": "Drunk47_BathroomSoberingStart"}}
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d825",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "EventChannelTransmitter_Drunk47BlackoutIllegalStart",
+          "factory": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchanneltransmitter_void.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchanneltransmitter_void.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_rChannelToken": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d826",
+              "postInit": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d826",
+        {
+          "parent": "cafe1ea44a66d825",
+          "name": "TokenID_Drunk47_BathroomIllegalStart_Blackout",
+          "factory": "[modules:/ztokenidentity.class].pc_entitytype",
+          "blueprint": "[modules:/ztokenidentity.class].pc_entityblueprint",
+          "properties": {
+            "m_sName": {
+              "type": "ZString",
+              "value": "Drunk47_BathroomIllegalStart"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d827",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "EventChannelTransmitter_Drunk47BlackoutIllegalStop",
+          "factory": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchanneltransmitter_void.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchanneltransmitter_void.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_rChannelToken": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d828",
+              "postInit": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d828",
+        {
+          "parent": "cafe1ea44a66d827",
+          "name": "TokenID_Drunk47_BathroomIllegalStop_Blackout",
+          "factory": "[modules:/ztokenidentity.class].pc_entitytype",
+          "blueprint": "[modules:/ztokenidentity.class].pc_entityblueprint",
+          "properties": {
+            "m_sName": {
+              "type": "ZString",
+              "value": "Drunk47_BathroomIllegalStop"
+            }
+          }
         }
       ]
     },
