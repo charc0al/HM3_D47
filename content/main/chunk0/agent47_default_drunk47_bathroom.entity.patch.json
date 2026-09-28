@@ -195,6 +195,9 @@
             "EventReceived": {
               "ExitSafeZoneNoAnim": [
                 "cafe1ea44a66d704"
+              ],
+              "Start": [
+                "cafe1ea44a66d801"
               ]
             }
           }
@@ -1129,6 +1132,29 @@
       "AddEntity": ["cafe1ea44a66d800", {"parent":"cafe1ea44a66d740","name":"ValueInt_8_BathroomVoice","factory":"[assembly:/_pro/design/logic/valueint.template?/valueint.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/logic/valueint.template?/valueint.entitytemplate].pc_entityblueprint","properties":{"m_nValue":{"type":"int32","value":8}}}]
     },
     {
+      "AddEntity": [
+        "cafe1ea44a66d801",
+        {
+          "parent": "cafe1ea44a66d740",
+          "name": "DialogLine_47Sorry_Chongqing",
+          "factory": "[assembly:/_pro/design/actor/spsystem.template?/dialogline.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/actor/spsystem.template?/dialogline.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_rCharacter": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d790"
+            },
+            "m_pAudioEvent": {
+              "type": "ZRuntimeResourceID",
+              "value": {
+                "resource": "009AA702F51DEA4F",
+                "flag": "5F"
+              }
+            }
+          }
+        }
+      ]
+    },    {
       "AddEntity": [
         "cafe1ea44a66d746",
         {
