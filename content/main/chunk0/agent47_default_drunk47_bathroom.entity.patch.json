@@ -293,10 +293,10 @@
           "events": {
             "EventReceived": {
               "Detach": ["cafe1ea44a66d714"],
-              "Deactivate": ["cafe1ea44a66d723"],
+              "Deactivate": ["cafe1ea44a66d717", "cafe1ea44a66d723", "cafe1ea44a66d812"],
               "MakeInvisible": ["cafe1ea44a66d721"],
               "SetFalse": ["cafe1ea44a66d716", "cafe1ea44a66d819"],
-              "Stop": ["cafe1ea44a66d804", "cafe1ea44a66d817", "cafe1ea44a66d818"],
+              "Stop": ["cafe1ea44a66d804", "cafe1ea44a66d817", "cafe1ea44a66d818", "cafe1ea44a66d829"],
               "TransmitEvent": ["cafe1ea44a66d827"]
             }
           }
@@ -1433,8 +1433,7 @@
               "Attach": ["cafe1ea44a66d714"],
               "SetFalse": ["cafe1ea44a66d71b"],
               "SetTrue": ["cafe1ea44a66d716", "cafe1ea44a66d819"],
-              "ActivateLarge": ["cafe1ea44a66d812"],
-              "In": ["cafe1ea44a66d718", "cafe1ea44a66d817", "cafe1ea44a66d818"],
+              "In": ["cafe1ea44a66d718", "cafe1ea44a66d817", "cafe1ea44a66d818", "cafe1ea44a66d829"],
               "TransmitEvent": ["cafe1ea44a66d825"]
             }
           }
@@ -1561,6 +1560,28 @@
           "factory": "[modules:/ztokenidentity.class].pc_entitytype",
           "blueprint": "[modules:/ztokenidentity.class].pc_entityblueprint",
           "properties": {"m_sName": {"type": "ZString", "value": "Drunk47_BathroomSoberingStart"}}
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d829",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "Drunk47BlackoutStreamActivateDelay",
+          "factory": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "Delay time (ms)": {
+              "type": "int32",
+              "value": 1
+            }
+          },
+          "events": {
+            "Out": {
+              "ActivateBlackout": ["cafe1ea44a66d812"]
+            }
+          }
         }
       ]
     },
