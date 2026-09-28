@@ -251,7 +251,7 @@
             "EventReceived": {
               "Attach": ["cafe1ea44a66d714"],
               "SetFalse": ["cafe1ea44a66d71b"],
-              "In": ["cafe1ea44a66d718", "cafe1ea44a66d804"],
+              "In": ["cafe1ea44a66d718"],
               "SetTrue": ["cafe1ea44a66d716"]
             }
           }
@@ -1520,6 +1520,31 @@
               "In": ["cafe1ea44a66d818"]
             }
           }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d822",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "EventChannelReceiver_Drunk47BathroomSoberingStart",
+          "factory": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchannelreceiver_void.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchannelreceiver_void.entitytemplate].pc_entityblueprint",
+          "properties": {"m_rChannelToken": {"type": "SEntityTemplateReference", "value": "cafe1ea44a66d823", "postInit": true}},
+          "events": {"EventReceived": {"In": ["cafe1ea44a66d804"]}}
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d823",
+        {
+          "parent": "cafe1ea44a66d822",
+          "name": "TokenID_Drunk47_BathroomSoberingStart",
+          "factory": "[modules:/ztokenidentity.class].pc_entitytype",
+          "blueprint": "[modules:/ztokenidentity.class].pc_entityblueprint",
+          "properties": {"m_sName": {"type": "ZString", "value": "Drunk47_BathroomSoberingStart"}}
         }
       ]
     },

@@ -1260,7 +1260,7 @@
         },
         "m_nAnimlayerTime": {
           "type": "float32",
-          "value": 7
+          "value": 6
         },
         "m_bInterruptibleAction": {
           "type": "bool",
@@ -1438,7 +1438,8 @@
         "cafe1ea44a66b107"
       ],
       "TransmitEvent": [
-        "cafe1ea44a66b195"
+        "cafe1ea44a66b195",
+        "cafe1ea44a66b208"
       ],
       "SetTrue": [
         "cafe1ea44a66b10e"
@@ -1983,7 +1984,7 @@
         },
         "m_nAnimlayerTime": {
           "type": "float32",
-          "value": 7
+          "value": 6
         },
         "m_bInterruptibleAction": {
           "type": "bool",
@@ -2049,9 +2050,6 @@
           ],
           "Increment": [
             "cafe1ea44a66b138"
-          ],
-          "In": [
-            "cafe1ea44a66b150"
           ]
         }
       }
@@ -2497,7 +2495,7 @@
         "m_ConditionList_Usable": {"type": "TArray<SEntityTemplateReference>", "value": ["cafe1ea44a66b204"]},
         "m_RuntimeNetworkResourceID": {"type": "ZRuntimeResourceID", "value": {"resource": "00A822EF038BFB69", "flag": "9F"}},
         "m_bUseAnimlayer": {"type": "bool", "value": true},
-        "m_nAnimlayerTime": {"type": "float32", "value": 7},
+        "m_nAnimlayerTime": {"type": "float32", "value": 6},
         "m_bInterruptibleAction": {"type": "bool", "value": false},
         "m_bUseRightHandItemGrip": {"type": "bool", "value": true},
         "m_bIsIllegal": {"type": "bool", "value": false},
@@ -2506,6 +2504,20 @@
       "events": {
         "Completed": {"TransmitEvent": ["cafe1ea44a66b202"]}
       }
+    },
+    "cafe1ea44a66b208": {
+      "parent": "89d1f4f46e0d4adb",
+      "name": "EventChannelTransmitter_Drunk47BathroomSoberingStart",
+      "factory": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchanneltransmitter_void.entitytemplate].pc_entitytype",
+      "blueprint": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchanneltransmitter_void.entitytemplate].pc_entityblueprint",
+      "properties": {"m_rChannelToken": {"type": "SEntityTemplateReference", "value": "cafe1ea44a66b209", "postInit": true}}
+    },
+    "cafe1ea44a66b209": {
+      "parent": "cafe1ea44a66b208",
+      "name": "TokenID_Drunk47_BathroomSoberingStart",
+      "factory": "[modules:/ztokenidentity.class].pc_entitytype",
+      "blueprint": "[modules:/ztokenidentity.class].pc_entityblueprint",
+      "properties": {"m_sName": {"type": "ZString", "value": "Drunk47_BathroomSoberingStart"}}
     }
   },
   "propertyOverrides": [],

@@ -2,7 +2,7 @@
 [x] 47 says "sorry" when NPCs slip
 [x] 10 continuous seconds in bathroom state reduces drunkenness by 1
 [ ] Vomiting at level 8
-[ ] Blackout drunk features
+[x] Blackout drunk features
 [ ] Fix hand attacher offset during drinking animation
 [ ] Stealing NPC drinks and drinking them
 [ ] Drinking restores health
@@ -14,3 +14,4 @@
 [x] Fix invisible piss
 [ ] Fix beer prompt showing when not equipped
 [ ] Different walking animations for drunk
+[ ] Dynamically sized piss particles
