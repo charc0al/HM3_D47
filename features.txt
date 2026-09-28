@@ -5,17 +5,17 @@
 [x] Blackout drunk features
 [ ] Fix hand attacher offset during drinking animation
 [ ] Drinking restores health
-[ ] Legally use in-level toilets
-[ ] Fix prompts showing when busy
+[x] Fix prompts showing when busy
 [ ] Electric trap on puddles
 [x] Fix invisible piss
-[ ] Fix beer prompt showing when not equipped
+[x] Fix beer prompt showing when not equipped
 [x] Dynamically sized piss particles - bigger stream of piss when more drunk
 [ ] Blackout state illegal the whole time
 
 ----- Maybe Happening -----
+[ ] Legally use in-level toilets
 [ ] Stealing NPC drinks and drinking them
-[ ] Having beer / alcohol in inventory prevents health regen
+[ ] Drunkenness > 0 prevents health regen
 
 ------ Probably Not -------
 [ ] Dynamic sized piss puddles
