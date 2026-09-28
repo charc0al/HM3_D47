@@ -338,8 +338,8 @@
           "factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_basic.entitytemplate].pc_entitytype",
           "blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_basic.entitytemplate].pc_entityblueprint",
           "events": {
-            "OnTrue": {"Activate": ["cafe1ea44a66d717"]},
-            "OnFalse": {"Deactivate": ["cafe1ea44a66d717"]}
+            "OnTrue": {"Activate": ["cafe1ea44a66d717", "cafe1ea44a66d812"]},
+            "OnFalse": {"Deactivate": ["cafe1ea44a66d717", "cafe1ea44a66d812"]}
           }
         }
       ]
@@ -1375,6 +1375,29 @@
               "type": "ZString",
               "value": "Drunk47_BathroomAnimationStop"
             }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d812",
+        {
+          "parent": "cafe1ea44a66d715",
+          "name": "FX_E_WaterCoolerPissStream_Sanity",
+          "factory": "00E1A44A66B118C0",
+          "blueprint": "00E1A44A66B118C1",
+          "properties": {
+            "m_mTransform": {
+              "type": "SMatrix43",
+              "value": {
+                "rotation": {"x": 97.51867083658354, "y": 0.7535178718294449, "z": -27.305880691722805},
+                "position": {"x": -0.0607759989798069, "y": 0.11294899880886078, "z": 0.000590000010561198},
+                "scale": {"x": 0.999999821422476, "y": 1.0000000136018228, "z": 1.000000876077821}
+              }
+            },
+            "m_eRoomBehaviour": {"type": "ZSpatialEntity.ERoomBehaviour", "value": "ROOM_DYNAMIC"},
+            "m_eidParent": {"type": "SEntityTemplateReference", "value": "cafe1ea44a66d715", "postInit": true}
           }
         }
       ]
