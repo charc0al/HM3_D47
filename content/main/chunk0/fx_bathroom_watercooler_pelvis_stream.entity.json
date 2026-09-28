@@ -565,15 +565,13 @@
       },
       "inputCopying": {
         "Activate": {
-          "Activate": [
-            "619f8fed155dab52",
-            "77eae0395fd5800e"
+        "Activate": [
+          "619f8fed155dab52"
           ]
         },
         "Deactivate": {
-          "Deactivate": [
-            "619f8fed155dab52",
-            "77eae0395fd5800e"
+        "Deactivate": [
+          "619f8fed155dab52"
           ]
         },
         "SetSpeedMin": {
