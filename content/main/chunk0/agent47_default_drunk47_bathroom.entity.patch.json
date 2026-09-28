@@ -251,7 +251,7 @@
             "EventReceived": {
               "Attach": ["cafe1ea44a66d714"],
               "SetFalse": ["cafe1ea44a66d71b"],
-              "In": ["cafe1ea44a66d718"],
+              "In": ["cafe1ea44a66d718", "cafe1ea44a66d824"],
               "SetTrue": ["cafe1ea44a66d716"]
             }
           }
@@ -968,55 +968,55 @@
     {
       "AddEntity": [
         "cafe1ea44a66d750",
-        {"parent":"cafe1ea44a66d740","name":"DrunkennessIs1_Filter","factory":"[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entityblueprint","properties":{"m_rFirstValueInt":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d741"},"m_rSecondValueInt":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d760"},"m_eEvaluation":{"type":"ZValueInt_Comparator_Poll.EEvaluationType","value":"EQUAL"}},"events":{"GetTrue":{"TransmitEvent":["cafe1ea44a66d770"]}}}
+        {"parent":"cafe1ea44a66d740","name":"DrunkennessIs1_Filter","factory":"[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entityblueprint","properties":{"m_rFirstValueInt":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d741"},"m_rSecondValueInt":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d760"},"m_eEvaluation":{"type":"ZValueInt_Comparator_Poll.EEvaluationType","value":"EQUAL"}},"events":{"GetTrue":{"TransmitEvent":["cafe1ea44a66d770"],"ActivateSmall":["cafe1ea44a66d812"]}}}
       ]
     },
     {
       "AddEntity": [
         "cafe1ea44a66d751",
-        {"parent":"cafe1ea44a66d740","name":"DrunkennessIs2_Filter","factory":"[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entityblueprint","properties":{"m_rFirstValueInt":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d741"},"m_rSecondValueInt":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d761"},"m_eEvaluation":{"type":"ZValueInt_Comparator_Poll.EEvaluationType","value":"EQUAL"}},"events":{"GetTrue":{"TransmitEvent":["cafe1ea44a66d771"]}}}
+        {"parent":"cafe1ea44a66d740","name":"DrunkennessIs2_Filter","factory":"[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entityblueprint","properties":{"m_rFirstValueInt":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d741"},"m_rSecondValueInt":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d761"},"m_eEvaluation":{"type":"ZValueInt_Comparator_Poll.EEvaluationType","value":"EQUAL"}},"events":{"GetTrue":{"TransmitEvent":["cafe1ea44a66d771"],"ActivateSmall":["cafe1ea44a66d812"]}}}
       ]
     },
     {
       "AddEntity": [
         "cafe1ea44a66d752",
-        {"parent":"cafe1ea44a66d740","name":"DrunkennessIs3_Filter","factory":"[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entityblueprint","properties":{"m_rFirstValueInt":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d741"},"m_rSecondValueInt":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d762"},"m_eEvaluation":{"type":"ZValueInt_Comparator_Poll.EEvaluationType","value":"EQUAL"}},"events":{"GetTrue":{"TransmitEvent":["cafe1ea44a66d772"]}}}
+        {"parent":"cafe1ea44a66d740","name":"DrunkennessIs3_Filter","factory":"[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entityblueprint","properties":{"m_rFirstValueInt":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d741"},"m_rSecondValueInt":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d762"},"m_eEvaluation":{"type":"ZValueInt_Comparator_Poll.EEvaluationType","value":"EQUAL"}},"events":{"GetTrue":{"TransmitEvent":["cafe1ea44a66d772"],"ActivateSmall":["cafe1ea44a66d812"]}}}
       ]
     },
     {
       "AddEntity": [
         "cafe1ea44a66d753",
-        {"parent":"cafe1ea44a66d740","name":"DrunkennessIs4_Filter","factory":"[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entityblueprint","properties":{"m_rFirstValueInt":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d741"},"m_rSecondValueInt":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d763"},"m_eEvaluation":{"type":"ZValueInt_Comparator_Poll.EEvaluationType","value":"EQUAL"}},"events":{"GetTrue":{"TransmitEvent":["cafe1ea44a66d773"]}}}
+        {"parent":"cafe1ea44a66d740","name":"DrunkennessIs4_Filter","factory":"[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entityblueprint","properties":{"m_rFirstValueInt":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d741"},"m_rSecondValueInt":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d763"},"m_eEvaluation":{"type":"ZValueInt_Comparator_Poll.EEvaluationType","value":"EQUAL"}},"events":{"GetTrue":{"TransmitEvent":["cafe1ea44a66d773"],"ActivateMedium":["cafe1ea44a66d812"]}}}
       ]
     },
     {
       "AddEntity": [
         "cafe1ea44a66d754",
-        {"parent":"cafe1ea44a66d740","name":"DrunkennessIs5_Filter","factory":"[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entityblueprint","properties":{"m_rFirstValueInt":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d741"},"m_rSecondValueInt":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d764"},"m_eEvaluation":{"type":"ZValueInt_Comparator_Poll.EEvaluationType","value":"EQUAL"}},"events":{"GetTrue":{"TransmitEvent":["cafe1ea44a66d774"]}}}
+        {"parent":"cafe1ea44a66d740","name":"DrunkennessIs5_Filter","factory":"[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entityblueprint","properties":{"m_rFirstValueInt":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d741"},"m_rSecondValueInt":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d764"},"m_eEvaluation":{"type":"ZValueInt_Comparator_Poll.EEvaluationType","value":"EQUAL"}},"events":{"GetTrue":{"TransmitEvent":["cafe1ea44a66d774"],"ActivateMedium":["cafe1ea44a66d812"]}}}
       ]
     },
     {
       "AddEntity": [
         "cafe1ea44a66d755",
-        {"parent":"cafe1ea44a66d740","name":"DrunkennessIs6_Filter","factory":"[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entityblueprint","properties":{"m_rFirstValueInt":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d741"},"m_rSecondValueInt":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d765"},"m_eEvaluation":{"type":"ZValueInt_Comparator_Poll.EEvaluationType","value":"EQUAL"}},"events":{"GetTrue":{"TransmitEvent":["cafe1ea44a66d775"]}}}
+        {"parent":"cafe1ea44a66d740","name":"DrunkennessIs6_Filter","factory":"[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entityblueprint","properties":{"m_rFirstValueInt":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d741"},"m_rSecondValueInt":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d765"},"m_eEvaluation":{"type":"ZValueInt_Comparator_Poll.EEvaluationType","value":"EQUAL"}},"events":{"GetTrue":{"TransmitEvent":["cafe1ea44a66d775"],"ActivateMedium":["cafe1ea44a66d812"]}}}
       ]
     },
     {
       "AddEntity": [
         "cafe1ea44a66d756",
-        {"parent":"cafe1ea44a66d740","name":"DrunkennessIs7_Filter","factory":"[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entityblueprint","properties":{"m_rFirstValueInt":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d741"},"m_rSecondValueInt":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d766"},"m_eEvaluation":{"type":"ZValueInt_Comparator_Poll.EEvaluationType","value":"EQUAL"}},"events":{"GetTrue":{"TransmitEvent":["cafe1ea44a66d776"]}}}
+        {"parent":"cafe1ea44a66d740","name":"DrunkennessIs7_Filter","factory":"[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entityblueprint","properties":{"m_rFirstValueInt":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d741"},"m_rSecondValueInt":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d766"},"m_eEvaluation":{"type":"ZValueInt_Comparator_Poll.EEvaluationType","value":"EQUAL"}},"events":{"GetTrue":{"TransmitEvent":["cafe1ea44a66d776"],"ActivateLarge":["cafe1ea44a66d812"]}}}
       ]
     },
     {
       "AddEntity": [
         "cafe1ea44a66d757",
-        {"parent":"cafe1ea44a66d740","name":"DrunkennessIs8_Filter","factory":"[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entityblueprint","properties":{"m_rFirstValueInt":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d741"},"m_rSecondValueInt":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d767"},"m_eEvaluation":{"type":"ZValueInt_Comparator_Poll.EEvaluationType","value":"EQUAL"}},"events":{"GetTrue":{"TransmitEvent":["cafe1ea44a66d777"]}}}
+        {"parent":"cafe1ea44a66d740","name":"DrunkennessIs8_Filter","factory":"[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entityblueprint","properties":{"m_rFirstValueInt":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d741"},"m_rSecondValueInt":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d767"},"m_eEvaluation":{"type":"ZValueInt_Comparator_Poll.EEvaluationType","value":"EQUAL"}},"events":{"GetTrue":{"TransmitEvent":["cafe1ea44a66d777"],"ActivateLarge":["cafe1ea44a66d812"]}}}
       ]
     },
     {
       "AddEntity": [
         "cafe1ea44a66d758",
-        {"parent":"cafe1ea44a66d740","name":"DrunkennessIs9_Filter","factory":"[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entityblueprint","properties":{"m_rFirstValueInt":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d741"},"m_rSecondValueInt":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d768"},"m_eEvaluation":{"type":"ZValueInt_Comparator_Poll.EEvaluationType","value":"EQUAL"}},"events":{"GetTrue":{"TransmitEvent":["cafe1ea44a66d778"]}}}
+        {"parent":"cafe1ea44a66d740","name":"DrunkennessIs9_Filter","factory":"[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entityblueprint","properties":{"m_rFirstValueInt":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d741"},"m_rSecondValueInt":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d768"},"m_eEvaluation":{"type":"ZValueInt_Comparator_Poll.EEvaluationType","value":"EQUAL"}},"events":{"GetTrue":{"TransmitEvent":["cafe1ea44a66d778"],"ActivateLarge":["cafe1ea44a66d812"]}}}
       ]
     },
     {
@@ -1404,6 +1404,19 @@
     },
     {
       "AddEntity": [
+        "cafe1ea44a66d824",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "Drunk47BathroomStreamBandDispatchDelay",
+          "factory": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entityblueprint",
+          "properties": {"Delay time (ms)": {"type": "int32", "value": 1}},
+          "events": {"Out": {"Get": ["cafe1ea44a66d750", "cafe1ea44a66d751", "cafe1ea44a66d752", "cafe1ea44a66d753", "cafe1ea44a66d754", "cafe1ea44a66d755", "cafe1ea44a66d756", "cafe1ea44a66d757", "cafe1ea44a66d758"]}}
+        }
+      ]
+    },
+    {
+      "AddEntity": [
         "cafe1ea44a66d815",
         {
           "parent": "cafe1ea44a66d710",
@@ -1419,6 +1432,7 @@
               "Attach": ["cafe1ea44a66d714"],
               "SetFalse": ["cafe1ea44a66d71b"],
               "SetTrue": ["cafe1ea44a66d716", "cafe1ea44a66d819"],
+              "ActivateLarge": ["cafe1ea44a66d812"],
               "In": ["cafe1ea44a66d718", "cafe1ea44a66d817", "cafe1ea44a66d818"]
             }
           }

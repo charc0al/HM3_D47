@@ -167,6 +167,20 @@
         }
       }
     },
+    "d47a000000000001": {
+      "parent":"a0e99c2327e3dde4","name":"FX_PB_Spray_Blood_Medium","factory":"[assembly:/_pro/effects/templates/impacts/fx_impacts_materialbased.template?/fx_pb_spray_blood.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/effects/templates/impacts/fx_impacts_materialbased.template?/fx_pb_spray_blood.entitytemplate].pc_entityblueprint",
+      "properties":{"m_fTimeToLiveSecondsMin":{"type":"float32","value":0.6299999952316284},"m_fTimeToLiveSecondsMax":{"type":"float32","value":0.699999988079071},"m_fParticleSizeMin":{"type":"float32","value":75},"m_fParticleSizeMax":{"type":"float32","value":25},"m_vGravity":{"type":"SVector3","value":{"x":0,"y":0,"z":-9.800000190734863}},"m_fMotionStretchFactor":{"type":"float32","value":1},"m_bEmitFrozen":{"type":"bool","value":false},"m_ParticleColorRangeStart":{"type":"SColorRGB","value":"#d6b51e"},"m_ParticleColorRangeEnd":{"type":"SColorRGB","value":"#d6b51e"}}
+    },
+    "d47a000000000002": {
+      "parent":"a0e99c2327e3dde4","name":"FX_PB_Spray_Blood_Large","factory":"[assembly:/_pro/effects/templates/impacts/fx_impacts_materialbased.template?/fx_pb_spray_blood.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/effects/templates/impacts/fx_impacts_materialbased.template?/fx_pb_spray_blood.entitytemplate].pc_entityblueprint",
+      "properties":{"m_fTimeToLiveSecondsMin":{"type":"float32","value":0.6299999952316284},"m_fTimeToLiveSecondsMax":{"type":"float32","value":0.699999988079071},"m_fParticleSizeMin":{"type":"float32","value":120},"m_fParticleSizeMax":{"type":"float32","value":40},"m_vGravity":{"type":"SVector3","value":{"x":0,"y":0,"z":-9.800000190734863}},"m_fMotionStretchFactor":{"type":"float32","value":1},"m_bEmitFrozen":{"type":"bool","value":false},"m_ParticleColorRangeStart":{"type":"SColorRGB","value":"#d6b51e"},"m_ParticleColorRangeEnd":{"type":"SColorRGB","value":"#d6b51e"}}
+    },
+    "d47a000000000003": {
+      "parent":"a0e99c2327e3dde4","name":"ParticleEmitterBox_Medium","factory":"[modules:/zparticleemitterboxentity.class].pc_entitytype","blueprint":"[modules:/zparticleemitterboxentity.class].pc_entityblueprint","properties":{"m_fSpeedMin":{"type":"float32","value":3},"m_ParticleController":{"type":"SEntityTemplateReference","value":"d47a000000000001"},"m_ParticleRender":{"type":"SEntityTemplateReference","value":"54e7f2228191c640"},"m_fParticlesPerSecond":{"type":"float32","value":20},"m_fParticlesPerSecondMax":{"type":"float32","value":45},"m_fEmissionCameraProximity":{"type":"float32","value":35},"m_fSpeedMax":{"type":"float32","value":3},"m_vGlobalSize":{"type":"SVector3","value":{"x":0,"y":0,"z":0}},"m_bEnabled":{"type":"bool","value":false},"m_fOuterConeAngle":{"type":"float32","value":10},"m_eidParent":{"type":"SEntityTemplateReference","value":"a0e99c2327e3dde4","postInit":true}}
+    },
+    "d47a000000000004": {
+      "parent":"a0e99c2327e3dde4","name":"ParticleEmitterBox_Large","factory":"[modules:/zparticleemitterboxentity.class].pc_entitytype","blueprint":"[modules:/zparticleemitterboxentity.class].pc_entityblueprint","properties":{"m_fSpeedMin":{"type":"float32","value":3},"m_ParticleController":{"type":"SEntityTemplateReference","value":"d47a000000000002"},"m_ParticleRender":{"type":"SEntityTemplateReference","value":"54e7f2228191c640"},"m_fParticlesPerSecond":{"type":"float32","value":20},"m_fParticlesPerSecondMax":{"type":"float32","value":45},"m_fEmissionCameraProximity":{"type":"float32","value":35},"m_fSpeedMax":{"type":"float32","value":3},"m_vGlobalSize":{"type":"SVector3","value":{"x":0,"y":0,"z":0}},"m_bEnabled":{"type":"bool","value":false},"m_fOuterConeAngle":{"type":"float32","value":10},"m_eidParent":{"type":"SEntityTemplateReference","value":"a0e99c2327e3dde4","postInit":true}}
+    },
     "9d3ee0ebad5a3ea5": {
       "parent": "a0e99c2327e3dde4",
       "name": "FX_PB_Impact_Water_Splash",
@@ -564,16 +578,15 @@
         }
       },
       "inputCopying": {
-        "Activate": {
-        "Activate": [
-          "619f8fed155dab52"
-          ]
-        },
+        "Activate": {"Deactivate": ["619f8fed155dab52", "d47a000000000003", "d47a000000000004"]},
         "Deactivate": {
         "Deactivate": [
-          "619f8fed155dab52"
+          "619f8fed155dab52", "d47a000000000003", "d47a000000000004"
           ]
         },
+        "ActivateSmall": {"Deactivate": ["d47a000000000003", "d47a000000000004"], "Activate": ["619f8fed155dab52"]},
+        "ActivateMedium": {"Deactivate": ["619f8fed155dab52", "d47a000000000004"], "Activate": ["d47a000000000003"]},
+        "ActivateLarge": {"Deactivate": ["619f8fed155dab52", "d47a000000000003"], "Activate": ["d47a000000000004"]},
         "SetSpeedMin": {
           "SetSpeedMin": [
             "619f8fed155dab52",
