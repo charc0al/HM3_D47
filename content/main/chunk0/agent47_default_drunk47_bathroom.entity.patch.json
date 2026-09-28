@@ -296,7 +296,7 @@
               "Deactivate": ["cafe1ea44a66d723"],
               "MakeInvisible": ["cafe1ea44a66d721"],
               "SetFalse": ["cafe1ea44a66d716"],
-              "Stop": ["cafe1ea44a66d804"]
+              "Stop": ["cafe1ea44a66d804", "cafe1ea44a66d817", "cafe1ea44a66d818"]
             }
           }
         }
@@ -1404,23 +1404,6 @@
     },
     {
       "AddEntity": [
-        "cafe1ea44a66d814",
-        {
-          "parent": "cafe1ea44a66d740",
-          "name": "ValueInt_Zero_Drunk47Blackout",
-          "factory": "[assembly:/_pro/design/logic/valueint.template?/valueint.entitytemplate].pc_entitytype",
-          "blueprint": "[assembly:/_pro/design/logic/valueint.template?/valueint.entitytemplate].pc_entityblueprint",
-          "properties": {
-            "m_nValue": {"type": "int32", "value": 0}
-          },
-          "events": {
-            "OnValue": {"SetValue": ["cafe1ea44a66d741"]}
-          }
-        }
-      ]
-    },
-    {
-      "AddEntity": [
         "cafe1ea44a66d815",
         {
           "parent": "cafe1ea44a66d710",
@@ -1478,38 +1461,17 @@
         "cafe1ea44a66d818",
         {
           "parent": "cafe1ea44a66d710",
-          "name": "Drunk47BlackoutDurationTimer",
+          "name": "Drunk47BlackoutBathroomVoiceTimer",
           "factory": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entitytype",
           "blueprint": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entityblueprint",
           "properties": {
-            "Delay time (ms)": {"type": "int32", "value": 30000}
+            "Delay time (ms)": {"type": "int32", "value": 8000}
           },
           "events": {
             "Out": {
-              "Stop": ["cafe1ea44a66d817", "cafe1ea44a66d804"],
-              "Detach": ["cafe1ea44a66d714"],
-              "Deactivate": ["cafe1ea44a66d723"],
-              "MakeInvisible": ["cafe1ea44a66d721"],
-              "SetFalse": ["cafe1ea44a66d716"],
-              "In": ["cafe1ea44a66d819"]
+              "Start": ["cafe1ea44a66d791"],
+              "In": ["cafe1ea44a66d818"]
             }
-          }
-        }
-      ]
-    },
-    {
-      "AddEntity": [
-        "cafe1ea44a66d819",
-        {
-          "parent": "cafe1ea44a66d710",
-          "name": "Drunk47BlackoutResetDelay",
-          "factory": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entitytype",
-          "blueprint": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entityblueprint",
-          "properties": {
-            "Delay time (ms)": {"type": "int32", "value": 1}
-          },
-          "events": {
-            "Out": {"Get": ["cafe1ea44a66d814"]}
           }
         }
       ]

@@ -13,3 +13,4 @@
 [ ] Dynamic sized piss puddles
 [x] Fix invisible piss
 [ ] Fix beer prompt showing when not equipped
+[ ] Different walking animations for drunk
