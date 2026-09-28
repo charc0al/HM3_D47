@@ -10,3 +10,4 @@
 [ ] Fix prompts showing when busy
 [ ] Electric trap on puddles
 [ ] Dynamic sized piss puddles
+[x] Fix invisible piss

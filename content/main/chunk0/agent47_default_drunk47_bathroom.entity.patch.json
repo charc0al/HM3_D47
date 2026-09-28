@@ -338,7 +338,7 @@
           "factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_basic.entitytemplate].pc_entitytype",
           "blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_basic.entitytemplate].pc_entityblueprint",
           "events": {
-            "OnTrue": {"Activate": ["cafe1ea44a66d717", "cafe1ea44a66d812"]},
+            "OnTrue": {"Activate": ["cafe1ea44a66d812"]},
             "OnFalse": {"Deactivate": ["cafe1ea44a66d717", "cafe1ea44a66d812"]}
           }
         }
