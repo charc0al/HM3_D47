@@ -8,3 +8,5 @@
 [ ] Having beer / alcohol in inventory prevents health regen
 [ ] Legally use in-level toilets
 [ ] Fix prompts showing when busy
+[ ] Electric trap on puddles
+[ ] Dynamic sized piss puddles

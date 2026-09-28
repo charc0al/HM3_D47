@@ -250,9 +250,9 @@
           "events": {
             "EventReceived": {
               "Attach": ["cafe1ea44a66d714"],
-              "SetTrue": ["cafe1ea44a66d716"],
               "SetFalse": ["cafe1ea44a66d71b"],
-              "In": ["cafe1ea44a66d718"]
+              "In": ["cafe1ea44a66d718", "cafe1ea44a66d804"],
+              "SetTrue": ["cafe1ea44a66d716"]
             }
           }
         }
@@ -292,10 +292,11 @@
           },
           "events": {
             "EventReceived": {
-              "SetFalse": ["cafe1ea44a66d716"],
               "Detach": ["cafe1ea44a66d714"],
               "Deactivate": ["cafe1ea44a66d723"],
-              "MakeInvisible": ["cafe1ea44a66d721"]
+              "MakeInvisible": ["cafe1ea44a66d721"],
+              "SetFalse": ["cafe1ea44a66d716"],
+              "Stop": ["cafe1ea44a66d804"]
             }
           }
         }
@@ -830,7 +831,8 @@
               "Get": [
                 "cafe1ea44a66d750", "cafe1ea44a66d751", "cafe1ea44a66d752",
                 "cafe1ea44a66d753", "cafe1ea44a66d754", "cafe1ea44a66d755",
-                "cafe1ea44a66d756", "cafe1ea44a66d757", "cafe1ea44a66d758"
+                "cafe1ea44a66d756", "cafe1ea44a66d757", "cafe1ea44a66d758",
+                "cafe1ea44a66d805"
               ]
             }
           }
@@ -1192,6 +1194,150 @@
             "m_sName": {
               "type": "ZString",
               "value": "Drunk47_BathroomPuddleNPCSlip"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d804",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "Drunk47BathroomSoberingTimer",
+          "factory": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "Delay time (ms)": {
+              "type": "int32",
+              "value": 10000
+            }
+          },
+          "events": {
+            "Out": {
+              "Subtract": [
+                "cafe1ea44a66d742"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d805",
+        {
+          "parent": "cafe1ea44a66d740",
+          "name": "Drunk47DrunkennessIsZero_Bathroom",
+          "factory": "[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_rFirstValueInt": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d741"
+            },
+            "m_rSecondValueInt": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d807"
+            },
+            "m_eEvaluation": {
+              "type": "ZValueInt_Comparator_Poll.EEvaluationType",
+              "value": "EQUAL"
+            }
+          },
+          "events": {
+            "GetTrue": {
+              "Poll": [
+                "cafe1ea44a66d809"
+              ]
+            },
+            "GetFalse": {
+              "Poll": [
+                "cafe1ea44a66d808"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d806",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "EventChannelTransmitter_Drunk47BathroomStopWhenSober",
+          "factory": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchanneltransmitter_void.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchanneltransmitter_void.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_rChannelToken": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d708",
+              "postInit": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d807",
+        {
+          "parent": "cafe1ea44a66d740",
+          "name": "ValueInt_Zero_Drunk47Bathroom",
+          "factory": "[assembly:/_pro/design/logic/valueint.template?/valueint.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic/valueint.template?/valueint.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_nValue": {
+              "type": "int32",
+              "value": 0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d808",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "ValueBool_Drunk47BathroomActive",
+          "factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_poll.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_poll.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_rValueEntity": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d716"
+            }
+          },
+          "events": {
+            "PollTrue": {
+              "In": [
+                "cafe1ea44a66d804"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d809",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "ValueBool_Drunk47BathroomActive_ForAutoExit",
+          "factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_poll.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_poll.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_rValueEntity": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d716"
+            }
+          },
+          "events": {
+            "PollTrue": {
+              "TransmitEvent": [
+                "cafe1ea44a66d806"
+              ]
             }
           }
         }
