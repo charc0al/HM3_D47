@@ -26,7 +26,8 @@
 
 ------ Probably Not -------
 [ ] Drunkenness > 0 prevents health regen
-   - You could always try using a valuebool_set (plus valuebool_entityproperty) 
+   - You could always try using a valuebool_set (plus valuebool_entityproperty)
+   - I think there's a "constant after start" property in moduleinfo that I assume would tell us
 [ ] Dynamic sized piss puddles
 [ ] Different walking animations for drunk
 [ ] Slow down game speed for 2 seconds when smashing a bottle

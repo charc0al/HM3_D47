@@ -830,7 +830,7 @@
                 "cafe1ea44a66d750", "cafe1ea44a66d751", "cafe1ea44a66d752",
                 "cafe1ea44a66d753", "cafe1ea44a66d754", "cafe1ea44a66d755",
                 "cafe1ea44a66d756", "cafe1ea44a66d757", "cafe1ea44a66d758",
-                "cafe1ea44a66d805"
+                "cafe1ea44a66d805", "cafe1ea44a66d842"
               ]
             }
           }
@@ -1888,7 +1888,13 @@
           "events": {"Position": {"Position": ["cafe1ea44a66d722"]}}
         }
       ]
-    }
+    },
+    {"AddEntity":["cafe1ea44a66d842",{"parent":"cafe1ea44a66d740","name":"DrunkennessIsZero_HealthRegen","factory":"[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entityblueprint","properties":{"m_rFirstValueInt":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d741"},"m_rSecondValueInt":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d843"},"m_eEvaluation":{"type":"ZValueInt_Comparator_Poll.EEvaluationType","value":"EQUAL"}},"events":{"GetTrue":{"TransmitEvent":["cafe1ea44a66d844"]},"GetFalse":{"TransmitEvent":["cafe1ea44a66d846"]}}}]},
+    {"AddEntity":["cafe1ea44a66d843",{"parent":"cafe1ea44a66d740","name":"ValueInt_Zero_HealthRegen","factory":"[assembly:/_pro/design/logic/valueint.template?/valueint.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/logic/valueint.template?/valueint.entitytemplate].pc_entityblueprint","properties":{"m_nValue":{"type":"int32","value":0}}}]},
+    {"AddEntity":["cafe1ea44a66d844",{"parent":"cafe1ea44a66d740","name":"EventChannelTransmitter_Drunk47HealthRegenEnable","factory":"[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchanneltransmitter_void.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchanneltransmitter_void.entitytemplate].pc_entityblueprint","properties":{"m_rChannelToken":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d845","postInit":true}}}]},
+    {"AddEntity":["cafe1ea44a66d845",{"parent":"cafe1ea44a66d844","name":"TokenID_Drunk47_HealthRegenEnable","factory":"[modules:/ztokenidentity.class].pc_entitytype","blueprint":"[modules:/ztokenidentity.class].pc_entityblueprint","properties":{"m_sName":{"type":"ZString","value":"Drunk47_HealthRegenEnable"}}}]},
+    {"AddEntity":["cafe1ea44a66d846",{"parent":"cafe1ea44a66d740","name":"EventChannelTransmitter_Drunk47HealthRegenDisable","factory":"[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchanneltransmitter_void.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchanneltransmitter_void.entitytemplate].pc_entityblueprint","properties":{"m_rChannelToken":{"type":"SEntityTemplateReference","value":"cafe1ea44a66d847","postInit":true}}}]},
+    {"AddEntity":["cafe1ea44a66d847",{"parent":"cafe1ea44a66d846","name":"TokenID_Drunk47_HealthRegenDisable","factory":"[modules:/ztokenidentity.class].pc_entitytype","blueprint":"[modules:/ztokenidentity.class].pc_entityblueprint","properties":{"m_sName":{"type":"ZString","value":"Drunk47_HealthRegenDisable"}}}]}
   ],
   "patchVersion": 6
 }
