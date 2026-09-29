@@ -1,0 +1,105 @@
+{
+  "tempHash": "00097AA87B144150",
+  "tbluHash": "00E738E7CF7A35E1",
+  "patch": [
+    {
+      "AddEntity": [
+        "cafe1ea44a66e001",
+        {
+          "parent": "d35decb0584ad3d4",
+          "name": "Drunk47_NoHealthRegen",
+          "factory": "[modules:/zdifficultycollectionentity.class].pc_entitytype",
+          "blueprint": "[modules:/zdifficultycollectionentity.class].pc_entityblueprint",
+          "properties": {
+            "m_sIdentifier": {"type": "ZString", "value": "Drunk47_NoHealthRegen"},
+            "m_nPriority": {"type": "uint32", "value": 101},
+            "m_aParameters": {"type": "TArray<SEntityTemplateReference>", "value": ["cafe1ea44a66e002"], "postInit": true},
+            "m_rEnableCondition": {"type": "SEntityTemplateReference", "value": "cafe1ea44a66e003", "postInit": true},
+            "m_bForceEnableRequiresCondition": {"type": "bool", "value": true}
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66e002",
+        {
+          "parent": "cafe1ea44a66e001",
+          "name": "Drunk47_PlayerHealthRegenPerSecond",
+          "factory": "[modules:/zdifficultyparameterentity.class].pc_entitytype",
+          "blueprint": "[modules:/zdifficultyparameterentity.class].pc_entityblueprint",
+          "properties": {
+            "m_eParameter": {"type": "EDifficultyParameter", "value": "EDP_PlayerHitPointsRegenerationPerSecond"},
+            "m_bToggle": {"type": "bool", "value": true},
+            "m_nCount": {"type": "int32", "value": 1},
+            "m_fValue": {"type": "float32", "value": 0},
+            "m_RepositoryId": {"type": "ZGuid", "value": "d47d0000-0000-4000-8000-00000000e002"}
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66e003",
+        {
+          "parent": "cafe1ea44a66e001",
+          "name": "ValueBool_Drunk47NoHealthRegen",
+          "factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_basic.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_basic.entitytemplate].pc_entityblueprint",
+          "properties": {"m_bValue": {"type": "bool", "value": false}}
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66e004",
+        {
+          "parent": "cafe1ea44a66e001",
+          "name": "EventChannelReceiver_Drunk47HealthRegenDisable",
+          "factory": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchannelreceiver_void.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchannelreceiver_void.entitytemplate].pc_entityblueprint",
+          "properties": {"m_rChannelToken": {"type": "SEntityTemplateReference", "value": "cafe1ea44a66e005", "postInit": true}},
+          "events": {"EventReceived": {"SetTrue": ["cafe1ea44a66e003"]}}
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66e005",
+        {
+          "parent": "cafe1ea44a66e004",
+          "name": "TokenID_Drunk47_HealthRegenDisable",
+          "factory": "[modules:/ztokenidentity.class].pc_entitytype",
+          "blueprint": "[modules:/ztokenidentity.class].pc_entityblueprint",
+          "properties": {"m_sName": {"type": "ZString", "value": "Drunk47_HealthRegenDisable"}}
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66e006",
+        {
+          "parent": "cafe1ea44a66e001",
+          "name": "EventChannelReceiver_Drunk47HealthRegenEnable",
+          "factory": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchannelreceiver_void.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchannelreceiver_void.entitytemplate].pc_entityblueprint",
+          "properties": {"m_rChannelToken": {"type": "SEntityTemplateReference", "value": "cafe1ea44a66e007", "postInit": true}},
+          "events": {"EventReceived": {"SetFalse": ["cafe1ea44a66e003"]}}
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66e007",
+        {
+          "parent": "cafe1ea44a66e006",
+          "name": "TokenID_Drunk47_HealthRegenEnable",
+          "factory": "[modules:/ztokenidentity.class].pc_entitytype",
+          "blueprint": "[modules:/ztokenidentity.class].pc_entityblueprint",
+          "properties": {"m_sName": {"type": "ZString", "value": "Drunk47_HealthRegenEnable"}}
+        }
+      ]
+    }
+  ],
+  "patchVersion": 6
+}

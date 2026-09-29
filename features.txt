@@ -13,7 +13,7 @@
 [x] Dynamically sized piss particles - bigger stream of piss when more drunk
 [x] Blackout state illegal the whole time
 [ ] Fine tune raycast piss trajectory
-[ ] Fix offset of animation stepping left
+[x] Fix offset of animation stepping left
 
 ----- Maybe Happening -----
 [ ] Legally use in-level toilets

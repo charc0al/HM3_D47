@@ -966,6 +966,7 @@
 				},
 				"Completed": {
 					"Poll": ["cafe1ea44a66b135"],
+					"RefillHealth": ["cafe1ea44a66b213"],
 					"SetFalse": ["cafe1ea44a66b20c"]
 				}
 			}
@@ -1559,6 +1560,7 @@
 				},
 				"Completed": {
 					"Poll": ["cafe1ea44a66b135"],
+					"RefillHealth": ["cafe1ea44a66b213"],
 					"SetFalse": ["cafe1ea44a66b20c"]
 				}
 			}
@@ -2124,6 +2126,24 @@
 			},
 			"events": {
 				"Out": {"SetTrue": ["cafe1ea44a66b210"]}
+			}
+		},
+		"cafe1ea44a66b212": {
+			"parent": "89d1f4f46e0d4adb",
+			"name": "BeerHealthRestore",
+			"factory": "[modules:/zentity.class].pc_entitytype",
+			"blueprint": "[modules:/zentity.class].pc_entityblueprint"
+		},
+		"cafe1ea44a66b213": {
+			"parent": "cafe1ea44a66b212",
+			"name": "BeerHealthModifier",
+			"factory": "[modules:/zhm5hitmanhealthmodifier.class].pc_entitytype",
+			"blueprint": "[modules:/zhm5hitmanhealthmodifier.class].pc_entityblueprint",
+			"properties": {
+				"m_eHealthValue": {
+					"type": "ZHM5HitmanHealthModifier.EHealthValue",
+					"value": "eHealth90"
+				}
 			}
 		}
 	},
