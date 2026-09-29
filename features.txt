@@ -16,12 +16,23 @@
 [x] Fix offset of animation stepping left
 [ ] Adjust beer weight to sometimes not break
 [ ] manifest options for no health regen or slow health regen
+[ ] drunk dancing at level 9
 
 ----- Maybe Happening -----
+[ ] Vomiting makes nearby NPCs sick
 [ ] Legally use in-level toilets
 [ ] Stealing NPC drinks and drinking them
-[ ] Drunkenness > 0 prevents health regen
+[ ] Puking at end of blackout / randomly
 
 ------ Probably Not -------
+[ ] Drunkenness > 0 prevents health regen
+   - You could always try using a valuebool_set (plus valuebool_entityproperty) 
 [ ] Dynamic sized piss puddles
 [ ] Different walking animations for drunk
+[ ] Slow down game speed for 2 seconds when smashing a bottle
+
+---- Trailer ----
+Berry & Fulcher line
+Train rooftop doorway trap
+
+
