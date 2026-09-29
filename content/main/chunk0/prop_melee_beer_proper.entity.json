@@ -1085,7 +1085,8 @@
 			"inputCopying": {
 				"In": {
 					"Decrement": ["cafe1ea44a66b138"],
-					"SetFalse": ["cafe1ea44a66b137"],
+					"SetFalse": ["cafe1ea44a66b137", "cafe1ea44a66b210"],
+					"In": ["cafe1ea44a66b211"],
 					"EnterSafeZone": ["cafe1ea44a66b107"],
 					"TransmitEvent": [
 						"cafe1ea44a66b195",
@@ -1545,7 +1546,7 @@
 					"type": "bool",
 					"value": true
 				},
-				"m_bIsIllegal": { "type": "bool", "value": true },
+				"m_bIsIllegal": { "type": "bool", "value": false },
 				"m_eInputAction": {
 					"type": "EHM5GameInputFlag",
 					"value": "eGameInputActionShoot"
@@ -1569,7 +1570,8 @@
 			"blueprint": "[modules:/zentity.class].pc_entityblueprint",
 			"inputCopying": {
 				"In": {
-					"SetFalse": ["cafe1ea44a66b137"],
+					"SetFalse": ["cafe1ea44a66b137", "cafe1ea44a66b210"],
+					"In": ["cafe1ea44a66b211"],
 					"EnterSafeZone": ["cafe1ea44a66b107"],
 					"TransmitEvent": ["cafe1ea44a66b195"],
 					"SetTrue": ["cafe1ea44a66b10e"]
@@ -1762,6 +1764,8 @@
 					"type": "ZInputListenerButtonEntity.eInputListenerButtons",
 					"value": "EILB_RIGHT"
 				},
+				"m_VisibleCondition": {"type": "SEntityTemplateReference", "value": "cafe1ea44a66b210", "postInit": true},
+				"m_Condition": {"type": "SEntityTemplateReference", "value": "cafe1ea44a66b210", "postInit": true},
 				"m_bUseOrientedPrompts": { "type": "bool", "value": true }
 			},
 			"events": {
@@ -2102,6 +2106,24 @@
 					"type": "ZString",
 					"value": "Drunk47_BathroomSoberingStart"
 				}
+			}
+		},
+		"cafe1ea44a66b210": {
+			"parent": "89d1f4f46e0d4adb",
+			"name": "ValueBool_BeerBathroomExitPromptReady",
+			"factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_basic.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_basic.entitytemplate].pc_entityblueprint"
+		},
+		"cafe1ea44a66b211": {
+			"parent": "89d1f4f46e0d4adb",
+			"name": "BeerBathroomExitPromptDelay",
+			"factory": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"Delay time (ms)": {"type": "int32", "value": 3000}
+			},
+			"events": {
+				"Out": {"SetTrue": ["cafe1ea44a66b210"]}
 			}
 		}
 	},
