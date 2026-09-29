@@ -1,16 +1,275 @@
-{"tempHash":"00097AA87B144150","tbluHash":"00E738E7CF7A35E1","patch":[
-{"AddEntity":["cafe1ea44a66e001",{"parent":"d35decb0584ad3d4","name":"Drunk47HealthRegenRateController","factory":"[modules:/zentity.class].pc_entitytype","blueprint":"[modules:/zentity.class].pc_entityblueprint"}]},
-{"AddEntity":["cafe1ea44a66e002",{"parent":"cafe1ea44a66e001","name":"ValueFloat_EntityProperty_DefaultHealthRegenRate","factory":"[modules:/zvaluefloat_entityproperty.class].pc_entitytype","blueprint":"[modules:/zvaluefloat_entityproperty.class].pc_entityblueprint","properties":{"m_rEntity":{"type":"SEntityTemplateReference","value":"767c7565ca90f862"},"m_sPropertyName":{"type":"ZString","value":"m_fValue"}}}]},
-{"AddEntity":["cafe1ea44a66e003",{"parent":"cafe1ea44a66e001","name":"ValueFloat_Set_DefaultHealthRegenRate","factory":"[modules:/zvaluefloat_set.class].pc_entitytype","blueprint":"[modules:/zvaluefloat_set.class].pc_entityblueprint","properties":{"m_rValueEntity":{"type":"SEntityTemplateReference","value":"cafe1ea44a66e002","postInit":true}}}]},
-{"AddEntity":["cafe1ea44a66e004",{"parent":"cafe1ea44a66e001","name":"ValueFloat_EntityProperty_HardHealthRegenRate","factory":"[modules:/zvaluefloat_entityproperty.class].pc_entitytype","blueprint":"[modules:/zvaluefloat_entityproperty.class].pc_entityblueprint","properties":{"m_rEntity":{"type":"SEntityTemplateReference","value":"61130f737ba7864e"},"m_sPropertyName":{"type":"ZString","value":"m_fValue"}}}]},
-{"AddEntity":["cafe1ea44a66e005",{"parent":"cafe1ea44a66e001","name":"ValueFloat_Set_HardHealthRegenRate","factory":"[modules:/zvaluefloat_set.class].pc_entitytype","blueprint":"[modules:/zvaluefloat_set.class].pc_entityblueprint","properties":{"m_rValueEntity":{"type":"SEntityTemplateReference","value":"cafe1ea44a66e004","postInit":true}}}]},
-{"AddEntity":["cafe1ea44a66e006",{"parent":"cafe1ea44a66e001","name":"ValueFloat_EntityProperty_EasyHealthRegenRate","factory":"[modules:/zvaluefloat_entityproperty.class].pc_entitytype","blueprint":"[modules:/zvaluefloat_entityproperty.class].pc_entityblueprint","properties":{"m_rEntity":{"type":"SEntityTemplateReference","value":"2a223de5723f42d2"},"m_sPropertyName":{"type":"ZString","value":"m_fValue"}}}]},
-{"AddEntity":["cafe1ea44a66e007",{"parent":"cafe1ea44a66e001","name":"ValueFloat_Set_EasyHealthRegenRate","factory":"[modules:/zvaluefloat_set.class].pc_entitytype","blueprint":"[modules:/zvaluefloat_set.class].pc_entityblueprint","properties":{"m_rValueEntity":{"type":"SEntityTemplateReference","value":"cafe1ea44a66e006","postInit":true}}}]},
-{"AddEntity":["cafe1ea44a66e008",{"parent":"cafe1ea44a66e001","name":"ValueFloat_Zero_HealthRegenRate","factory":"[assembly:/_pro/design/logic/valuefloat.template?/valuefloat_get.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/logic/valuefloat.template?/valuefloat_get.entitytemplate].pc_entityblueprint","properties":{"m_fValue":{"type":"float32","value":0}},"events":{"Value":{"SetValue":["cafe1ea44a66e003","cafe1ea44a66e005","cafe1ea44a66e007"]}}}]},
-{"AddEntity":["cafe1ea44a66e009",{"parent":"cafe1ea44a66e001","name":"ValueFloat_Five_HealthRegenRate","factory":"[assembly:/_pro/design/logic/valuefloat.template?/valuefloat_get.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/logic/valuefloat.template?/valuefloat_get.entitytemplate].pc_entityblueprint","properties":{"m_fValue":{"type":"float32","value":5}},"events":{"Value":{"SetValue":["cafe1ea44a66e003","cafe1ea44a66e007"]}}}]},
-{"AddEntity":["cafe1ea44a66e00a",{"parent":"cafe1ea44a66e001","name":"ValueFloat_Two_HealthRegenRate","factory":"[assembly:/_pro/design/logic/valuefloat.template?/valuefloat_get.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/logic/valuefloat.template?/valuefloat_get.entitytemplate].pc_entityblueprint","properties":{"m_fValue":{"type":"float32","value":2}},"events":{"Value":{"SetValue":["cafe1ea44a66e005"]}}}]},
-{"AddEntity":["cafe1ea44a66e00b",{"parent":"cafe1ea44a66e001","name":"EventChannelReceiver_Drunk47HealthRegenDisable","factory":"[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchannelreceiver_void.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchannelreceiver_void.entitytemplate].pc_entityblueprint","properties":{"m_rChannelToken":{"type":"SEntityTemplateReference","value":"cafe1ea44a66e00c","postInit":true}},"events":{"EventReceived":{"Get":["cafe1ea44a66e008"]}}}]},
-{"AddEntity":["cafe1ea44a66e00c",{"parent":"cafe1ea44a66e00b","name":"TokenID_Drunk47_HealthRegenDisable","factory":"[modules:/ztokenidentity.class].pc_entitytype","blueprint":"[modules:/ztokenidentity.class].pc_entityblueprint","properties":{"m_sName":{"type":"ZString","value":"Drunk47_HealthRegenDisable"}}}]},
-{"AddEntity":["cafe1ea44a66e00d",{"parent":"cafe1ea44a66e001","name":"EventChannelReceiver_Drunk47HealthRegenEnable","factory":"[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchannelreceiver_void.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchannelreceiver_void.entitytemplate].pc_entityblueprint","properties":{"m_rChannelToken":{"type":"SEntityTemplateReference","value":"cafe1ea44a66e00e","postInit":true}},"events":{"EventReceived":{"Get":["cafe1ea44a66e009","cafe1ea44a66e00a"]}}}]},
-{"AddEntity":["cafe1ea44a66e00e",{"parent":"cafe1ea44a66e00d","name":"TokenID_Drunk47_HealthRegenEnable","factory":"[modules:/ztokenidentity.class].pc_entitytype","blueprint":"[modules:/ztokenidentity.class].pc_entityblueprint","properties":{"m_sName":{"type":"ZString","value":"Drunk47_HealthRegenEnable"}}}]}
-],"patchVersion":6}
+{
+	"tempHash": "00097AA87B144150",
+	"tbluHash": "00E738E7CF7A35E1",
+	"patch": [
+		{
+			"AddEntity": [
+				"cafe1ea44a66e001",
+				{
+					"parent": "d35decb0584ad3d4",
+					"name": "Drunk47_Health_Regen",
+					"factory": "[modules:/zentity.class].pc_entitytype",
+					"blueprint": "[modules:/zentity.class].pc_entityblueprint"
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe1ea44a66e002",
+				{
+					"parent": "cafe1ea44a66e001",
+					"name": "ValueFloat_EntityProperty_DefaultHealthRegenRate",
+					"factory": "[modules:/zvaluefloat_entityproperty.class].pc_entitytype",
+					"blueprint": "[modules:/zvaluefloat_entityproperty.class].pc_entityblueprint",
+					"properties": {
+						"m_rEntity": {
+							"type": "SEntityTemplateReference",
+							"value": "767c7565ca90f862"
+						},
+						"m_sPropertyName": {
+							"type": "ZString",
+							"value": "m_fValue"
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe1ea44a66e003",
+				{
+					"parent": "cafe1ea44a66e001",
+					"name": "ValueFloat_Set_DefaultHealthRegenRate",
+					"factory": "[modules:/zvaluefloat_set.class].pc_entitytype",
+					"blueprint": "[modules:/zvaluefloat_set.class].pc_entityblueprint",
+					"properties": {
+						"m_rValueEntity": {
+							"type": "SEntityTemplateReference",
+							"value": "cafe1ea44a66e002",
+							"postInit": true
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe1ea44a66e004",
+				{
+					"parent": "cafe1ea44a66e001",
+					"name": "ValueFloat_EntityProperty_HardHealthRegenRate",
+					"factory": "[modules:/zvaluefloat_entityproperty.class].pc_entitytype",
+					"blueprint": "[modules:/zvaluefloat_entityproperty.class].pc_entityblueprint",
+					"properties": {
+						"m_rEntity": {
+							"type": "SEntityTemplateReference",
+							"value": "61130f737ba7864e"
+						},
+						"m_sPropertyName": {
+							"type": "ZString",
+							"value": "m_fValue"
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe1ea44a66e005",
+				{
+					"parent": "cafe1ea44a66e001",
+					"name": "ValueFloat_Set_HardHealthRegenRate",
+					"factory": "[modules:/zvaluefloat_set.class].pc_entitytype",
+					"blueprint": "[modules:/zvaluefloat_set.class].pc_entityblueprint",
+					"properties": {
+						"m_rValueEntity": {
+							"type": "SEntityTemplateReference",
+							"value": "cafe1ea44a66e004",
+							"postInit": true
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe1ea44a66e006",
+				{
+					"parent": "cafe1ea44a66e001",
+					"name": "ValueFloat_EntityProperty_EasyHealthRegenRate",
+					"factory": "[modules:/zvaluefloat_entityproperty.class].pc_entitytype",
+					"blueprint": "[modules:/zvaluefloat_entityproperty.class].pc_entityblueprint",
+					"properties": {
+						"m_rEntity": {
+							"type": "SEntityTemplateReference",
+							"value": "2a223de5723f42d2"
+						},
+						"m_sPropertyName": {
+							"type": "ZString",
+							"value": "m_fValue"
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe1ea44a66e007",
+				{
+					"parent": "cafe1ea44a66e001",
+					"name": "ValueFloat_Set_EasyHealthRegenRate",
+					"factory": "[modules:/zvaluefloat_set.class].pc_entitytype",
+					"blueprint": "[modules:/zvaluefloat_set.class].pc_entityblueprint",
+					"properties": {
+						"m_rValueEntity": {
+							"type": "SEntityTemplateReference",
+							"value": "cafe1ea44a66e006",
+							"postInit": true
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe1ea44a66e008",
+				{
+					"parent": "cafe1ea44a66e001",
+					"name": "ValueFloat_Zero_HealthRegenRate",
+					"factory": "[assembly:/_pro/design/logic/valuefloat.template?/valuefloat_get.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/logic/valuefloat.template?/valuefloat_get.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_fValue": { "type": "float32", "value": 0 }
+					},
+					"events": {
+						"Value": {
+							"SetValue": [
+								"cafe1ea44a66e003",
+								"cafe1ea44a66e005",
+								"cafe1ea44a66e007"
+							]
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe1ea44a66e009",
+				{
+					"parent": "cafe1ea44a66e001",
+					"name": "ValueFloat_Five_HealthRegenRate",
+					"factory": "[assembly:/_pro/design/logic/valuefloat.template?/valuefloat_get.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/logic/valuefloat.template?/valuefloat_get.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_fValue": { "type": "float32", "value": 5 }
+					},
+					"events": {
+						"Value": {
+							"SetValue": [
+								"cafe1ea44a66e003",
+								"cafe1ea44a66e007"
+							]
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe1ea44a66e00a",
+				{
+					"parent": "cafe1ea44a66e001",
+					"name": "ValueFloat_Two_HealthRegenRate",
+					"factory": "[assembly:/_pro/design/logic/valuefloat.template?/valuefloat_get.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/logic/valuefloat.template?/valuefloat_get.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_fValue": { "type": "float32", "value": 2 }
+					},
+					"events": {
+						"Value": { "SetValue": ["cafe1ea44a66e005"] }
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe1ea44a66e00b",
+				{
+					"parent": "cafe1ea44a66e001",
+					"name": "EventChannelReceiver_Drunk47HealthRegenDisable",
+					"factory": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchannelreceiver_void.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchannelreceiver_void.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_rChannelToken": {
+							"type": "SEntityTemplateReference",
+							"value": "cafe1ea44a66e00c",
+							"postInit": true
+						}
+					},
+					"events": {
+						"EventReceived": { "Get": ["cafe1ea44a66e008"] }
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe1ea44a66e00c",
+				{
+					"parent": "cafe1ea44a66e00b",
+					"name": "TokenID_Drunk47_HealthRegenDisable",
+					"factory": "[modules:/ztokenidentity.class].pc_entitytype",
+					"blueprint": "[modules:/ztokenidentity.class].pc_entityblueprint",
+					"properties": {
+						"m_sName": {
+							"type": "ZString",
+							"value": "Drunk47_HealthRegenDisable"
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe1ea44a66e00d",
+				{
+					"parent": "cafe1ea44a66e001",
+					"name": "EventChannelReceiver_Drunk47HealthRegenEnable",
+					"factory": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchannelreceiver_void.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchannelreceiver_void.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_rChannelToken": {
+							"type": "SEntityTemplateReference",
+							"value": "cafe1ea44a66e00e",
+							"postInit": true
+						}
+					},
+					"events": {
+						"EventReceived": {
+							"Get": ["cafe1ea44a66e009", "cafe1ea44a66e00a"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe1ea44a66e00e",
+				{
+					"parent": "cafe1ea44a66e00d",
+					"name": "TokenID_Drunk47_HealthRegenEnable",
+					"factory": "[modules:/ztokenidentity.class].pc_entitytype",
+					"blueprint": "[modules:/ztokenidentity.class].pc_entityblueprint",
+					"properties": {
+						"m_sName": {
+							"type": "ZString",
+							"value": "Drunk47_HealthRegenEnable"
+						}
+					}
+				}
+			]
+		}
+	],
+	"patchVersion": 6
+}
