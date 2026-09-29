@@ -7,7 +7,7 @@
 [ ] Fix hand attacher offset during drinking animation
 [ ] Drinking restores health
 [x] Fix prompts showing when busy
-[ ] Electric trap on puddles
+[x] Electric trap on puddles
 [x] Fix invisible piss
 [x] Fix beer prompt showing when not equipped
 [x] Dynamically sized piss particles - bigger stream of piss when more drunk

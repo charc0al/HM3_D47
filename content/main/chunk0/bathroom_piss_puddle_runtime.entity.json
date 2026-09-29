@@ -243,14 +243,8 @@
 			},
 			"events": {
 				"WaterSpillActivated": {
-					"Activate": [
-						"45a838c4454c7a88"
-					],
-					"EnableSlipping": [
-						"6d7c0746337380e2"
-					],
-					"Rig": [
-						"cafe7a11c0ffee22"
+					"Signal": [
+						"d47b000000000008"
 					]
 				}
 			},
@@ -524,6 +518,19 @@
 				"m_sName": {
 					"type": "ZString",
 					"value": "Drunk47_BathroomStop"
+				}
+			}
+		},
+		"d47b000000000008": {
+			"parent": "975617a94a7708b2",
+			"name": "VoidSignalOnce_Drunk47BathroomPuddleInitialActivation",
+			"factory": "[assembly:/_pro/design/logic/signalpipes.template?/voidsignalonce_simple.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/logic/signalpipes.template?/voidsignalonce_simple.entitytemplate].pc_entityblueprint",
+			"events": {
+				"Out": {
+					"Activate": ["45a838c4454c7a88"],
+					"EnableSlipping": ["6d7c0746337380e2"],
+					"Rig": ["cafe7a11c0ffee22"]
 				}
 			}
 		}
