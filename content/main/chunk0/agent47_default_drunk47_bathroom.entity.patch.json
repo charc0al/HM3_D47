@@ -249,7 +249,6 @@
           },
           "events": {
             "EventReceived": {
-              "Attach": ["cafe1ea44a66d714"],
               "SetFalse": ["cafe1ea44a66d71b"],
               "In": ["cafe1ea44a66d718", "cafe1ea44a66d824"],
               "SetTrue": ["cafe1ea44a66d716"]
@@ -294,7 +293,7 @@
             "EventReceived": {
               "Deactivate": ["cafe1ea44a66d717", "cafe1ea44a66d723", "cafe1ea44a66d812"],
               "SetFalse": ["cafe1ea44a66d716", "cafe1ea44a66d819"],
-              "Stop": ["cafe1ea44a66d804", "cafe1ea44a66d817", "cafe1ea44a66d818", "cafe1ea44a66d829", "cafe1ea44a66d831"],
+              "Stop": ["cafe1ea44a66d804", "cafe1ea44a66d817", "cafe1ea44a66d818", "cafe1ea44a66d824", "cafe1ea44a66d829", "cafe1ea44a66d831"],
               "TransmitEvent": ["cafe1ea44a66d827"],
               "In": ["cafe1ea44a66d830"]
             }
@@ -375,7 +374,7 @@
           "factory": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entitytype",
           "blueprint": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entityblueprint",
           "properties": {
-            "Delay time (ms)": {"type": "int32", "value": 3000}
+            "Delay time (ms)": {"type": "int32", "value": 4000}
           },
           "events": {
             "Out": {
@@ -1409,8 +1408,8 @@
           "name": "Drunk47BathroomStreamBandDispatchDelay",
           "factory": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entitytype",
           "blueprint": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entityblueprint",
-          "properties": {"Delay time (ms)": {"type": "int32", "value": 2000}},
-          "events": {"Out": {"Get": ["cafe1ea44a66d750", "cafe1ea44a66d751", "cafe1ea44a66d752", "cafe1ea44a66d753", "cafe1ea44a66d754", "cafe1ea44a66d755", "cafe1ea44a66d756", "cafe1ea44a66d757", "cafe1ea44a66d758"]}}
+          "properties": {"Delay time (ms)": {"type": "int32", "value": 3000}},
+          "events": {"Out": {"Attach": ["cafe1ea44a66d714"], "Get": ["cafe1ea44a66d750", "cafe1ea44a66d751", "cafe1ea44a66d752", "cafe1ea44a66d753", "cafe1ea44a66d754", "cafe1ea44a66d755", "cafe1ea44a66d756", "cafe1ea44a66d757", "cafe1ea44a66d758"]}}
         }
       ]
     },
@@ -1428,10 +1427,9 @@
           "events": {
             "EventReceived": {
               "Add": ["cafe1ea44a66d742"],
-              "Attach": ["cafe1ea44a66d714"],
               "SetFalse": ["cafe1ea44a66d71b"],
               "SetTrue": ["cafe1ea44a66d716", "cafe1ea44a66d819"],
-              "In": ["cafe1ea44a66d718", "cafe1ea44a66d817", "cafe1ea44a66d818", "cafe1ea44a66d829", "cafe1ea44a66d831"],
+              "In": ["cafe1ea44a66d718", "cafe1ea44a66d817", "cafe1ea44a66d818", "cafe1ea44a66d829"],
               "TransmitEvent": ["cafe1ea44a66d825"]
             }
           }
@@ -1704,11 +1702,12 @@
           "properties": {
             "Delay time (ms)": {
               "type": "int32",
-              "value": 2000
+              "value": 3000
             }
           },
           "events": {
             "Out": {
+              "Attach": ["cafe1ea44a66d714"],
               "ActivateBlackout": ["cafe1ea44a66d812"]
             }
           }
