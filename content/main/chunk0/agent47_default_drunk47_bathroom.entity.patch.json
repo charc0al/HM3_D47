@@ -4344,7 +4344,7 @@
         "cafe1ea44a66d893",
         {
           "parent": "cafe1ea44a66d740",
-          "name": "Drunk47DrunkennessBelowOne_LegalToilet",
+          "name": "Drunk47DrunkennessIsZero_LegalToilet",
           "factory": "[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entitytype",
           "blueprint": "[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entityblueprint",
           "properties": {
@@ -4354,11 +4354,11 @@
             },
             "m_rSecondValueInt": {
               "type": "SEntityTemplateReference",
-              "value": "cafe1ea44a66d760"
+              "value": "cafe1ea44a66d807"
             },
             "m_eEvaluation": {
               "type": "ZValueInt_Comparator_Poll.EEvaluationType",
-              "value": "LOWER"
+              "value": "EQUAL"
             }
           },
           "events": {
