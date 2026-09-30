@@ -4363,8 +4363,8 @@
           },
           "events": {
             "GetTrue": {
-              "Poll": [
-                "cafe1ea44a66d894"
+              "TransmitEvent": [
+                "cafe1ea44a66d895"
               ]
             }
           }
@@ -4387,9 +4387,6 @@
           },
           "events": {
             "PollTrue": {
-              "TransmitEvent": [
-                "cafe1ea44a66d895"
-              ],
               "In": [
                 "cafe1ea44a66d886"
               ]
