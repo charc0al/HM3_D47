@@ -196,6 +196,15 @@
               "ExitSafeZoneNoAnim": [
                 "cafe1ea44a66d704"
               ],
+              "SetFalse": [
+                "cafe1ea44a66d716"
+              ],
+              "Subtract": [
+                "cafe1ea44a66d854"
+              ],
+              "Stop": [
+                "cafe1ea44a66d804"
+              ],
               "Start": [
                 "cafe1ea44a66d801"
               ]
@@ -2378,19 +2387,19 @@
         "cafe1ea44a66d804",
         {
           "parent": "cafe1ea44a66d710",
-          "name": "Drunk47BathroomSoberingTimer",
+          "name": "ContinuousPissSecondTimer",
           "factory": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entitytype",
           "blueprint": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entityblueprint",
           "properties": {
             "Delay time (ms)": {
               "type": "int32",
-              "value": 10000
+              "value": 1000
             }
           },
           "events": {
             "Out": {
-              "Subtract": [
-                "cafe1ea44a66d742"
+              "Poll": [
+                "cafe1ea44a66d808"
               ]
             }
           }
@@ -2424,10 +2433,162 @@
               "Poll": [
                 "cafe1ea44a66d809"
               ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d850",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "ValueInt_ContinuousPissSeconds",
+          "factory": "[assembly:/_pro/design/logic/valueint.template?/valueint_basic.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic/valueint.template?/valueint_basic.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_nValue": {
+              "type": "int32",
+              "value": 0
+            },
+            "m_bSetValueAlwaysTriggerChangedEvent": {
+              "type": "bool",
+              "value": true
+            }
+          },
+          "events": {
+            "OnValue": {
+              "Get": [
+                "cafe1ea44a66d852"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d851",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "Increment_ContinuousPissSeconds",
+          "factory": "[assembly:/_pro/design/logic/valueint.template?/valueint_operation.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic/valueint.template?/valueint_operation.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_rValue1": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d850"
+            },
+            "m_rValue2": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d743"
+            },
+            "m_rResult": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d850"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d852",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "ContinuousPissSecondsIsTen",
+          "factory": "[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_rFirstValueInt": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d850"
+            },
+            "m_rSecondValueInt": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d853"
+            },
+            "m_eEvaluation": {
+              "type": "ZValueInt_Comparator_Poll.EEvaluationType",
+              "value": "EQUAL"
+            }
+          },
+          "events": {
+            "GetTrue": {
+              "Subtract": [
+                "cafe1ea44a66d854",
+                "cafe1ea44a66d742"
+              ]
             },
             "GetFalse": {
               "Poll": [
-                "cafe1ea44a66d808"
+                "cafe1ea44a66d855"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d853",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "ValueInt_Ten_ContinuousPissSeconds",
+          "factory": "[assembly:/_pro/design/logic/valueint.template?/valueint.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic/valueint.template?/valueint.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_nValue": {
+              "type": "int32",
+              "value": 10
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d854",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "Reset_ContinuousPissSeconds",
+          "factory": "[assembly:/_pro/design/logic/valueint.template?/valueint_operation.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic/valueint.template?/valueint_operation.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_rValue1": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d850"
+            },
+            "m_rValue2": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d850"
+            },
+            "m_rResult": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d850"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d855",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "Poll_Drunk47BathroomActive_ContinueContinuousPissSeconds",
+          "factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_poll.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_poll.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_rValueEntity": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d716"
+            }
+          },
+          "events": {
+            "PollTrue": {
+              "In": [
+                "cafe1ea44a66d804"
               ]
             }
           }
@@ -2485,8 +2646,8 @@
           },
           "events": {
             "PollTrue": {
-              "In": [
-                "cafe1ea44a66d804"
+              "Add": [
+                "cafe1ea44a66d851"
               ]
             }
           }
@@ -2816,6 +2977,9 @@
           },
           "events": {
             "EventReceived": {
+              "Subtract": [
+                "cafe1ea44a66d854"
+              ],
               "In": [
                 "cafe1ea44a66d804"
               ]
