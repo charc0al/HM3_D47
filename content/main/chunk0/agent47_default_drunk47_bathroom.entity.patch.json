@@ -3088,7 +3088,7 @@
           "properties": {
             "Delay time (ms)": {
               "type": "int32",
-              "value": 2000
+              "value": 750
             }
           },
           "events": {

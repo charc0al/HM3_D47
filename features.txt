@@ -18,6 +18,7 @@
 [x] Drunkenness > 0 prevents health regen
 [.] Legally use in-level toilets
 [ ] Larger puddles the drunker you are
+[ ] Temporary TANK damage resistance during blackout
 
 ----- Maybe Happening -----
 [ ] Vomiting at level 8
