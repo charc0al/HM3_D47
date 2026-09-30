@@ -165,9 +165,9 @@
     },
     "fe75699fb3dbfdcc": {
       "parent": "89d1f4f46e0d4adb",
-      "name": "ItemHelpers_GripPose_1H_Rock",
-      "factory": "[assembly:/_pro/design/gamecore/itemhelpers_grippose.template?/itemhelpers_grippose_1h_rock.entitytemplate].pc_entitytype",
-      "blueprint": "[assembly:/_pro/design/gamecore/itemhelpers_grippose.template?/itemhelpers_grippose_1h_rock.entitytemplate].pc_entityblueprint"
+      "name": "ItemHelpers_GripPose_Bottle",
+      "factory": "[assembly:/_pro/design/gamecore/itemhelpers_grippose.template?/itemhelpers_grippose_bottle.entitytemplate].pc_entitytype",
+      "blueprint": "[assembly:/_pro/design/gamecore/itemhelpers_grippose.template?/itemhelpers_grippose_bottle.entitytemplate].pc_entityblueprint"
     },
     "86e92ca93dbbb565": {
       "parent": "89d1f4f46e0d4adb",
