@@ -197,13 +197,16 @@
                 "cafe1ea44a66d704"
               ],
               "SetFalse": [
-                "cafe1ea44a66d716"
+                "cafe1ea44a66d716",
+                "cafe1ea44a66d873"
               ],
               "Subtract": [
                 "cafe1ea44a66d854"
               ],
               "Stop": [
-                "cafe1ea44a66d804"
+                "cafe1ea44a66d804",
+                "cafe1ea44a66d872",
+                "cafe1ea44a66d875"
               ],
               "Start": [
                 "cafe1ea44a66d801"
@@ -259,7 +262,8 @@
           "events": {
             "EventReceived": {
               "SetFalse": [
-                "cafe1ea44a66d71b"
+                "cafe1ea44a66d71b",
+                "cafe1ea44a66d873"
               ],
               "Deactivate": [
                 "cafe1ea44a66d812"
@@ -273,6 +277,10 @@
               "In": [
                 "cafe1ea44a66d718",
                 "cafe1ea44a66d824"
+              ],
+              "Stop": [
+                "cafe1ea44a66d872",
+                "cafe1ea44a66d875"
               ],
               "SetTrue": [
                 "cafe1ea44a66d716"
@@ -326,7 +334,8 @@
               ],
               "SetFalse": [
                 "cafe1ea44a66d716",
-                "cafe1ea44a66d819"
+                "cafe1ea44a66d819",
+                "cafe1ea44a66d873"
               ],
               "Subtract": [
                 "cafe1ea44a66d862"
@@ -337,6 +346,8 @@
                 "cafe1ea44a66d817",
                 "cafe1ea44a66d818",
                 "cafe1ea44a66d865",
+                "cafe1ea44a66d872",
+                "cafe1ea44a66d875",
                 "cafe1ea44a66d824",
                 "cafe1ea44a66d829",
                 "cafe1ea44a66d831"
@@ -949,16 +960,11 @@
           "properties": {
             "Loop_SFX_Event": {
               "type": "ZRuntimeResourceID",
-              "value": {
-                "resource": "[assembly:/sound/wwise/exportedwwisedata/events/props_events/setpieces/traps/setpiece_trap_watercooler/play_sfx_trap_watercooler_leak.wwiseevent].pc_wwisebank",
-                "flag": "5F"
-              }
+              "value": null
             },
             "DeviceOn": {
               "type": "TArray<SEntityTemplateReference>",
-              "value": [
-                "cafe1ea44a66d716"
-              ],
+              "value": [],
               "postInit": true
             },
             "m_mTransform": {
@@ -2860,7 +2866,8 @@
           "inputCopying": {
             "In": {
               "SetFalse": [
-                "cafe1ea44a66d71b"
+                "cafe1ea44a66d71b",
+                "cafe1ea44a66d873"
               ],
               "In": [
                 "cafe1ea44a66d865"
@@ -2939,6 +2946,160 @@
             "PollTrue": {
               "Add": [
                 "cafe1ea44a66d851"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d870",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "3DAE_Drunk47BathroomCanisterPour",
+          "factory": "[assembly:/templates/sound/wwise/soundentities.template?/3daudioemitter.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/templates/sound/wwise/soundentities.template?/3daudioemitter.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_mTransform": {
+              "type": "SMatrix43",
+              "value": {
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "position": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              }
+            },
+            "m_eidParent": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d715",
+              "postInit": true
+            }
+          },
+          "subsets": {
+            "AudioEmitters": [
+              "cafe1ea44a66d710"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d871",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "play_sfx_trap_evergreen_canister_water_Drunk47",
+          "factory": "[modules:/zaudioevententity.class].pc_entitytype",
+          "blueprint": "[modules:/zaudioevententity.class].pc_entityblueprint",
+          "properties": {
+            "m_pMainEvent": {
+              "type": "ZRuntimeResourceID",
+              "value": {
+                "resource": "[assembly:/sound/wwise/exportedwwisedata/events/sfx_interactiveprops/sfx_interactiveprops_traps/play_sfx_trap_evergreen_canister_water.wwiseevent].pc_wwisebank",
+                "flag": "5F"
+              }
+            },
+            "m_pEmitter": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d870"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d872",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "Drunk47BathroomCanisterPourRepeatTimer",
+          "factory": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "Delay time (ms)": {
+              "type": "int32",
+              "value": 2000
+            }
+          },
+          "events": {
+            "Out": {
+              "Poll": [
+                "cafe1ea44a66d874"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d873",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "ValueBool_Drunk47BathroomCanisterPourActive",
+          "factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_basic.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_basic.entitytemplate].pc_entityblueprint"
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d874",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "Poll_Drunk47BathroomCanisterPourActive",
+          "factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_poll.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_poll.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_rValueEntity": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d873"
+            }
+          },
+          "events": {
+            "PollTrue": {
+              "Send": [
+                "cafe1ea44a66d871"
+              ],
+              "In": [
+                "cafe1ea44a66d872"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d875",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "Drunk47BathroomCanisterPourStartDelay",
+          "factory": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "Delay time (ms)": {
+              "type": "int32",
+              "value": 1
+            }
+          },
+          "events": {
+            "Out": {
+              "SetTrue": [
+                "cafe1ea44a66d873"
+              ],
+              "Send": [
+                "cafe1ea44a66d871"
+              ],
+              "In": [
+                "cafe1ea44a66d872"
               ]
             }
           }
@@ -3069,6 +3230,9 @@
               "MakeVisible": [
                 "cafe1ea44a66d812"
               ],
+              "In": [
+                "cafe1ea44a66d875"
+              ],
               "Get": [
                 "cafe1ea44a66d750",
                 "cafe1ea44a66d751",
@@ -3109,7 +3273,8 @@
                 "cafe1ea44a66d812"
               ],
               "SetFalse": [
-                "cafe1ea44a66d71b"
+                "cafe1ea44a66d71b",
+                "cafe1ea44a66d873"
               ],
               "SetTrue": [
                 "cafe1ea44a66d716",
@@ -3119,6 +3284,10 @@
                 "cafe1ea44a66d856",
                 "cafe1ea44a66d818",
                 "cafe1ea44a66d829"
+              ],
+              "Stop": [
+                "cafe1ea44a66d872",
+                "cafe1ea44a66d875"
               ],
               "TransmitEvent": [
                 "cafe1ea44a66d825"
@@ -3224,7 +3393,8 @@
           "events": {
             "PollTrue": {
               "In": [
-                "cafe1ea44a66d86d"
+                "cafe1ea44a66d86d",
+                "cafe1ea44a66d875"
               ]
             }
           }
@@ -3504,7 +3674,8 @@
                 "cafe1ea44a66d812"
               ],
               "In": [
-                "cafe1ea44a66d86d"
+                "cafe1ea44a66d86d",
+                "cafe1ea44a66d875"
               ]
             }
           }
