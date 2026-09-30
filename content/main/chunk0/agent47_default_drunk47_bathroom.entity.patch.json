@@ -264,6 +264,9 @@
               "Deactivate": [
                 "cafe1ea44a66d812"
               ],
+              "MakeInvisible": [
+                "cafe1ea44a66d812"
+              ],
               "Detach": [
                 "cafe1ea44a66d714"
               ],
@@ -316,6 +319,9 @@
               "Deactivate": [
                 "cafe1ea44a66d717",
                 "cafe1ea44a66d723",
+                "cafe1ea44a66d812"
+              ],
+              "MakeInvisible": [
                 "cafe1ea44a66d812"
               ],
               "SetFalse": [
@@ -393,6 +399,9 @@
             "OnFalse": {
               "Deactivate": [
                 "cafe1ea44a66d717",
+                "cafe1ea44a66d812"
+              ],
+              "MakeInvisible": [
                 "cafe1ea44a66d812"
               ]
             }
@@ -2984,6 +2993,9 @@
               "Attach": [
                 "cafe1ea44a66d714"
               ],
+              "MakeVisible": [
+                "cafe1ea44a66d812"
+              ],
               "Get": [
                 "cafe1ea44a66d750",
                 "cafe1ea44a66d751",
@@ -3019,6 +3031,9 @@
             "EventReceived": {
               "Add": [
                 "cafe1ea44a66d742"
+              ],
+              "MakeInvisible": [
+                "cafe1ea44a66d812"
               ],
               "SetFalse": [
                 "cafe1ea44a66d71b"
@@ -3411,6 +3426,9 @@
             "Out": {
               "Attach": [
                 "cafe1ea44a66d714"
+              ],
+              "MakeVisible": [
+                "cafe1ea44a66d812"
               ],
               "ActivateBlackout": [
                 "cafe1ea44a66d812"
