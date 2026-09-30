@@ -4000,6 +4000,15 @@
               "SetFalse": [
                 "cafe1ea44a66d884"
               ],
+              "Deactivate": [
+                "cafe1ea44a66d812"
+              ],
+              "MakeInvisible": [
+                "cafe1ea44a66d812"
+              ],
+              "Detach": [
+                "cafe1ea44a66d714"
+              ],
               "Subtract": [
                 "cafe1ea44a66d892"
               ],
@@ -4008,7 +4017,9 @@
               ],
               "Stop": [
                 "cafe1ea44a66d885",
-                "cafe1ea44a66d886"
+                "cafe1ea44a66d886",
+                "cafe1ea44a66d871",
+                "cafe1ea44a66d875"
               ]
             }
           }
@@ -4062,8 +4073,8 @@
                 "cafe1ea44a66d714"
               ],
               "Stop": [
-                "cafe1ea44a66d885",
-                "cafe1ea44a66d886"
+                "cafe1ea44a66d871",
+                "cafe1ea44a66d875"
               ],
               "In": [
                 "cafe1ea44a66d8ab"
@@ -4136,7 +4147,8 @@
                 "cafe1ea44a66d8a9"
               ],
               "In": [
-                "cafe1ea44a66d886"
+                "cafe1ea44a66d886",
+                "cafe1ea44a66d875"
               ]
             }
           }
@@ -4271,6 +4283,9 @@
               "Subtract": [
                 "cafe1ea44a66d892",
                 "cafe1ea44a66d742"
+              ],
+              "In": [
+                "cafe1ea44a66d8ac"
               ]
             },
             "GetFalse": {
@@ -4329,7 +4344,7 @@
         "cafe1ea44a66d893",
         {
           "parent": "cafe1ea44a66d740",
-          "name": "Drunk47DrunkennessIsZero_LegalToilet",
+          "name": "Drunk47DrunkennessBelowOne_LegalToilet",
           "factory": "[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entitytype",
           "blueprint": "[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entityblueprint",
           "properties": {
@@ -4339,11 +4354,11 @@
             },
             "m_rSecondValueInt": {
               "type": "SEntityTemplateReference",
-              "value": "cafe1ea44a66d807"
+              "value": "cafe1ea44a66d760"
             },
             "m_eEvaluation": {
               "type": "ZValueInt_Comparator_Poll.EEvaluationType",
-              "value": "EQUAL"
+              "value": "LOWER"
             }
           },
           "events": {
@@ -4879,6 +4894,30 @@
             "Out": {
               "Subtract": [
                 "cafe1ea44a66d892"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d8ac",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "Drunk47LegalToiletSobrietyCheckDelay",
+          "factory": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "Delay time (ms)": {
+              "type": "int32",
+              "value": 1
+            }
+          },
+          "events": {
+            "Out": {
+              "Get": [
+                "cafe1ea44a66d893"
               ]
             }
           }
