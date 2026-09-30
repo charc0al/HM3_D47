@@ -96,6 +96,30 @@
               "type": "ZString",
               "value": "Use toilet"
             },
+            "m_sPromptTextPassive": {
+              "type": "ZString",
+              "value": ""
+            },
+            "m_RuntimeNetworkResourceID": {
+              "type": "ZRuntimeResourceID",
+              "value": null
+            },
+            "m_bUseAnimlayer": {
+              "type": "bool",
+              "value": false
+            },
+            "m_nAnimlayerTime": {
+              "type": "float32",
+              "value": 1.12
+            },
+            "m_bInterruptibleAction": {
+              "type": "bool",
+              "value": false
+            },
+            "m_bIsIllegal": {
+              "type": "bool",
+              "value": false
+            },
             "m_ConditionList_Visible": {
               "type": "TArray<SEntityTemplateReference>",
               "value": [
@@ -825,6 +849,30 @@
             "m_sPromptText": {
               "type": "ZString",
               "value": "Use toilet"
+            },
+            "m_sPromptTextPassive": {
+              "type": "ZString",
+              "value": ""
+            },
+            "m_RuntimeNetworkResourceID": {
+              "type": "ZRuntimeResourceID",
+              "value": null
+            },
+            "m_bUseAnimlayer": {
+              "type": "bool",
+              "value": false
+            },
+            "m_nAnimlayerTime": {
+              "type": "float32",
+              "value": 1.12
+            },
+            "m_bInterruptibleAction": {
+              "type": "bool",
+              "value": false
+            },
+            "m_bIsIllegal": {
+              "type": "bool",
+              "value": false
             },
             "m_ConditionList_Visible": {
               "type": "TArray<SEntityTemplateReference>",
