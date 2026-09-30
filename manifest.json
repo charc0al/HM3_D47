@@ -1,29 +1,66 @@
 {
-	"$schema": "https://raw.githubusercontent.com/atampy25/simple-mod-framework/main/Mod%20Manager/src/lib/manifest-schema.json",
-	"version": "0.1.0",
-	"id": "Charc0al.Drunk47",
-	"name": "Drunk 47",
-	"description": "Allow 47 to loosen up a bit, relieve himself, and get absolutely hammered.",
-	"authors": ["Charc0al"],
-	"frameworkVersion": "2.25.1",
-	"contentFolders": ["content/main"],
-	"dependencies": [
-		"007D7BD3E9CEE479",
-		{
-			"runtimeID": "009AA702F51DEA4F",
-			"toChunk": 0,
-			"comment": "dr43154_walkwaygem_47_002 (sorry!)"
-		}
-	],
-	"localisation": {
-	  "english": { "ui_prop_melee_beer_bottle_name": "Beer Bottle", "ui_prop_melee_beer_bottle_desc": "A sturdy beer bottle. Break it to create a slippery puddle." },
-	  "french": { "ui_prop_melee_beer_bottle_name": "Bouteille de bière", "ui_prop_melee_beer_bottle_desc": "Une solide bouteille de bière. Brisez-la pour créer une flaque glissante." },
-	  "italian": { "ui_prop_melee_beer_bottle_name": "Bottiglia di birra", "ui_prop_melee_beer_bottle_desc": "Una robusta bottiglia di birra. Rompila per creare una pozza scivolosa." },
-	  "german": { "ui_prop_melee_beer_bottle_name": "Bierflasche", "ui_prop_melee_beer_bottle_desc": "Eine robuste Bierflasche. Zerbrich sie, um eine rutschige Pfütze zu erzeugen." },
-	  "spanish": { "ui_prop_melee_beer_bottle_name": "Botella de cerveza", "ui_prop_melee_beer_bottle_desc": "Una resistente botella de cerveza. Rómpela para crear un charco resbaladizo." },
-	  "russian": { "ui_prop_melee_beer_bottle_name": "Бутылка пива", "ui_prop_melee_beer_bottle_desc": "Прочная бутылка пива. Разбейте её, чтобы создать скользкую лужу." },
-	  "chineseSimplified": { "ui_prop_melee_beer_bottle_name": "啤酒瓶", "ui_prop_melee_beer_bottle_desc": "一个结实的啤酒瓶。打碎它会形成一滩湿滑的液体。" },
-	  "chineseTraditional": { "ui_prop_melee_beer_bottle_name": "啤酒瓶", "ui_prop_melee_beer_bottle_desc": "一個結實的啤酒瓶。打碎它會形成一灘濕滑的液體。" },
-	  "japanese": { "ui_prop_melee_beer_bottle_name": "ビール瓶", "ui_prop_melee_beer_bottle_desc": "丈夫なビール瓶。割ると滑りやすい水たまりができる。" }
+  "$schema": "https://raw.githubusercontent.com/atampy25/simple-mod-framework/main/Mod%20Manager/src/lib/manifest-schema.json",
+  "version": "0.1.0",
+  "id": "Charc0al.Drunk47",
+  "name": "Drunk 47",
+  "description": "Allow 47 to loosen up a bit, relieve himself, and get absolutely hammered.",
+  "authors": [
+    "Charc0al"
+  ],
+  "frameworkVersion": "2.25.1",
+  "contentFolders": [
+    "content/main"
+  ],
+  "dependencies": [
+    "007D7BD3E9CEE479",
+    {
+      "runtimeID": "009AA702F51DEA4F",
+      "toChunk": 0,
+      "comment": "dr43154_walkwaygem_47_002 (sorry!)"
+    },
+    {
+      "runtimeID": "00A56284F6897CE8",
+      "portFromChunk1": true,
+      "toChunk": 0,
+      "comment": "Pipe-valve water leak loop for Drunk47 bathroom audio"
     }
+  ],
+  "localisation": {
+    "english": {
+      "ui_prop_melee_beer_bottle_name": "Beer Bottle",
+      "ui_prop_melee_beer_bottle_desc": "A sturdy beer bottle. Break it to create a slippery puddle."
+    },
+    "french": {
+      "ui_prop_melee_beer_bottle_name": "Bouteille de bière",
+      "ui_prop_melee_beer_bottle_desc": "Une solide bouteille de bière. Brisez-la pour créer une flaque glissante."
+    },
+    "italian": {
+      "ui_prop_melee_beer_bottle_name": "Bottiglia di birra",
+      "ui_prop_melee_beer_bottle_desc": "Una robusta bottiglia di birra. Rompila per creare una pozza scivolosa."
+    },
+    "german": {
+      "ui_prop_melee_beer_bottle_name": "Bierflasche",
+      "ui_prop_melee_beer_bottle_desc": "Eine robuste Bierflasche. Zerbrich sie, um eine rutschige Pfütze zu erzeugen."
+    },
+    "spanish": {
+      "ui_prop_melee_beer_bottle_name": "Botella de cerveza",
+      "ui_prop_melee_beer_bottle_desc": "Una resistente botella de cerveza. Rómpela para crear un charco resbaladizo."
+    },
+    "russian": {
+      "ui_prop_melee_beer_bottle_name": "Бутылка пива",
+      "ui_prop_melee_beer_bottle_desc": "Прочная бутылка пива. Разбейте её, чтобы создать скользкую лужу."
+    },
+    "chineseSimplified": {
+      "ui_prop_melee_beer_bottle_name": "啤酒瓶",
+      "ui_prop_melee_beer_bottle_desc": "一个结实的啤酒瓶。打碎它会形成一滩湿滑的液体。"
+    },
+    "chineseTraditional": {
+      "ui_prop_melee_beer_bottle_name": "啤酒瓶",
+      "ui_prop_melee_beer_bottle_desc": "一個結實的啤酒瓶。打碎它會形成一灘濕滑的液體。"
+    },
+    "japanese": {
+      "ui_prop_melee_beer_bottle_name": "ビール瓶",
+      "ui_prop_melee_beer_bottle_desc": "丈夫なビール瓶。割ると滑りやすい水たまりができる。"
+    }
+  }
 }
