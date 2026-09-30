@@ -1170,7 +1170,18 @@
                 "cafe1ea44a66d757",
                 "cafe1ea44a66d758",
                 "cafe1ea44a66d805",
-                "cafe1ea44a66d842"
+                "cafe1ea44a66d842",
+                "cafe1ea44a66d893",
+                "cafe1ea44a66d8a0",
+                "cafe1ea44a66d8a1",
+                "cafe1ea44a66d8a2",
+                "cafe1ea44a66d8a3",
+                "cafe1ea44a66d8a4",
+                "cafe1ea44a66d8a5",
+                "cafe1ea44a66d8a6",
+                "cafe1ea44a66d8a7",
+                "cafe1ea44a66d8a8",
+                "cafe1ea44a66d8a9"
               ]
             }
           }
@@ -3964,6 +3975,911 @@
             "m_sName": {
               "type": "ZString",
               "value": "Drunk47_HealthRegenDisable"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d880",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "EventChannelReceiver_Drunk47LegalToiletStart",
+          "factory": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchannelreceiver_void.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchannelreceiver_void.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_rChannelToken": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d881",
+              "postInit": true
+            }
+          },
+          "events": {
+            "EventReceived": {
+              "SetFalse": [
+                "cafe1ea44a66d884"
+              ],
+              "Subtract": [
+                "cafe1ea44a66d892"
+              ],
+              "In": [
+                "cafe1ea44a66d8aa"
+              ],
+              "Stop": [
+                "cafe1ea44a66d885",
+                "cafe1ea44a66d886"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d881",
+        {
+          "parent": "cafe1ea44a66d880",
+          "name": "TokenID_Drunk47_LegalToiletStart",
+          "factory": "[modules:/ztokenidentity.class].pc_entitytype",
+          "blueprint": "[modules:/ztokenidentity.class].pc_entityblueprint",
+          "properties": {
+            "m_sName": {
+              "type": "ZString",
+              "value": "Drunk47_LegalToiletStart"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d882",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "EventChannelReceiver_Drunk47LegalToiletStop",
+          "factory": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchannelreceiver_void.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchannelreceiver_void.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_rChannelToken": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d883",
+              "postInit": true
+            }
+          },
+          "events": {
+            "EventReceived": {
+              "SetFalse": [
+                "cafe1ea44a66d884"
+              ],
+              "Deactivate": [
+                "cafe1ea44a66d812"
+              ],
+              "MakeInvisible": [
+                "cafe1ea44a66d812"
+              ],
+              "Detach": [
+                "cafe1ea44a66d714"
+              ],
+              "Stop": [
+                "cafe1ea44a66d885",
+                "cafe1ea44a66d886"
+              ],
+              "In": [
+                "cafe1ea44a66d8ab"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d883",
+        {
+          "parent": "cafe1ea44a66d882",
+          "name": "TokenID_Drunk47_LegalToiletStop",
+          "factory": "[modules:/ztokenidentity.class].pc_entitytype",
+          "blueprint": "[modules:/ztokenidentity.class].pc_entityblueprint",
+          "properties": {
+            "m_sName": {
+              "type": "ZString",
+              "value": "Drunk47_LegalToiletStop"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d884",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "ValueBool_Drunk47LegalToiletActive",
+          "factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_basic.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_basic.entitytemplate].pc_entityblueprint"
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d885",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "Drunk47LegalToiletStreamStartDelay",
+          "factory": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "Delay time (ms)": {
+              "type": "int32",
+              "value": 3000
+            }
+          },
+          "events": {
+            "Out": {
+              "Attach": [
+                "cafe1ea44a66d714"
+              ],
+              "MakeVisible": [
+                "cafe1ea44a66d812"
+              ],
+              "Get": [
+                "cafe1ea44a66d8a0",
+                "cafe1ea44a66d8a1",
+                "cafe1ea44a66d8a2",
+                "cafe1ea44a66d8a3",
+                "cafe1ea44a66d8a4",
+                "cafe1ea44a66d8a5",
+                "cafe1ea44a66d8a6",
+                "cafe1ea44a66d8a7",
+                "cafe1ea44a66d8a8",
+                "cafe1ea44a66d8a9"
+              ],
+              "In": [
+                "cafe1ea44a66d886"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d886",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "LegalPissSecondTimer",
+          "factory": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "Delay time (ms)": {
+              "type": "int32",
+              "value": 1000
+            }
+          },
+          "events": {
+            "Out": {
+              "Poll": [
+                "cafe1ea44a66d887"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d887",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "Poll_Drunk47LegalToiletActive_IncrementLegalPissSeconds",
+          "factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_poll.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_poll.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_rValueEntity": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d884"
+            }
+          },
+          "events": {
+            "PollTrue": {
+              "Add": [
+                "cafe1ea44a66d889"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d888",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "ValueInt_LegalPissSeconds",
+          "factory": "[assembly:/_pro/design/logic/valueint.template?/valueint_basic.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic/valueint.template?/valueint_basic.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_nValue": {
+              "type": "int32",
+              "value": 0
+            },
+            "m_bSetValueAlwaysTriggerChangedEvent": {
+              "type": "bool",
+              "value": true
+            }
+          },
+          "events": {
+            "OnValue": {
+              "Get": [
+                "cafe1ea44a66d890"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d889",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "Increment_LegalPissSeconds",
+          "factory": "[assembly:/_pro/design/logic/valueint.template?/valueint_operation.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic/valueint.template?/valueint_operation.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_rValue1": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d888"
+            },
+            "m_rValue2": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d743"
+            },
+            "m_rResult": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d888"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d890",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "LegalPissSecondsIsFive",
+          "factory": "[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_rFirstValueInt": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d888"
+            },
+            "m_rSecondValueInt": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d891"
+            },
+            "m_eEvaluation": {
+              "type": "ZValueInt_Comparator_Poll.EEvaluationType",
+              "value": "EQUAL"
+            }
+          },
+          "events": {
+            "GetTrue": {
+              "Subtract": [
+                "cafe1ea44a66d892",
+                "cafe1ea44a66d742"
+              ]
+            },
+            "GetFalse": {
+              "Poll": [
+                "cafe1ea44a66d894"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d891",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "ValueInt_Five_LegalPissSeconds",
+          "factory": "[assembly:/_pro/design/logic/valueint.template?/valueint.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic/valueint.template?/valueint.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_nValue": {
+              "type": "int32",
+              "value": 5
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d892",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "Reset_LegalPissSeconds",
+          "factory": "[assembly:/_pro/design/logic/valueint.template?/valueint_operation.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic/valueint.template?/valueint_operation.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_rValue1": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d888"
+            },
+            "m_rValue2": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d888"
+            },
+            "m_rResult": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d888"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d893",
+        {
+          "parent": "cafe1ea44a66d740",
+          "name": "Drunk47DrunkennessIsZero_LegalToilet",
+          "factory": "[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_rFirstValueInt": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d741"
+            },
+            "m_rSecondValueInt": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d807"
+            },
+            "m_eEvaluation": {
+              "type": "ZValueInt_Comparator_Poll.EEvaluationType",
+              "value": "EQUAL"
+            }
+          },
+          "events": {
+            "GetTrue": {
+              "Poll": [
+                "cafe1ea44a66d894"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d894",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "Poll_Drunk47LegalToiletActive",
+          "factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_poll.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_poll.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_rValueEntity": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d884"
+            }
+          },
+          "events": {
+            "PollTrue": {
+              "TransmitEvent": [
+                "cafe1ea44a66d895"
+              ],
+              "In": [
+                "cafe1ea44a66d886"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d895",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "EventChannelTransmitter_Drunk47LegalToiletAutoExit",
+          "factory": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchanneltransmitter_void.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchanneltransmitter_void.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_rChannelToken": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d896",
+              "postInit": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d896",
+        {
+          "parent": "cafe1ea44a66d895",
+          "name": "TokenID_Drunk47_LegalToiletAutoExit",
+          "factory": "[modules:/ztokenidentity.class].pc_entitytype",
+          "blueprint": "[modules:/ztokenidentity.class].pc_entityblueprint",
+          "properties": {
+            "m_sName": {
+              "type": "ZString",
+              "value": "Drunk47_LegalToiletAutoExit"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d897",
+        {
+          "parent": "cafe1ea44a66d740",
+          "name": "Poll_Drunk47LegalToiletActive_SelectSmallStream",
+          "factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_poll.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_poll.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_rValueEntity": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d884"
+            }
+          },
+          "events": {
+            "PollTrue": {
+              "ActivateSmall": [
+                "cafe1ea44a66d812"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d898",
+        {
+          "parent": "cafe1ea44a66d740",
+          "name": "Poll_Drunk47LegalToiletActive_SelectMediumStream",
+          "factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_poll.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_poll.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_rValueEntity": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d884"
+            }
+          },
+          "events": {
+            "PollTrue": {
+              "ActivateMedium": [
+                "cafe1ea44a66d812"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d899",
+        {
+          "parent": "cafe1ea44a66d740",
+          "name": "Poll_Drunk47LegalToiletActive_SelectLargeStream",
+          "factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_poll.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_poll.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_rValueEntity": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d884"
+            }
+          },
+          "events": {
+            "PollTrue": {
+              "ActivateLarge": [
+                "cafe1ea44a66d812"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d89a",
+        {
+          "parent": "cafe1ea44a66d740",
+          "name": "Poll_Drunk47LegalToiletActive_SelectBlackoutStream",
+          "factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_poll.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_poll.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_rValueEntity": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d884"
+            }
+          },
+          "events": {
+            "PollTrue": {
+              "ActivateBlackout": [
+                "cafe1ea44a66d812"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d8a0",
+        {
+          "parent": "cafe1ea44a66d740",
+          "name": "DrunkennessIs1_LegalToilet",
+          "factory": "[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_rFirstValueInt": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d741"
+            },
+            "m_rSecondValueInt": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d760"
+            },
+            "m_eEvaluation": {
+              "type": "ZValueInt_Comparator_Poll.EEvaluationType",
+              "value": "EQUAL"
+            }
+          },
+          "events": {
+            "GetTrue": {
+              "Poll": [
+                "cafe1ea44a66d897"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d8a1",
+        {
+          "parent": "cafe1ea44a66d740",
+          "name": "DrunkennessIs2_LegalToilet",
+          "factory": "[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_rFirstValueInt": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d741"
+            },
+            "m_rSecondValueInt": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d761"
+            },
+            "m_eEvaluation": {
+              "type": "ZValueInt_Comparator_Poll.EEvaluationType",
+              "value": "EQUAL"
+            }
+          },
+          "events": {
+            "GetTrue": {
+              "Poll": [
+                "cafe1ea44a66d897"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d8a2",
+        {
+          "parent": "cafe1ea44a66d740",
+          "name": "DrunkennessIs3_LegalToilet",
+          "factory": "[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_rFirstValueInt": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d741"
+            },
+            "m_rSecondValueInt": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d762"
+            },
+            "m_eEvaluation": {
+              "type": "ZValueInt_Comparator_Poll.EEvaluationType",
+              "value": "EQUAL"
+            }
+          },
+          "events": {
+            "GetTrue": {
+              "Poll": [
+                "cafe1ea44a66d897"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d8a3",
+        {
+          "parent": "cafe1ea44a66d740",
+          "name": "DrunkennessIs4_LegalToilet",
+          "factory": "[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_rFirstValueInt": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d741"
+            },
+            "m_rSecondValueInt": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d763"
+            },
+            "m_eEvaluation": {
+              "type": "ZValueInt_Comparator_Poll.EEvaluationType",
+              "value": "EQUAL"
+            }
+          },
+          "events": {
+            "GetTrue": {
+              "Poll": [
+                "cafe1ea44a66d898"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d8a4",
+        {
+          "parent": "cafe1ea44a66d740",
+          "name": "DrunkennessIs5_LegalToilet",
+          "factory": "[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_rFirstValueInt": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d741"
+            },
+            "m_rSecondValueInt": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d764"
+            },
+            "m_eEvaluation": {
+              "type": "ZValueInt_Comparator_Poll.EEvaluationType",
+              "value": "EQUAL"
+            }
+          },
+          "events": {
+            "GetTrue": {
+              "Poll": [
+                "cafe1ea44a66d898"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d8a5",
+        {
+          "parent": "cafe1ea44a66d740",
+          "name": "DrunkennessIs6_LegalToilet",
+          "factory": "[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_rFirstValueInt": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d741"
+            },
+            "m_rSecondValueInt": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d765"
+            },
+            "m_eEvaluation": {
+              "type": "ZValueInt_Comparator_Poll.EEvaluationType",
+              "value": "EQUAL"
+            }
+          },
+          "events": {
+            "GetTrue": {
+              "Poll": [
+                "cafe1ea44a66d898"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d8a6",
+        {
+          "parent": "cafe1ea44a66d740",
+          "name": "DrunkennessIs7_LegalToilet",
+          "factory": "[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_rFirstValueInt": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d741"
+            },
+            "m_rSecondValueInt": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d766"
+            },
+            "m_eEvaluation": {
+              "type": "ZValueInt_Comparator_Poll.EEvaluationType",
+              "value": "EQUAL"
+            }
+          },
+          "events": {
+            "GetTrue": {
+              "Poll": [
+                "cafe1ea44a66d899"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d8a7",
+        {
+          "parent": "cafe1ea44a66d740",
+          "name": "DrunkennessIs8_LegalToilet",
+          "factory": "[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_rFirstValueInt": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d741"
+            },
+            "m_rSecondValueInt": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d767"
+            },
+            "m_eEvaluation": {
+              "type": "ZValueInt_Comparator_Poll.EEvaluationType",
+              "value": "EQUAL"
+            }
+          },
+          "events": {
+            "GetTrue": {
+              "Poll": [
+                "cafe1ea44a66d899"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d8a8",
+        {
+          "parent": "cafe1ea44a66d740",
+          "name": "DrunkennessIs9_LegalToilet",
+          "factory": "[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_rFirstValueInt": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d741"
+            },
+            "m_rSecondValueInt": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d768"
+            },
+            "m_eEvaluation": {
+              "type": "ZValueInt_Comparator_Poll.EEvaluationType",
+              "value": "EQUAL"
+            }
+          },
+          "events": {
+            "GetTrue": {
+              "Poll": [
+                "cafe1ea44a66d899"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d8a9",
+        {
+          "parent": "cafe1ea44a66d740",
+          "name": "DrunkennessIs10_LegalToilet",
+          "factory": "[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_rFirstValueInt": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d741"
+            },
+            "m_rSecondValueInt": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d834"
+            },
+            "m_eEvaluation": {
+              "type": "ZValueInt_Comparator_Poll.EEvaluationType",
+              "value": "EQUAL"
+            }
+          },
+          "events": {
+            "GetTrue": {
+              "Poll": [
+                "cafe1ea44a66d89a"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d8aa",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "Drunk47LegalToiletStartBarrier",
+          "factory": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "Delay time (ms)": {
+              "type": "int32",
+              "value": 1
+            }
+          },
+          "events": {
+            "Out": {
+              "SetTrue": [
+                "cafe1ea44a66d884"
+              ],
+              "In": [
+                "cafe1ea44a66d885"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d8ab",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "Drunk47LegalToiletStopResetBarrier",
+          "factory": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "Delay time (ms)": {
+              "type": "int32",
+              "value": 1
+            }
+          },
+          "events": {
+            "Out": {
+              "Subtract": [
+                "cafe1ea44a66d892"
+              ]
             }
           }
         }
