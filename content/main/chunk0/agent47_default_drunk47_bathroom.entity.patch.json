@@ -336,6 +336,7 @@
                 "cafe1ea44a66d856",
                 "cafe1ea44a66d817",
                 "cafe1ea44a66d818",
+                "cafe1ea44a66d865",
                 "cafe1ea44a66d824",
                 "cafe1ea44a66d829",
                 "cafe1ea44a66d831"
@@ -467,11 +468,8 @@
           },
           "events": {
             "Out": {
-              "Get": [
-                "cafe1ea44a66d71a"
-              ],
               "In": [
-                "cafe1ea44a66d719"
+                "cafe1ea44a66d86d"
               ]
             }
           }
@@ -931,6 +929,9 @@
             "Out": {
               "SpawnItem": [
                 "cafe1ea44a66d725"
+              ],
+              "Poll": [
+                "cafe1ea44a66d86f"
               ]
             }
           }
@@ -2850,6 +2851,78 @@
     },
     {
       "AddEntity": [
+        "cafe1ea44a66d86d",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "BeginDrunk47BathroomGroundQuery",
+          "factory": "[modules:/zentity.class].pc_entitytype",
+          "blueprint": "[modules:/zentity.class].pc_entityblueprint",
+          "inputCopying": {
+            "In": {
+              "SetFalse": [
+                "cafe1ea44a66d71b"
+              ],
+              "In": [
+                "cafe1ea44a66d865"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d865",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "Drunk47BathroomGroundQueryStartDelay",
+          "factory": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "Delay time (ms)": {
+              "type": "int32",
+              "value": 1
+            }
+          },
+          "events": {
+            "Out": {
+              "Get": [
+                "cafe1ea44a66d71a"
+              ],
+              "In": [
+                "cafe1ea44a66d719"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d86f",
+        {
+          "parent": "cafe1ea44a66d710",
+          "name": "Poll_Drunk47BlackoutActive_RearmPuddleTimer",
+          "factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_poll.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_poll.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_rValueEntity": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d819"
+            }
+          },
+          "events": {
+            "PollTrue": {
+              "In": [
+                "cafe1ea44a66d817"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
         "cafe1ea44a66d808",
         {
           "parent": "cafe1ea44a66d710",
@@ -3044,8 +3117,6 @@
               ],
               "In": [
                 "cafe1ea44a66d856",
-                "cafe1ea44a66d718",
-                "cafe1ea44a66d817",
                 "cafe1ea44a66d818",
                 "cafe1ea44a66d829"
               ],
@@ -3153,8 +3224,7 @@
           "events": {
             "PollTrue": {
               "In": [
-                "cafe1ea44a66d718",
-                "cafe1ea44a66d817"
+                "cafe1ea44a66d86d"
               ]
             }
           }
@@ -3432,6 +3502,9 @@
               ],
               "ActivateBlackout": [
                 "cafe1ea44a66d812"
+              ],
+              "In": [
+                "cafe1ea44a66d86d"
               ]
             }
           }
