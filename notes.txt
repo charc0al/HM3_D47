@@ -1,22 +1,17 @@
-Drunk47 GlacierKit tuning notes
-================================
-
-These are the current live entity names and values. Timers use milliseconds.
-The primary shared bathroom-effects graph is in:
-  content/main/chunk0/agent47_default_drunk47_bathroom.entity.patch.json
+content/main/chunk0/agent47_default_drunk47_bathroom.entity.patch.json
 
 
-PELVIS URINE STREAM
+PISS STREAM
 -------------------
 
-The Agent 47 graph entity is:
+Agent 47:
   FX_E_WaterCoolerPissStream_Sanity
   ID: cafe1ea44a66d812
 
 It uses the full effect runtime:
   content/main/chunk0/fx_bathroom_watercooler_pelvis_stream.entity.json
 
-The four exclusive emitter bands are selected from drunkenness:
+Piss emitters:
 
   ParticleEmitterBox
   ID: 619f8fed155dab52
@@ -38,14 +33,14 @@ The four exclusive emitter bands are selected from drunkenness:
   Level: 10 / blackout
   Controller: FX_PB_Spray_Blood_Blackout (d47a000000000005)
 
-On every ParticleEmitterBox* entity:
+ParticleEmitterBox fields:
   m_fParticlesPerSecond     = base particle count/rate (currently 20)
   m_fParticlesPerSecondMax  = maximum particle count/rate (currently 45)
   m_fSpeedMin / m_fSpeedMax = stream speed (currently 3)
   m_fOuterConeAngle         = stream spread (currently 10)
   m_bEnabled                = normally false; gameplay switches exactly one band on.
 
-On each FX_PB_Spray_Blood* controller:
+FX_PB_Spray_Blood fields:
   m_ParticleColorRangeStart / m_ParticleColorRangeEnd = urine colour.
     Current colour: #d6b51e.
   m_fParticleSizeMin / m_fParticleSizeMax = droplet size.
@@ -63,31 +58,26 @@ On each FX_PB_Spray_Blood* controller:
     overrides it; the other controllers inherit their base effect's curve unless
     an AlphaCurve override is added to them.
 
-Do not change m_bEnabled in a saved patch unless deliberately changing the
-selection graph: the gameplay comparators activate one band at a time.
-
-
-STREAM AND SOUND START DELAYS
+Delays
 -----------------------------
 
-Voluntary bathroom action and involuntary drink-to-bathroom action share:
+Voluntary and involuntary bathroom delay:
   Drunk47BathroomStreamBandDispatchDelay
   ID: cafe1ea44a66d824
-  Current delay: 3000 ms
+  3000 ms
 
-This is the delay before the pelvis stream attaches/renders. Its completion
-also starts Drunk47BathroomAudioStartDelay:
+Piss stream and audio delays - Drunk47BathroomAudioStartDelay:
   ID: cafe1ea44a66d875
-  Current delay: 1 ms
+  1 ms
 
-The audio event started by that timer is:
+Audio:
   play_sfx_pipe_valve_leak_water_loop_Drunk47
   ID: cafe1ea44a66d871
 
-Legal toilet use has its own independent stream delay:
+Legal piss stream delay:
   Drunk47LegalToiletStreamStartDelay
   ID: cafe1ea44a66d885
-  Current delay: 3000 ms
+  3000 ms
 
 It also feeds Drunk47BathroomAudioStartDelay after its completion. Therefore,
 change d824 for voluntary/involuntary only, and d885 for legal toilets only.
@@ -119,7 +109,7 @@ It enables:
 The legal toilet's right-button exit does not use this beer prompt-delay gate.
 
 
-PUDDLES AND THE TINY SPLASH ANCHOR
+PUDDLES AND TINY SPLASH ANCHOR
 ----------------------------------
 
 The real persistent yellow/slippery puddle is spawned as:
