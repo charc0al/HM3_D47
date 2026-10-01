@@ -1,4 +1,4 @@
------- TO-DO TASKS ------
+TO-DO TASKS ------
 [x] 47 says "i need to use the bathroom" at different drunk levels
 [x] 47 says "sorry" when NPCs slip
 [x] 10 continuous seconds in bathroom state reduces drunkenness by 1
@@ -18,9 +18,37 @@
 [x] Drunkenness > 0 prevents health regen
 [x] Legally use in-level toilets
 [ ] Larger puddles the drunker you are
-[ ] Drunkenness increases damage resistance
+[X] Drunkenness increases damage resistance
 [ ] DOF drunk filter as well
 [ ] Disable drink prompt > level 5 when in blackout
+[ ] Active piss puddle makes sound that attracts NPCs from close distance
+[ ] More voice lines - search for _47_ on https://mediabrowser.hitmaps.com/audio
+    - How about this? - dr21663_47wrongoutfitapproachready_47_001
+    - In the right hands, anything can be a deadly weapon
+	- Is this all right? - dr21663_47wrongoutfitapproachready_47_002
+	- Ah, there you are. - dr21613_47weaponsdemofabareturns_47_002
+	- Done. - dr25251_barber_47doneshavingrandom_47_005
+	- Don't worry, you should live a little. - dr11163_47relax_47_001
+	- Break time. - dr42266_opjuice47diss_47_004
+	- I’ve got this. - dr42266_opjuice47diss_47_005
+	- I'm tapping in - dr42266_opjuice47diss_47_002
+	- Here we are - dr12297_47_request_target_enterfirst_47_ws_004
+	- I love it - dr7242_47photolook_47_003
+	- Just keep walking - dr29325_47constantescort1_47_004
+	- I can't wait - dr33138_jobinterviewaccountkeycard_47_002
+	- wasn't planning on it - dr33115_itproblem47timnod_47_004
+	- practical - dr33143_goldboxprivacy_47_002
+	- OK - dr33130_jobinterviewcard3_47_001
+	- alright - dr33123_jobinterviewhrgreet_47_004
+	- all the comforts of home - dr27043_housesalecassidyhaggling_47_004
+	- consider it done - dr27068_intelopp_andersonexplains_47_006
+	- I've seen worse - dr27415_killerchat47_47_002
+	- what was I supposed to do again - dr27186_mole47guardaskinstructions_47_001
+	- I don't care much for politics - dr27152_kelly47blakepitch_47_004
+	- just doing my job - dr29865_47wincongrats_47_002
+	- I know. May i? - dr29072_oppnecklace_47putonnecklace_47_002
+	- I'm not from around here - dr27118_blaketourmeets47_47_002
+	- I'm done - dr27188_mole47jobdone_47_001
 
 ----- Maybe Happening -----
 [ ] Vomiting at level 8
