@@ -20,6 +20,7 @@
 [ ] Larger puddles the drunker you are
 [ ] Drunkenness increases damage resistance
 [ ] DOF drunk filter as well
+[ ] Disable drink prompt > level 5 when in blackout
 
 ----- Maybe Happening -----
 [ ] Vomiting at level 8
