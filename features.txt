@@ -27,7 +27,7 @@ TO-DO TASKS ------
     - In the right hands, anything can be a deadly weapon
 	- Is this all right? - dr21663_47wrongoutfitapproachready_47_002
 	- Ah, there you are. - dr21613_47weaponsdemofabareturns_47_002
-	- Done. - dr25251_barber_47doneshavingrandom_47_005
+	- Done. - dr25251_barber_47doneshavingrandom_47_005, dr46077_47foremannowait_47_002
 	- Don't worry, you should live a little. - dr11163_47relax_47_001
 	- Break time. - dr42266_opjuice47diss_47_004
 	- I’ve got this. - dr42266_opjuice47diss_47_005
@@ -36,8 +36,9 @@ TO-DO TASKS ------
 	- I love it - dr7242_47photolook_47_003
 	- Just keep walking - dr29325_47constantescort1_47_004
 	- I can't wait - dr33138_jobinterviewaccountkeycard_47_002
+	- Can't wait - dr3854_bsment47wakealt_47_013
 	- wasn't planning on it - dr33115_itproblem47timnod_47_004
-	- practical - dr33143_goldboxprivacy_47_002
+	- practical - dr33143_goldboxprivacy_47_002, dr46157_slapcrestspeech_47_002
 	- OK - dr33130_jobinterviewcard3_47_001
 	- alright - dr33123_jobinterviewhrgreet_47_004
 	- all the comforts of home - dr27043_housesalecassidyhaggling_47_004
@@ -49,6 +50,42 @@ TO-DO TASKS ------
 	- I know. May i? - dr29072_oppnecklace_47putonnecklace_47_002
 	- I'm not from around here - dr27118_blaketourmeets47_47_002
 	- I'm done - dr27188_mole47jobdone_47_001
+	- Almost done, yes. - dr27084_health47janusbanter_47_009
+	- I found this - dr25104_fandirector47thanks_47_001
+	- I found this(alt) - dr46094_stdntflowertrade_47_001
+	- Good party? - dr23023_heartofstonebassplayer2_47_002
+	- I just had surgery - dr23023_heartofstonebassplayer2_47_002
+	- Excellent. - dr23547_hallowedground_assistant47shamanacknowledge_47_002
+	- Here it is - dr23670_backpacker_47guardstatue2_47_001
+	- Groovy - dr23161_backpacker47sicariofrancoexpect_47_002, dr46099_47hippyakkameet_47_008
+	- I'll be back - dr23198_backpacker47statueno_47_001
+	- Boo - dr23698_47francoshouldertap_47_003
+	- I belive this is yours - dr23242_undyinglovehectorjoy_47_001
+	- Why is he doing this? - dr31002_garage_47_003
+	- I'm in - 31000_laptop_47_001
+	- Here we are - dr4501_morganarrivesuiteshort_47_001
+	- It's what I do - dr4152_crossdesilvabalcony_47_008
+	- Camera Rolling - dr6157_47rolling_47_001
+	- Of course - dr1237_caruso47leaveflowers_47_003
+	- I believe in forgiveness - dr7060_abiatticonfession47_47_006
+	- Yes please - dr41111_murderstaffgreets47answer_47_001
+	- Sure, why not - dr46139_farahboxreply_47_001
+	- Nothing quite like it - dr44264_vidalrieperescort_47_003
+	- So, what happens now - m05_llama_ingamemoment_briefing_v3_47_006
+	- Legends die, I'm alive - dr42348_opconffooled_47_004
+	- No one will ever know I was here - dr41455_photoalexaandphotographer47aftershoot_47_002
+	- I'll just follow my impulses - dr43263_testsubjectstagehush_47_002
+	- To old friends - dr44059_dianablack47toast_47_003
+	- Corporate liquidator - dr44261_dianarieper2_47_005
+	- We'll be done soon - dr34095_47docdiagnosewilliams2_47_004
+	- Sure, why not dr23466_deadlyart_catalinaselfie47yes_47_001
+	- FLUID MOVEMENT - 47_slappers_47_about2slap_agent47_agent47_001
+	- Alright, you asked for it - 47_slappers_47_about2slap_agent47_agent47_002
+	- The Hidden Hand - 47_slappers_47_about2slap_agent47_agent47_004
+	- I am sorry - 47_slappers_47_about2slap_agent47_agent47_010
+	- I'm known to be the best - 47_slappers_47_about2slap_agent47_agent47_009
+	- All in - dr3759_vip47move_47_021
+	- I need it - dr3740_slotagentsmith_47_010
 
 ----- Maybe Happening -----
 [ ] Vomiting at level 8
