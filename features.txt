@@ -3,7 +3,7 @@
 [x] 47 says "sorry" when NPCs slip
 [x] 10 continuous seconds in bathroom state reduces drunkenness by 1
 [x] Blackout drunk features
-[ ] Fix hand attacher offset during drinking animation
+[*] Fix hand attacher offset during drinking animation
 [x] Drinking restores health
 [x] Fix prompts showing when busy
 [x] Electric trap on puddles
@@ -25,16 +25,16 @@
 [ ] Vomiting makes nearby NPCs sick
 [ ] Stealing NPC drinks and drinking them
 [ ] Puking at end of blackout / randomly
+[ ] Slow down game speed for 2 seconds when smashing someone in the face with a beer bottle
 
 ------ Probably Not -------
 [ ] Dynamic sized piss puddles
 [ ] Different walking animations for drunk
-[ ] Slow down game speed for 2 seconds when smashing a bottle
 [n/a] manifest options for no health regen or slow health regen
 
 ---- Trailer ----
 Berry & Fulcher line
 Train rooftop doorway trap
-
+Pissing in toilet -> drowning
 
 Toilet_Old_A_00 - 00E9F09C3B030590
