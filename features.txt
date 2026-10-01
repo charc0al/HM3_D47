@@ -16,9 +16,10 @@
 [ ] Adjust beer weight to sometimes not break
 [ ] level 9 drunk dancing
 [x] Drunkenness > 0 prevents health regen
-[.] Legally use in-level toilets
+[x] Legally use in-level toilets
 [ ] Larger puddles the drunker you are
-[ ] Temporary TANK damage resistance during blackout
+[ ] Drunkenness increases damage resistance
+[ ] DOF drunk filter as well
 
 ----- Maybe Happening -----
 [ ] Vomiting at level 8
