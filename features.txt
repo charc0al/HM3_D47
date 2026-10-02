@@ -15,6 +15,7 @@ TO-DO TASKS ------
 [x] Fix offset of animation stepping left
 [ ] Adjust beer weight to sometimes not break
 [ ] level 9 drunk dancing
+[ ] NPCs can hear active piss puddle splashing and investigate
 [x] Drunkenness > 0 prevents health regen
 [x] Legally use in-level toilets
 [.] Larger puddles the drunker you are
