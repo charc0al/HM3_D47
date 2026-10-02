@@ -5,7 +5,7 @@
 	"entities": {
 		"d47b000000000100": {
 			"parent": "975617a94a7708b2",
-			"name": "FX_Piss_Puddle_Normal",
+			"name": "FX_Piss_Puddle_Small",
 			"factory": "[assembly:/_pro/effects/templates/water/fx_water_leaks.template?/fx_water_leak_3x3m_a.entitytemplate].pc_entitytype",
 			"blueprint": "[assembly:/_pro/effects/templates/water/fx_water_leaks.template?/fx_water_leak_3x3m_a.entitytemplate].pc_entityblueprint",
 			"properties": {
@@ -53,7 +53,7 @@
 		},
 		"d47b000000000101": {
 			"parent": "975617a94a7708b2",
-			"name": "FX_Piss_Puddle_Large_Level5Plus",
+			"name": "FX_Piss_Puddle_Huge",
 			"factory": "[assembly:/_pro/effects/templates/water/fx_water_leaks.template?/fx_water_leak_3x3m_a.entitytemplate].pc_entitytype",
 			"blueprint": "[assembly:/_pro/effects/templates/water/fx_water_leaks.template?/fx_water_leak_3x3m_a.entitytemplate].pc_entityblueprint",
 			"properties": {
@@ -62,7 +62,7 @@
 				"LeakSpeed": { "type": "float32", "value": 0.20000000298023224 },
 				"ConstantColorRGB_01_Value": { "type": "SColorRGB", "value": "#7a660d" },
 				"m_eidParent": { "type": "SEntityTemplateReference", "value": "d47b000000000108", "postInit": true },
-				"m_PrimitiveScale": { "type": "SVector3", "value": { "x": 1.8, "y": 1.8, "z": 1.8 } }
+				"m_PrimitiveScale": { "type": "SVector3", "value": { "x": 1.35, "y": 1.35, "z": 1.35 } }
 			}
 		},
 		"dfac4441e9f822ff": {
@@ -562,7 +562,7 @@
 		},
 		"d47b000000000104": {
 			"parent": "975617a94a7708b2",
-			"name": "DrunkennessAbove4_PuddleLarge",
+			"name": "DrunkennessAbove8_PuddleHuge",
 			"factory": "[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entitytype",
 			"blueprint": "[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entityblueprint",
 			"properties": {
@@ -572,15 +572,15 @@
 			},
 			"events": {
 				"GetTrue": { "Deactivate": ["d47b000000000100"], "Activate": ["d47b000000000108"], "EnableSlipping": ["d47b00000000010b"], "Rig": ["d47b00000000010d"] },
-				"GetFalse": { "Activate": ["d47b000000000100"], "EnableSlipping": ["6d7c0746337380e2"], "Rig": ["cafe7a11c0ffee22"] }
+				"GetFalse": { "Get": ["d47b00000000011b"] }
 			}
 		},
 		"d47b000000000105": {
 			"parent": "975617a94a7708b2",
-			"name": "ValueInt_PuddleLargeThreshold4",
+			"name": "ValueInt_PuddleHugeThreshold8",
 			"factory": "[assembly:/_pro/design/logic/valueint.template?/valueint_basic.entitytemplate].pc_entitytype",
 			"blueprint": "[assembly:/_pro/design/logic/valueint.template?/valueint_basic.entitytemplate].pc_entityblueprint",
-			"properties": { "m_nValue": { "type": "int32", "value": 4 } }
+			"properties": { "m_nValue": { "type": "int32", "value": 8 } }
 		},
 		"d47b000000000106": {
 			"parent": "975617a94a7708b2",
@@ -599,7 +599,7 @@
 		},
 		"d47b000000000108": {
 			"parent": "975617a94a7708b2",
-			"name": "PropHelper_WaterSpill_PissPuddleLargeVisual",
+			"name": "PropHelper_WaterSpill_PissPuddleHugeVisual",
 			"factory": "[assembly:/_pro/design/gamecore/prophelpers.template?/prophelper_waterspill_scalable_evergreen.entitytemplate].pc_entitytype",
 			"blueprint": "[assembly:/_pro/design/gamecore/prophelpers.template?/prophelper_waterspill_scalable_evergreen.entitytemplate].pc_entityblueprint",
 			"properties": {
@@ -612,7 +612,7 @@
 				},
 				"NPCKillVolumem_vGlobalSize": {
 					"type": "SVector3",
-					"value": { "x": 3.6, "y": 3.6, "z": 2.200000047683716 }
+					"value": { "x": 2.7, "y": 2.7, "z": 1.65 }
 				},
 				"m_sId": { "type": "ZGuid", "value": "d47fdd76-83e2-4b8c-936a-c6ba7bf22a53" },
 				"m_eRoomBehaviour": { "type": "ZSpatialEntity.ERoomBehaviour", "value": "ROOM_DYNAMIC" },
@@ -624,7 +624,7 @@
 		},
 		"d47b000000000109": {
 			"parent": "975617a94a7708b2",
-			"name": "VoidSignalOnce_PissPuddleLargeVisualActivation",
+			"name": "VoidSignalOnce_PissPuddleHugeVisualActivation",
 			"factory": "[assembly:/_pro/design/logic/signalpipes.template?/voidsignalonce_simple.entitytemplate].pc_entitytype",
 			"blueprint": "[assembly:/_pro/design/logic/signalpipes.template?/voidsignalonce_simple.entitytemplate].pc_entityblueprint",
 			"events": {
@@ -642,7 +642,7 @@
 		},
 		"d47b00000000010b": {
 			"parent": "975617a94a7708b2",
-			"name": "PropHelper_SlipperyFloors_PissPuddleLarge",
+			"name": "PropHelper_SlipperyFloors_PissPuddleHuge",
 			"factory": "[assembly:/_pro/design/gamecore/prophelpers.template?/prophelper_slipperyfloors.entitytemplate].pc_entitytype",
 			"blueprint": "[assembly:/_pro/design/gamecore/prophelpers.template?/prophelper_slipperyfloors.entitytemplate].pc_entityblueprint",
 			"properties": {
@@ -656,18 +656,18 @@
 		},
 		"d47b00000000010c": {
 			"parent": "975617a94a7708b2",
-			"name": "WaterPuddleSlipVolume_Large",
+			"name": "WaterPuddleSlipVolume_Huge",
 			"factory": "[modules:/zspherevolumeentity.class].pc_entitytype",
 			"blueprint": "[modules:/zspherevolumeentity.class].pc_entityblueprint",
 			"properties": {
 				"m_mTransform": { "type": "SMatrix43", "value": { "rotation": { "x": 0, "y": 0, "z": 0 }, "position": { "x": 0, "y": 0, "z": 0 } } },
-				"m_fRadius": { "type": "float32", "value": 1.8 },
+				"m_fRadius": { "type": "float32", "value": 1.35 },
 				"m_eidParent": { "type": "SEntityTemplateReference", "value": "d47b000000000108", "postInit": true }
 			}
 		},
 		"d47b00000000010d": {
 			"parent": "975617a94a7708b2",
-			"name": "ItemHelper_Logic_BananaSlip_Large",
+			"name": "ItemHelper_Logic_BananaSlip_Huge",
 			"factory": "[assembly:/_pro/design/gamecore/itemhelpers.template?/itemhelper_logic_bananaslip.entitytemplate].pc_entitytype",
 			"blueprint": "[assembly:/_pro/design/gamecore/itemhelpers.template?/itemhelper_logic_bananaslip.entitytemplate].pc_entityblueprint",
 			"properties": {
@@ -677,6 +677,144 @@
 				"m_rGeomEntity": { "type": "SEntityTemplateReference", "value": { "ref": "d47b000000000101", "externalScene": null, "exposedEntity": "FX_Water_Leak_3x3m_A" } }
 			},
 			"events": { "OnSprung": { "TransmitEvent": ["cafe7a11c0ffee23"] } }
+		},
+		"d47b00000000010e": {
+			"parent": "975617a94a7708b2",
+			"name": "FX_Piss_Puddle_Medium",
+			"factory": "[assembly:/_pro/effects/templates/water/fx_water_leaks.template?/fx_water_leak_3x3m_a.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/effects/templates/water/fx_water_leaks.template?/fx_water_leak_3x3m_a.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_mTransform": { "type": "SMatrix43", "value": { "rotation": { "x": 0, "y": 0, "z": 0 }, "position": { "x": 0, "y": 0, "z": 0 } } },
+				"m_eRoomBehaviour": { "type": "ZSpatialEntity.ERoomBehaviour", "value": "ROOM_DYNAMIC" },
+				"LeakSpeed": { "type": "float32", "value": 0.20000000298023224 },
+				"ConstantColorRGB_01_Value": { "type": "SColorRGB", "value": "#7a660d" },
+				"m_eidParent": { "type": "SEntityTemplateReference", "value": "d47b00000000010f", "postInit": true },
+				"m_PrimitiveScale": { "type": "SVector3", "value": { "x": 0.675, "y": 0.675, "z": 0.675 } }
+			}
+		},
+		"d47b00000000010f": {
+			"parent": "975617a94a7708b2",
+			"name": "PropHelper_WaterSpill_PissPuddleMediumVisual",
+			"factory": "[assembly:/_pro/design/gamecore/prophelpers.template?/prophelper_waterspill_scalable_evergreen.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/gamecore/prophelpers.template?/prophelper_waterspill_scalable_evergreen.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_mTransform": { "type": "SMatrix43", "value": { "rotation": { "x": 0, "y": 0, "z": 0 }, "position": { "x": 0, "y": 0, "z": 0 } } },
+				"NPCKillVolumem_vGlobalSize": { "type": "SVector3", "value": { "x": 1.35, "y": 1.35, "z": 0.825 } },
+				"m_sId": { "type": "ZGuid", "value": "51452620-14dc-4828-8f56-3b4e15500668" },
+				"m_eRoomBehaviour": { "type": "ZSpatialEntity.ERoomBehaviour", "value": "ROOM_DYNAMIC" },
+				"m_eidParent": { "type": "SEntityTemplateReference", "value": "dbc101917b6c0c62", "postInit": true }
+			},
+			"events": { "WaterSpillActivated": { "Signal": ["d47b000000000110"] } }
+		},
+		"d47b000000000110": {
+			"parent": "975617a94a7708b2",
+			"name": "VoidSignalOnce_PissPuddleMediumVisualActivation",
+			"factory": "[assembly:/_pro/design/logic/signalpipes.template?/voidsignalonce_simple.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/logic/signalpipes.template?/voidsignalonce_simple.entitytemplate].pc_entityblueprint",
+			"events": { "Out": { "Activate": ["d47b00000000010e"] } }
+		},
+		"d47b000000000111": {
+			"parent": "975617a94a7708b2",
+			"name": "PropHelper_SlipperyFloors_PissPuddleMedium",
+			"factory": "[assembly:/_pro/design/gamecore/prophelpers.template?/prophelper_slipperyfloors.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/gamecore/prophelpers.template?/prophelper_slipperyfloors.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_mTransform": { "type": "SMatrix43", "value": { "rotation": { "x": 0, "y": 0, "z": 0 }, "position": { "x": 0, "y": 0, "z": 0 } } },
+				"m_eRoomBehaviour": { "type": "ZSpatialEntity.ERoomBehaviour", "value": "ROOM_DYNAMIC" },
+				"WaterPresent": { "type": "TArray<SEntityTemplateReference>", "value": [{ "ref": "dfac4441e9f822ff", "externalScene": null, "exposedEntity": "ItemVisible" }] },
+				"AllowSoap": { "type": "bool", "value": true },
+				"m_eidParent": { "type": "SEntityTemplateReference", "value": "d47b00000000010f", "postInit": true },
+				"m_Boxes": { "type": "TArray<SEntityTemplateReference>", "value": [{ "ref": "d47b00000000010f", "externalScene": null, "exposedEntity": "VolumeBox_electrify" }], "postInit": true }
+			}
+		},
+		"d47b000000000112": {
+			"parent": "975617a94a7708b2",
+			"name": "WaterPuddleSlipVolume_Medium",
+			"factory": "[modules:/zspherevolumeentity.class].pc_entitytype",
+			"blueprint": "[modules:/zspherevolumeentity.class].pc_entityblueprint",
+			"properties": { "m_mTransform": { "type": "SMatrix43", "value": { "rotation": { "x": 0, "y": 0, "z": 0 }, "position": { "x": 0, "y": 0, "z": 0 } } }, "m_fRadius": { "type": "float32", "value": 0.675 }, "m_eidParent": { "type": "SEntityTemplateReference", "value": "d47b00000000010f", "postInit": true } }
+		},
+		"d47b000000000113": {
+			"parent": "975617a94a7708b2",
+			"name": "ItemHelper_Logic_BananaSlip_Medium",
+			"factory": "[assembly:/_pro/design/gamecore/itemhelpers.template?/itemhelper_logic_bananaslip.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/gamecore/itemhelpers.template?/itemhelper_logic_bananaslip.entitytemplate].pc_entityblueprint",
+			"properties": { "m_sId": { "type": "ZGuid", "value": "ffc32424-68ee-47b6-9b06-bd9a9237c028" }, "m_Spheres": { "type": "TArray<SEntityTemplateReference>", "value": ["d47b000000000112"], "postInit": true }, "m_rItem": { "type": "SEntityTemplateReference", "value": "dfac4441e9f822ff", "postInit": true }, "m_rGeomEntity": { "type": "SEntityTemplateReference", "value": { "ref": "d47b00000000010e", "externalScene": null, "exposedEntity": "FX_Water_Leak_3x3m_A" } } },
+			"events": { "OnSprung": { "TransmitEvent": ["cafe7a11c0ffee23"] } }
+		},
+		"d47b000000000114": {
+			"parent": "975617a94a7708b2",
+			"name": "FX_Piss_Puddle_Large",
+			"factory": "[assembly:/_pro/effects/templates/water/fx_water_leaks.template?/fx_water_leak_3x3m_a.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/effects/templates/water/fx_water_leaks.template?/fx_water_leak_3x3m_a.entitytemplate].pc_entityblueprint",
+			"properties": { "m_mTransform": { "type": "SMatrix43", "value": { "rotation": { "x": 0, "y": 0, "z": 0 }, "position": { "x": 0, "y": 0, "z": 0 } } }, "m_eRoomBehaviour": { "type": "ZSpatialEntity.ERoomBehaviour", "value": "ROOM_DYNAMIC" }, "LeakSpeed": { "type": "float32", "value": 0.20000000298023224 }, "ConstantColorRGB_01_Value": { "type": "SColorRGB", "value": "#7a660d" }, "m_eidParent": { "type": "SEntityTemplateReference", "value": "d47b000000000115", "postInit": true }, "m_PrimitiveScale": { "type": "SVector3", "value": { "x": 0.9, "y": 0.9, "z": 0.9 } } }
+		},
+		"d47b000000000115": {
+			"parent": "975617a94a7708b2",
+			"name": "PropHelper_WaterSpill_PissPuddleLargeVisual",
+			"factory": "[assembly:/_pro/design/gamecore/prophelpers.template?/prophelper_waterspill_scalable_evergreen.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/gamecore/prophelpers.template?/prophelper_waterspill_scalable_evergreen.entitytemplate].pc_entityblueprint",
+			"properties": { "m_mTransform": { "type": "SMatrix43", "value": { "rotation": { "x": 0, "y": 0, "z": 0 }, "position": { "x": 0, "y": 0, "z": 0 } } }, "NPCKillVolumem_vGlobalSize": { "type": "SVector3", "value": { "x": 1.8, "y": 1.8, "z": 1.1 } }, "m_sId": { "type": "ZGuid", "value": "05327bbd-210b-462f-bd7f-e799203f224b" }, "m_eRoomBehaviour": { "type": "ZSpatialEntity.ERoomBehaviour", "value": "ROOM_DYNAMIC" }, "m_eidParent": { "type": "SEntityTemplateReference", "value": "dbc101917b6c0c62", "postInit": true } },
+			"events": { "WaterSpillActivated": { "Signal": ["d47b000000000116"] } }
+		},
+		"d47b000000000116": {
+			"parent": "975617a94a7708b2",
+			"name": "VoidSignalOnce_PissPuddleLargeVisualActivation",
+			"factory": "[assembly:/_pro/design/logic/signalpipes.template?/voidsignalonce_simple.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/logic/signalpipes.template?/voidsignalonce_simple.entitytemplate].pc_entityblueprint",
+			"events": { "Out": { "Activate": ["d47b000000000114"] } }
+		},
+		"d47b000000000117": {
+			"parent": "975617a94a7708b2",
+			"name": "PropHelper_SlipperyFloors_PissPuddleLarge",
+			"factory": "[assembly:/_pro/design/gamecore/prophelpers.template?/prophelper_slipperyfloors.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/gamecore/prophelpers.template?/prophelper_slipperyfloors.entitytemplate].pc_entityblueprint",
+			"properties": { "m_mTransform": { "type": "SMatrix43", "value": { "rotation": { "x": 0, "y": 0, "z": 0 }, "position": { "x": 0, "y": 0, "z": 0 } } }, "m_eRoomBehaviour": { "type": "ZSpatialEntity.ERoomBehaviour", "value": "ROOM_DYNAMIC" }, "WaterPresent": { "type": "TArray<SEntityTemplateReference>", "value": [{ "ref": "dfac4441e9f822ff", "externalScene": null, "exposedEntity": "ItemVisible" }] }, "AllowSoap": { "type": "bool", "value": true }, "m_eidParent": { "type": "SEntityTemplateReference", "value": "d47b000000000115", "postInit": true }, "m_Boxes": { "type": "TArray<SEntityTemplateReference>", "value": [{ "ref": "d47b000000000115", "externalScene": null, "exposedEntity": "VolumeBox_electrify" }], "postInit": true } }
+		},
+		"d47b000000000118": {
+			"parent": "975617a94a7708b2",
+			"name": "WaterPuddleSlipVolume_Large",
+			"factory": "[modules:/zspherevolumeentity.class].pc_entitytype",
+			"blueprint": "[modules:/zspherevolumeentity.class].pc_entityblueprint",
+			"properties": { "m_mTransform": { "type": "SMatrix43", "value": { "rotation": { "x": 0, "y": 0, "z": 0 }, "position": { "x": 0, "y": 0, "z": 0 } } }, "m_fRadius": { "type": "float32", "value": 0.9 }, "m_eidParent": { "type": "SEntityTemplateReference", "value": "d47b000000000115", "postInit": true } }
+		},
+		"d47b000000000119": {
+			"parent": "975617a94a7708b2",
+			"name": "ItemHelper_Logic_BananaSlip_Large",
+			"factory": "[assembly:/_pro/design/gamecore/itemhelpers.template?/itemhelper_logic_bananaslip.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/gamecore/itemhelpers.template?/itemhelper_logic_bananaslip.entitytemplate].pc_entityblueprint",
+			"properties": { "m_sId": { "type": "ZGuid", "value": "a4e486bb-bd12-47d4-8b56-df1a9cb2b857" }, "m_Spheres": { "type": "TArray<SEntityTemplateReference>", "value": ["d47b000000000118"], "postInit": true }, "m_rItem": { "type": "SEntityTemplateReference", "value": "dfac4441e9f822ff", "postInit": true }, "m_rGeomEntity": { "type": "SEntityTemplateReference", "value": { "ref": "d47b000000000114", "externalScene": null, "exposedEntity": "FX_Water_Leak_3x3m_A" } } },
+			"events": { "OnSprung": { "TransmitEvent": ["cafe7a11c0ffee23"] } }
+		},
+		"d47b00000000011a": {
+			"parent": "975617a94a7708b2",
+			"name": "ValueInt_PuddleLargeThreshold5",
+			"factory": "[assembly:/_pro/design/logic/valueint.template?/valueint_basic.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/logic/valueint.template?/valueint_basic.entitytemplate].pc_entityblueprint",
+			"properties": { "m_nValue": { "type": "int32", "value": 5 } }
+		},
+		"d47b00000000011b": {
+			"parent": "975617a94a7708b2",
+			"name": "DrunkennessAbove5_PuddleLarge",
+			"factory": "[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entityblueprint",
+			"properties": { "m_rFirstValueInt": { "type": "SEntityTemplateReference", "value": "d47b000000000102" }, "m_rSecondValueInt": { "type": "SEntityTemplateReference", "value": "d47b00000000011a" }, "m_eEvaluation": { "type": "ZValueInt_Comparator_Poll.EEvaluationType", "value": "HIGHER" } },
+			"events": { "GetTrue": { "Deactivate": ["d47b000000000100"], "Activate": ["d47b000000000115"], "EnableSlipping": ["d47b000000000117"], "Rig": ["d47b000000000119"] }, "GetFalse": { "Get": ["d47b00000000011d"] } }
+		},
+		"d47b00000000011c": {
+			"parent": "975617a94a7708b2",
+			"name": "ValueInt_PuddleMediumThreshold2",
+			"factory": "[assembly:/_pro/design/logic/valueint.template?/valueint_basic.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/logic/valueint.template?/valueint_basic.entitytemplate].pc_entityblueprint",
+			"properties": { "m_nValue": { "type": "int32", "value": 2 } }
+		},
+		"d47b00000000011d": {
+			"parent": "975617a94a7708b2",
+			"name": "DrunkennessAbove2_PuddleMedium",
+			"factory": "[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entityblueprint",
+			"properties": { "m_rFirstValueInt": { "type": "SEntityTemplateReference", "value": "d47b000000000102" }, "m_rSecondValueInt": { "type": "SEntityTemplateReference", "value": "d47b00000000011c" }, "m_eEvaluation": { "type": "ZValueInt_Comparator_Poll.EEvaluationType", "value": "HIGHER" } },
+			"events": { "GetTrue": { "Deactivate": ["d47b000000000100"], "Activate": ["d47b00000000010f"], "EnableSlipping": ["d47b000000000111"], "Rig": ["d47b000000000113"] }, "GetFalse": { "Activate": ["d47b000000000100"], "EnableSlipping": ["6d7c0746337380e2"], "Rig": ["cafe7a11c0ffee22"] } }
 		}
 	},
 	"propertyOverrides": [],

@@ -17,11 +17,12 @@ TO-DO TASKS ------
 [ ] level 9 drunk dancing
 [x] Drunkenness > 0 prevents health regen
 [x] Legally use in-level toilets
-[ ] Larger puddles the drunker you are
+[.] Larger puddles the drunker you are
 [X] Drunkenness increases damage resistance
 [ ] DOF drunk filter as well
 [ ] Disable drink prompt > level 5 when in blackout
 [ ] Active piss puddle makes sound that attracts NPCs from close distance
+[ ] Elevate puddles to 0.02 to fix clipping floor textures
 [ ] More voice lines - search for _47_ on https://mediabrowser.hitmaps.com/audio
     - How about this? - dr21663_47wrongoutfitapproachready_47_001
     - In the right hands, anything can be a deadly weapon
