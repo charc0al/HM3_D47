@@ -1511,9 +1511,6 @@
 			]
 		},
 		{
-			"SubEntityOperation": ["c635eba87f0fde01", {"SetPropertyValue":{"property_name":"m_fLensBlur","value":3.0}}]
-		},
-		{
 			"SubEntityOperation": ["cafe1ea44a66d419", {"AddEventConnection":["EventReceived","DOFMediumBlendIn","78d19a084a9a8f8f"]}]
 		}
 	],

@@ -11,7 +11,7 @@
             "value": 0.5
           }
         }
-      ]
+	]
     },
     {
       "AddEntity": [
@@ -1408,7 +1408,12 @@
           }
         }
       ]
-    }
+    },
+    {"SubEntityOperation":["cafe1ea44a66d410",{"AddEventConnection":["EventReceived","DOFMediumBlendOut","78d19a084a9a8f8f"]}]},
+    {"SubEntityOperation":["cafe1ea44a66d413",{"AddEventConnection":["EventReceived","DOFMediumBlendOut","78d19a084a9a8f8f"]}]},
+    {"SubEntityOperation":["cafe1ea44a66d416",{"AddEventConnection":["EventReceived","DOFMediumBlendOut","78d19a084a9a8f8f"]}]},
+    {"SubEntityOperation":["cafe1ea44a66d419",{"AddEventConnection":["EventReceived","DOFMediumBlendIn","78d19a084a9a8f8f"]}]},
+    {"SubEntityOperation":["cafe1ea44a66d404",{"AddEventConnection":["EventReceived","DOFMediumBlendOut","78d19a084a9a8f8f"]}]}
   ],
   "patchVersion": 6
 }
