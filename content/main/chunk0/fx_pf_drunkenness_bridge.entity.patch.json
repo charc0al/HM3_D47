@@ -11,7 +11,7 @@
             "value": 0.5
           }
         }
-	]
+      ]
     },
     {
       "AddEntity": [
@@ -476,18 +476,18 @@
               "postInit": true
             }
           },
-      "events": {
-        "EventReceived": {
-          "BlendWeight": [
-            {
-              "ref": "5b236772543af2e6",
-              "value": {
-                "type": "float32",
-                "value": 0.6499999761581421
-              }
+          "events": {
+            "EventReceived": {
+              "BlendWeight": [
+                {
+                  "ref": "5b236772543af2e6",
+                  "value": {
+                    "type": "float32",
+                    "value": 0.6499999761581421
+                  }
+                }
+              ]
             }
-          ]
-        }
           }
         }
       ]
@@ -554,24 +554,24 @@
               "postInit": true
             }
           },
-      "events": {
-        "EventReceived": {
-          "BlendWeight": [
-            {
-              "ref": "5b236772543af2e6",
-              "value": {
-                "type": "float32",
-                "value": 0.1
-              }
+          "events": {
+            "EventReceived": {
+              "BlendWeight": [
+                {
+                  "ref": "5b236772543af2e6",
+                  "value": {
+                    "type": "float32",
+                    "value": 0.1
+                  }
+                }
+              ],
+              "BlendIn": [
+                "5b236772543af2e6"
+              ],
+              "In": [
+                "cafe1ea44a66d412"
+              ]
             }
-          ],
-          "BlendIn": [
-            "5b236772543af2e6"
-          ],
-          "In": [
-            "cafe1ea44a66d412"
-          ]
-        }
           }
         }
       ]
@@ -598,26 +598,26 @@
         "cafe1ea44a66d412",
         {
           "parent": "cafe1ea44a66d401",
-        "name": "DrunkennessFilterLevel1StartAfterWeight",
+          "name": "DrunkennessFilterLevel1StartAfterWeight",
           "factory": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entitytype",
           "blueprint": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entityblueprint",
           "properties": {
             "Delay time (ms)": {
               "type": "int32",
-            "value": 1
+              "value": 1
             }
           },
           "events": {
             "Out": {
-          "BlendWeight": [
-            {
-              "ref": "5b236772543af2e6",
-              "value": {
-                "type": "float32",
-                "value": 0.1
-              }
-            }
-          ]
+              "BlendWeight": [
+                {
+                  "ref": "5b236772543af2e6",
+                  "value": {
+                    "type": "float32",
+                    "value": 0.1
+                  }
+                }
+              ]
             }
           }
         }
@@ -638,18 +638,18 @@
               "postInit": true
             }
           },
-      "events": {
-        "EventReceived": {
-          "BlendWeight": [
-            {
-              "ref": "5b236772543af2e6",
-              "value": {
-                "type": "float32",
-                "value": 0.2
-              }
+          "events": {
+            "EventReceived": {
+              "BlendWeight": [
+                {
+                  "ref": "5b236772543af2e6",
+                  "value": {
+                    "type": "float32",
+                    "value": 0.2
+                  }
+                }
+              ]
             }
-          ]
-        }
           }
         }
       ]
@@ -716,18 +716,18 @@
               "postInit": true
             }
           },
-      "events": {
-        "EventReceived": {
-          "BlendWeight": [
-            {
-              "ref": "5b236772543af2e6",
-              "value": {
-                "type": "float32",
-                "value": 0.3
-              }
+          "events": {
+            "EventReceived": {
+              "BlendWeight": [
+                {
+                  "ref": "5b236772543af2e6",
+                  "value": {
+                    "type": "float32",
+                    "value": 0.3
+                  }
+                }
+              ]
             }
-          ]
-        }
           }
         }
       ]
@@ -794,18 +794,18 @@
               "postInit": true
             }
           },
-      "events": {
-        "EventReceived": {
-          "BlendWeight": [
-            {
-              "ref": "5b236772543af2e6",
-              "value": {
-                "type": "float32",
-                "value": 0.4166666567325592
-              }
+          "events": {
+            "EventReceived": {
+              "BlendWeight": [
+                {
+                  "ref": "5b236772543af2e6",
+                  "value": {
+                    "type": "float32",
+                    "value": 0.4166666567325592
+                  }
+                }
+              ]
             }
-          ]
-        }
           }
         }
       ]
@@ -872,18 +872,18 @@
               "postInit": true
             }
           },
-      "events": {
-        "EventReceived": {
-          "BlendWeight": [
-            {
-              "ref": "5b236772543af2e6",
-              "value": {
-                "type": "float32",
-                "value": 0.5333333611488342
-              }
+          "events": {
+            "EventReceived": {
+              "BlendWeight": [
+                {
+                  "ref": "5b236772543af2e6",
+                  "value": {
+                    "type": "float32",
+                    "value": 0.5333333611488342
+                  }
+                }
+              ]
             }
-          ]
-        }
           }
         }
       ]
@@ -950,18 +950,18 @@
               "postInit": true
             }
           },
-      "events": {
-        "EventReceived": {
-          "BlendWeight": [
-            {
-              "ref": "5b236772543af2e6",
-              "value": {
-                "type": "float32",
-                "value": 0.7666666507720947
-              }
+          "events": {
+            "EventReceived": {
+              "BlendWeight": [
+                {
+                  "ref": "5b236772543af2e6",
+                  "value": {
+                    "type": "float32",
+                    "value": 0.7666666507720947
+                  }
+                }
+              ]
             }
-          ]
-        }
           }
         }
       ]
@@ -1028,18 +1028,18 @@
               "postInit": true
             }
           },
-      "events": {
-        "EventReceived": {
-          "BlendWeight": [
-            {
-              "ref": "5b236772543af2e6",
-              "value": {
-                "type": "float32",
-                "value": 0.8833333253860474
-              }
+          "events": {
+            "EventReceived": {
+              "BlendWeight": [
+                {
+                  "ref": "5b236772543af2e6",
+                  "value": {
+                    "type": "float32",
+                    "value": 0.8833333253860474
+                  }
+                }
+              ]
             }
-          ]
-        }
           }
         }
       ]
@@ -1106,18 +1106,18 @@
               "postInit": true
             }
           },
-      "events": {
-        "EventReceived": {
-          "BlendWeight": [
-            {
-              "ref": "5b236772543af2e6",
-              "value": {
-                "type": "float32",
-                "value": 1
-              }
+          "events": {
+            "EventReceived": {
+              "BlendWeight": [
+                {
+                  "ref": "5b236772543af2e6",
+                  "value": {
+                    "type": "float32",
+                    "value": 1
+                  }
+                }
+              ]
             }
-          ]
-        }
           }
         }
       ]
@@ -1195,8 +1195,7 @@
           }
         }
       ]
-    }
-    ,
+    },
     {
       "AddEntity": [
         "cafe1ea44a66d600",
@@ -1228,20 +1227,65 @@
           "factory": "[modules:/zhm5disguisesafezoneentity.class].pc_entitytype",
           "blueprint": "[modules:/zhm5disguisesafezoneentity.class].pc_entityblueprint",
           "properties": {
-            "m_pSafeZoneNetwork": {"type": "SEntityTemplateReference", "value": "cafe1ea44a66d603"},
-            "m_aInputListeners": {"type": "TArray<SEntityTemplateReference>", "value": ["cafe1ea44a66d606"], "postInit": true},
-            "m_bSetPositionOnExit": {"type": "bool", "value": false},
-            "m_fPitchAngle": {"type": "float32", "value": 0},
-            "m_fYawAngle": {"type": "float32", "value": 0},
-            "m_bAlignPitchAngle": {"type": "bool", "value": false},
-            "m_bAlignYawAngle": {"type": "bool", "value": false},
-            "m_pSafeZoneOrigin": {"type": "SEntityTemplateReference", "value": null},
-            "m_bBlendOutCloth": {"type": "bool", "value": true},
-            "m_fClothBlendTime": {"type": "float32", "value": 2},
-            "m_pSafeZoneLoopPosition": {"type": "SEntityTemplateReference", "value": null},
-            "m_bHideItems": {"type": "bool", "value": true},
-            "m_bDropAndPickupLeftHandItem": {"type": "bool", "value": true},
-            "m_bHideNonLeftHandItems": {"type": "bool", "value": false}
+            "m_pSafeZoneNetwork": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d603"
+            },
+            "m_aInputListeners": {
+              "type": "TArray<SEntityTemplateReference>",
+              "value": [
+                "cafe1ea44a66d606"
+              ],
+              "postInit": true
+            },
+            "m_bSetPositionOnExit": {
+              "type": "bool",
+              "value": false
+            },
+            "m_fPitchAngle": {
+              "type": "float32",
+              "value": 0
+            },
+            "m_fYawAngle": {
+              "type": "float32",
+              "value": 0
+            },
+            "m_bAlignPitchAngle": {
+              "type": "bool",
+              "value": false
+            },
+            "m_bAlignYawAngle": {
+              "type": "bool",
+              "value": false
+            },
+            "m_pSafeZoneOrigin": {
+              "type": "SEntityTemplateReference",
+              "value": null
+            },
+            "m_bBlendOutCloth": {
+              "type": "bool",
+              "value": true
+            },
+            "m_fClothBlendTime": {
+              "type": "float32",
+              "value": 2
+            },
+            "m_pSafeZoneLoopPosition": {
+              "type": "SEntityTemplateReference",
+              "value": null
+            },
+            "m_bHideItems": {
+              "type": "bool",
+              "value": true
+            },
+            "m_bDropAndPickupLeftHandItem": {
+              "type": "bool",
+              "value": true
+            },
+            "m_bHideNonLeftHandItems": {
+              "type": "bool",
+              "value": false
+            }
           }
         }
       ]
@@ -1255,8 +1299,18 @@
           "factory": "[modules:/zchildnetworkselectorentity.class].pc_entitytype",
           "blueprint": "[modules:/zchildnetworkselectorentity.class].pc_entityblueprint",
           "properties": {
-            "m_aChildNetworks": {"type": "TArray<SEntityTemplateReference>", "value": ["cafe1ea44a66d604"], "postInit": true},
-            "m_rSelectedIndex": {"type": "SEntityTemplateReference", "value": "cafe1ea44a66d605", "postInit": true}
+            "m_aChildNetworks": {
+              "type": "TArray<SEntityTemplateReference>",
+              "value": [
+                "cafe1ea44a66d604"
+              ],
+              "postInit": true
+            },
+            "m_rSelectedIndex": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d605",
+              "postInit": true
+            }
           }
         }
       ]
@@ -1270,7 +1324,13 @@
           "factory": "[modules:/zchildnetworkentity.class].pc_entitytype",
           "blueprint": "[modules:/zchildnetworkentity.class].pc_entityblueprint",
           "properties": {
-            "m_RuntimeNetworkResourceID": {"type": "ZRuntimeResourceID", "value": {"resource": "008655EF0E618E77", "flag": "9F"}}
+            "m_RuntimeNetworkResourceID": {
+              "type": "ZRuntimeResourceID",
+              "value": {
+                "resource": "008655EF0E618E77",
+                "flag": "9F"
+              }
+            }
           }
         }
       ]
@@ -1295,15 +1355,30 @@
           "factory": "[modules:/zinputlistenerbuttonentity.class].pc_entitytype",
           "blueprint": "[modules:/zinputlistenerbuttonentity.class].pc_entityblueprint",
           "properties": {
-            "m_rPromptTextResource": {"type": "ZRuntimeResourceID", "value": "[assembly:/localization/hitman6/conversations/ui/pro/setpieces.sweetmenutext?/setpieces_localization_prompt_leave.sweetline].pc_sweetline"},
-            "m_eButton": {"type": "ZInputListenerButtonEntity.eInputListenerButtons", "value": "EILB_RELOAD"},
-            "m_bUseOrientedPrompts": {"type": "bool", "value": true}
+            "m_rPromptTextResource": {
+              "type": "ZRuntimeResourceID",
+              "value": "[assembly:/localization/hitman6/conversations/ui/pro/setpieces.sweetmenutext?/setpieces_localization_prompt_leave.sweetline].pc_sweetline"
+            },
+            "m_eButton": {
+              "type": "ZInputListenerButtonEntity.eInputListenerButtons",
+              "value": "EILB_RELOAD"
+            },
+            "m_bUseOrientedPrompts": {
+              "type": "bool",
+              "value": true
+            }
           },
           "events": {
             "OnPressed": {
-              "ExitSafeZoneNoAnim": ["cafe1ea44a66d602"],
-              "SetFalse": ["cafe1ea44a66d60c"],
-              "Detach": ["cafe1ea44a66d60a"]
+              "ExitSafeZoneNoAnim": [
+                "cafe1ea44a66d602"
+              ],
+              "SetFalse": [
+                "cafe1ea44a66d60c"
+              ],
+              "Detach": [
+                "cafe1ea44a66d60a"
+              ]
             }
           }
         }
@@ -1318,13 +1393,23 @@
           "factory": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchannelreceiver_void.entitytemplate].pc_entitytype",
           "blueprint": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchannelreceiver_void.entitytemplate].pc_entityblueprint",
           "properties": {
-            "m_rChannelToken": {"type": "SEntityTemplateReference", "value": "cafe1ea44a66d608", "postInit": true}
+            "m_rChannelToken": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d608",
+              "postInit": true
+            }
           },
           "events": {
             "EventReceived": {
-              "EnterSafeZone": ["cafe1ea44a66d602"],
-              "Attach": ["cafe1ea44a66d60a"],
-              "SetTrue": ["cafe1ea44a66d60c"]
+              "EnterSafeZone": [
+                "cafe1ea44a66d602"
+              ],
+              "Attach": [
+                "cafe1ea44a66d60a"
+              ],
+              "SetTrue": [
+                "cafe1ea44a66d60c"
+              ]
             }
           }
         }
@@ -1339,7 +1424,10 @@
           "factory": "[modules:/ztokenidentity.class].pc_entitytype",
           "blueprint": "[modules:/ztokenidentity.class].pc_entityblueprint",
           "properties": {
-            "m_sName": {"type": "ZString", "value": "Drunk47_BathroomStart"}
+            "m_sName": {
+              "type": "ZString",
+              "value": "Drunk47_BathroomStart"
+            }
           }
         }
       ]
@@ -1364,9 +1452,18 @@
           "factory": "[modules:/zheroboneattachentity.class].pc_entitytype",
           "blueprint": "[modules:/zheroboneattachentity.class].pc_entityblueprint",
           "properties": {
-            "m_BoneName": {"type": "ZString", "value": "Pelvis"},
-            "m_spatial": {"type": "SEntityTemplateReference", "value": "cafe1ea44a66d609"},
-            "m_bStartAttached": {"type": "bool", "value": false}
+            "m_BoneName": {
+              "type": "ZString",
+              "value": "Pelvis"
+            },
+            "m_spatial": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d609"
+            },
+            "m_bStartAttached": {
+              "type": "bool",
+              "value": false
+            }
           }
         }
       ]
@@ -1383,13 +1480,32 @@
             "m_mTransform": {
               "type": "SMatrix43",
               "value": {
-                "rotation": {"x": 97.51867083658354, "y": 0.7535178718294449, "z": -27.305880691722805},
-                "position": {"x": -0.0607759989798069, "y": 0.11294899880886078, "z": 0.000590000010561198},
-                "scale": {"x": 0.999999821422476, "y": 1.0000000136018228, "z": 1.000000876077821}
+                "rotation": {
+                  "x": 97.51867083658354,
+                  "y": 0.7535178718294449,
+                  "z": -27.305880691722805
+                },
+                "position": {
+                  "x": -0.0607759989798069,
+                  "y": 0.11294899880886078,
+                  "z": 0.000590000010561198
+                },
+                "scale": {
+                  "x": 0.999999821422476,
+                  "y": 1.0000000136018228,
+                  "z": 1.000000876077821
+                }
               }
             },
-            "m_eRoomBehaviour": {"type": "ZSpatialEntity.ERoomBehaviour", "value": "ROOM_DYNAMIC"},
-            "m_eidParent": {"type": "SEntityTemplateReference", "value": "cafe1ea44a66d609", "postInit": true}
+            "m_eRoomBehaviour": {
+              "type": "ZSpatialEntity.ERoomBehaviour",
+              "value": "ROOM_DYNAMIC"
+            },
+            "m_eidParent": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d609",
+              "postInit": true
+            }
           }
         }
       ]
@@ -1403,15 +1519,319 @@
           "factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_basic.entitytemplate].pc_entitytype",
           "blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_basic.entitytemplate].pc_entityblueprint",
           "events": {
-            "OnTrue": {"Activate": ["cafe1ea44a66d60b"]},
-            "OnFalse": {"Deactivate": ["cafe1ea44a66d60b"]}
+            "OnTrue": {
+              "Activate": [
+                "cafe1ea44a66d60b"
+              ]
+            },
+            "OnFalse": {
+              "Deactivate": [
+                "cafe1ea44a66d60b"
+              ]
+            }
           }
         }
       ]
     },
-    {"SubEntityOperation":["cafe1ea44a66d416",{"AddEventConnection":["EventReceived","DOFMediumBlendOut","78d19a084a9a8f8f"]}]},
-    {"SubEntityOperation":["cafe1ea44a66d419",{"AddEventConnection":["EventReceived","DOFMediumBlendIn","78d19a084a9a8f8f"]}]},
-    {"SubEntityOperation":["c635eba87f0fde01",{"SetPropertyValue":{"property_name":"m_fLensBlur","value":1.5}}]}
+    {
+      "SubEntityOperation": [
+        "cafe1ea44a66d416",
+        {
+          "AddEventConnection": [
+            "EventReceived",
+            "DOFMediumBlendOut",
+            "78d19a084a9a8f8f"
+          ]
+        }
+      ]
+    },
+    {
+      "SubEntityOperation": [
+        "cafe1ea44a66d419",
+        {
+          "AddEventConnection": [
+            "EventReceived",
+            "DOFMediumBlendIn",
+            "78d19a084a9a8f8f"
+          ]
+        }
+      ]
+    },
+    {
+      "SubEntityOperation": [
+        "c635eba87f0fde01",
+        {
+          "SetPropertyValue": {
+            "property_name": "m_fLensBlur",
+            "value": 1.5
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d428",
+        {
+          "parent": "78d19a084a9a8f8f",
+          "name": "DOFHigh",
+          "factory": "[modules:/zentity.class].pc_entitytype",
+          "blueprint": "[modules:/zentity.class].pc_entityblueprint",
+          "properties": {
+            "m_input0": {
+              "type": "SEntityTemplateReference",
+              "value": "2d2390a0d532c601"
+            }
+          },
+          "propertyAliases": {
+            "m_input0": [
+              {
+                "originalProperty": "m_input0",
+                "originalEntity": "cafe1ea44a66d42b"
+              }
+            ]
+          },
+          "exposedInterfaces": {
+            "ZPostfilterBlendEntity": "cafe1ea44a66d42b",
+            "ZPostfilterGraphBaseNode": "cafe1ea44a66d42b"
+          },
+          "inputCopying": {
+            "DOFHighBlendIn": {
+              "BlendIn": [
+                "cafe1ea44a66d42a"
+              ]
+            },
+            "DOFHighBlendOut": {
+              "BlendOut": [
+                "cafe1ea44a66d42a"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d429",
+        {
+          "parent": "cafe1ea44a66d428",
+          "name": "PF_DOFHigh",
+          "factory": "[modules:/zrenderpostfilterparametersentity.class].pc_entitytype",
+          "blueprint": "[modules:/zrenderpostfilterparametersentity.class].pc_entityblueprint",
+          "properties": {
+            "m_bForegroundBlur": {
+              "type": "bool",
+              "value": true
+            },
+            "m_bDistortionBarrelEnabled": {
+              "type": "bool",
+              "value": false
+            },
+            "m_bHDRLensFlareEnabled": {
+              "type": "bool",
+              "value": false
+            },
+            "m_fHDRBrightPassThreshold": {
+              "type": "float32",
+              "value": 1
+            },
+            "m_bNoiseEnabled": {
+              "type": "bool",
+              "value": false
+            },
+            "m_bHDRGlareEnabled": {
+              "type": "bool",
+              "value": false
+            },
+            "m_eHDRGlareType": {
+              "type": "ZRenderPostfilterParametersEntity.EHDRGlareType",
+              "value": "eCinecamVerticalSlits"
+            },
+            "m_bSSAOEnabled": {
+              "type": "bool",
+              "value": false
+            },
+            "m_bFogEnabled": {
+              "type": "bool",
+              "value": false
+            },
+            "m_fDistortionBarrelScale": {
+              "type": "float32",
+              "value": 0.24000023305416107
+            },
+            "m_fFogDensity": {
+              "type": "float32",
+              "value": 0.10000000149011612
+            },
+            "m_FogColor": {
+              "type": "SColorRGB",
+              "value": "#000000"
+            },
+            "m_bVignetteEnabled": {
+              "type": "bool",
+              "value": false
+            },
+            "m_bDepthOfFieldEnabled": {
+              "type": "bool",
+              "value": true
+            },
+            "m_fDepthOfFieldFocusStart": {
+              "type": "float32",
+              "value": 0.4099999964237213
+            },
+            "m_fDepthOfFieldFocalFadeNear": {
+              "type": "float32",
+              "value": 0.20000000298023224
+            },
+            "m_fNoiseIntensity": {
+              "type": "float32",
+              "value": 0.11999999731779099
+            },
+            "m_fDepthOfFieldFocusEnd": {
+              "type": "float32",
+              "value": 8.380000114440918
+            },
+            "m_fDepthOfFieldFocalFadeFar": {
+              "type": "float32",
+              "value": 5
+            },
+            "m_bFogGlobal": {
+              "type": "bool",
+              "value": false
+            },
+            "m_fHDRBloomScale": {
+              "type": "float32",
+              "value": 0
+            },
+            "m_fNoiseScale": {
+              "type": "float32",
+              "value": 0.6000000238418579
+            },
+            "m_fLensBlur": {
+              "type": "float32",
+              "value": 3
+            },
+            "m_fHDRStarScale": {
+              "type": "float32",
+              "value": 0
+            },
+            "m_bHDREnabled": {
+              "type": "bool",
+              "value": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d42c",
+        {
+          "parent": "cafe1ea44a66d428",
+          "name": "Source",
+          "factory": "[modules:/zpostfiltersourceentity.class].pc_entitytype",
+          "blueprint": "[modules:/zpostfiltersourceentity.class].pc_entityblueprint"
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d42a",
+        {
+          "parent": "cafe1ea44a66d428",
+          "name": "BlendController",
+          "factory": "[modules:/zpostfilterlayerentity.class].pc_entitytype",
+          "blueprint": "[modules:/zpostfilterlayerentity.class].pc_entityblueprint",
+          "properties": {
+            "m_postfilterGraphNode": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d42c"
+            },
+            "m_parametersEntity": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d429"
+            },
+            "m_blendNode": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d42b",
+              "postInit": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d42b",
+        {
+          "parent": "cafe1ea44a66d428",
+          "name": "Blend",
+          "factory": "[modules:/zpostfilterblendentity.class].pc_entitytype",
+          "blueprint": "[modules:/zpostfilterblendentity.class].pc_entityblueprint",
+          "properties": {
+            "m_input1": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d42c"
+            },
+            "m_bEnableBlendMask": {
+              "type": "bool",
+              "value": true
+            },
+            "m_input0": {
+              "type": "SEntityTemplateReference",
+              "value": "2d2390a0d532c601"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "SubEntityOperation": [
+        "cafe1ea44a66d41f",
+        {
+          "AddEventConnection": [
+            "EventReceived",
+            "DOFHighBlendIn",
+            "cafe1ea44a66d428"
+          ]
+        }
+      ]
+    },
+    {
+      "SubEntityOperation": [
+        "cafe1ea44a66d41f",
+        {
+          "AddEventConnection": [
+            "EventReceived",
+            "DOFMediumBlendOut",
+            "78d19a084a9a8f8f"
+          ]
+        }
+      ]
+    },
+    {
+      "SubEntityOperation": [
+        "cafe1ea44a66d407",
+        {
+          "AddEventConnection": [
+            "EventReceived",
+            "DOFHighBlendOut",
+            "cafe1ea44a66d428"
+          ]
+        }
+      ]
+    },
+    {
+      "SubEntityOperation": [
+        "cafe1ea44a66d407",
+        {
+          "AddEventConnection": [
+            "EventReceived",
+            "DOFMediumBlendIn",
+            "78d19a084a9a8f8f"
+          ]
+        }
+      ]
+    }
   ],
   "patchVersion": 6
 }
