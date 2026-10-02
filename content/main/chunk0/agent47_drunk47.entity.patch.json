@@ -862,6 +862,9 @@
             "ItemSpawned": {
               "SetItem": [
                 "cafe1ea44a66d727"
+              ],
+              "Poll": [
+                "cafe1ea44a66d8ad"
               ]
             },
             "Item": {
@@ -4915,6 +4918,30 @@
             "Out": {
               "Get": [
                 "cafe1ea44a66d893"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d8ad",
+        {
+          "parent": "cafe1ea44a66d740",
+          "name": "Poll_Drunk47Drunkenness_ForPuddleSize",
+          "factory": "[assembly:/_pro/design/logic/valueint.template?/valueint_poll.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic/valueint.template?/valueint_poll.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_rValueEntity": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d741"
+            }
+          },
+          "events": {
+            "OnValue": {
+              "TransmitEvent": [
+                "cafe1ea44a66d746"
               ]
             }
           }

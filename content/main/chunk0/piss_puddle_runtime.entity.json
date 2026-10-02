@@ -3,9 +3,9 @@
 	"tbluHash": "00E1A44A66B120C1",
 	"rootEntity": "975617a94a7708b2",
 	"entities": {
-		"45a838c4454c7a88": {
+		"d47b000000000100": {
 			"parent": "975617a94a7708b2",
-			"name": "FX_Water_Leak_3x3m_A",
+			"name": "FX_Piss_Puddle_Normal",
 			"factory": "[assembly:/_pro/effects/templates/water/fx_water_leaks.template?/fx_water_leak_3x3m_a.entitytemplate].pc_entitytype",
 			"blueprint": "[assembly:/_pro/effects/templates/water/fx_water_leaks.template?/fx_water_leak_3x3m_a.entitytemplate].pc_entityblueprint",
 			"properties": {
@@ -49,6 +49,20 @@
 						"z": 0.45
 					}
 				}
+			}
+		},
+		"d47b000000000101": {
+			"parent": "975617a94a7708b2",
+			"name": "FX_Piss_Puddle_Large_Level5Plus",
+			"factory": "[assembly:/_pro/effects/templates/water/fx_water_leaks.template?/fx_water_leak_3x3m_a.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/effects/templates/water/fx_water_leaks.template?/fx_water_leak_3x3m_a.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_mTransform": { "type": "SMatrix43", "value": { "rotation": { "x": 0, "y": 0, "z": 0 }, "position": { "x": 0, "y": 0, "z": 0 } } },
+				"m_eRoomBehaviour": { "type": "ZSpatialEntity.ERoomBehaviour", "value": "ROOM_DYNAMIC" },
+				"LeakSpeed": { "type": "float32", "value": 0.20000000298023224 },
+				"ConstantColorRGB_01_Value": { "type": "SColorRGB", "value": "#7a660d" },
+				"m_eidParent": { "type": "SEntityTemplateReference", "value": "d47b000000000108", "postInit": true },
+				"m_PrimitiveScale": { "type": "SVector3", "value": { "x": 1.8, "y": 1.8, "z": 1.8 } }
 			}
 		},
 		"dfac4441e9f822ff": {
@@ -360,7 +374,7 @@
 				"m_rGeomEntity": {
 					"type": "SEntityTemplateReference",
 					"value": {
-						"ref": "45a838c4454c7a88",
+						"ref": "d47b000000000100",
 						"externalScene": null,
 						"exposedEntity": "FX_Water_Leak_3x3m_A"
 					}
@@ -528,10 +542,94 @@
 			"blueprint": "[assembly:/_pro/design/logic/signalpipes.template?/voidsignalonce_simple.entitytemplate].pc_entityblueprint",
 			"events": {
 				"Out": {
-					"Activate": ["45a838c4454c7a88"],
+					"Activate": ["d47b000000000100"],
 					"EnableSlipping": ["6d7c0746337380e2"],
 					"Rig": ["cafe7a11c0ffee22"]
 				}
+			}
+		},
+		"d47b000000000102": {
+			"parent": "975617a94a7708b2",
+			"name": "ValueInt_Drunk47Drunkenness_PuddleSize",
+			"factory": "[assembly:/_pro/design/logic/valueint.template?/valueint_basic.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/logic/valueint.template?/valueint_basic.entitytemplate].pc_entityblueprint",
+			"properties": { "m_nValue": { "type": "int32", "value": 0 }, "m_bSetValueAlwaysTriggerChangedEvent": { "type": "bool", "value": true } },
+			"events": { "OnValue": { "Get": ["d47b000000000104"] } }
+		},
+		"d47b000000000103": {
+			"parent": "975617a94a7708b2",
+			"name": "EventChannelReceiver_Drunk47DrunkennessLevel_PuddleSize",
+			"factory": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchannelreceiver_int32.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchannelreceiver_int32.entitytemplate].pc_entityblueprint",
+			"properties": { "m_rChannelToken": { "type": "SEntityTemplateReference", "value": "d47b000000000107", "postInit": true } },
+			"events": { "EventReceived": { "SetValue": ["d47b000000000102"] } }
+		},
+		"d47b000000000104": {
+			"parent": "975617a94a7708b2",
+			"name": "DrunkennessAbove4_PuddleLarge",
+			"factory": "[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/logic/valueint.template?/valueint_comparator_poll.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_rFirstValueInt": { "type": "SEntityTemplateReference", "value": "d47b000000000102" },
+				"m_rSecondValueInt": { "type": "SEntityTemplateReference", "value": "d47b000000000105" },
+				"m_eEvaluation": { "type": "ZValueInt_Comparator_Poll.EEvaluationType", "value": "HIGHER" }
+			},
+			"events": { "GetTrue": { "Start": ["d47b000000000106"] } }
+		},
+		"d47b000000000105": {
+			"parent": "975617a94a7708b2",
+			"name": "ValueInt_PuddleLargeThreshold4",
+			"factory": "[assembly:/_pro/design/logic/valueint.template?/valueint_basic.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/logic/valueint.template?/valueint_basic.entitytemplate].pc_entityblueprint",
+			"properties": { "m_nValue": { "type": "int32", "value": 4 } }
+		},
+		"d47b000000000106": {
+			"parent": "975617a94a7708b2",
+			"name": "Delay_Drunk47PuddleLargeVariantActivation",
+			"factory": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entityblueprint",
+			"properties": { "Delay time (ms)": { "type": "int32", "value": 250 } },
+			"events": { "Out": { "Deactivate": ["d47b000000000100"], "Activate": ["d47b000000000108"] } }
+		},
+		"d47b000000000107": {
+			"parent": "d47b000000000103",
+			"name": "TokenID_Drunk47_Drunkenness_LevelChanged_PuddleSize",
+			"factory": "[modules:/ztokenidentity.class].pc_entitytype",
+			"blueprint": "[modules:/ztokenidentity.class].pc_entityblueprint",
+			"properties": { "m_sName": { "type": "ZString", "value": "Drunk47_Drunkenness_LevelChanged" } }
+		},
+		"d47b000000000108": {
+			"parent": "975617a94a7708b2",
+			"name": "PropHelper_WaterSpill_PissPuddleLargeVisual",
+			"factory": "[assembly:/_pro/design/gamecore/prophelpers.template?/prophelper_waterspill_scalable_evergreen.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/gamecore/prophelpers.template?/prophelper_waterspill_scalable_evergreen.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_mTransform": {
+					"type": "SMatrix43",
+					"value": {
+						"rotation": { "x": 0, "y": 0, "z": 0 },
+						"position": { "x": 0, "y": 0, "z": 0 }
+					}
+				},
+				"NPCKillVolumem_vGlobalSize": {
+					"type": "SVector3",
+					"value": { "x": 0.9, "y": 0.9, "z": 0.550000011920929 }
+				},
+				"m_sId": { "type": "ZGuid", "value": "d47fdd76-83e2-4b8c-936a-c6ba7bf22a53" },
+				"m_eRoomBehaviour": { "type": "ZSpatialEntity.ERoomBehaviour", "value": "ROOM_DYNAMIC" },
+				"m_eidParent": { "type": "SEntityTemplateReference", "value": "dbc101917b6c0c62", "postInit": true }
+			},
+			"events": {
+				"WaterSpillActivated": { "Signal": ["d47b000000000109"] }
+			}
+		},
+		"d47b000000000109": {
+			"parent": "975617a94a7708b2",
+			"name": "VoidSignalOnce_PissPuddleLargeVisualActivation",
+			"factory": "[assembly:/_pro/design/logic/signalpipes.template?/voidsignalonce_simple.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/logic/signalpipes.template?/voidsignalonce_simple.entitytemplate].pc_entityblueprint",
+			"events": {
+				"Out": { "Activate": ["d47b000000000101"] }
 			}
 		}
 	},
