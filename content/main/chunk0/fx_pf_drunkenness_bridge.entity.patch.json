@@ -1558,17 +1558,6 @@
       ]
     },
     {
-      "SubEntityOperation": [
-        "c635eba87f0fde01",
-        {
-          "SetPropertyValue": {
-            "property_name": "m_fLensBlur",
-            "value": 1.5
-          }
-        }
-      ]
-    },
-    {
       "AddEntity": [
         "cafe1ea44a66d428",
         {
@@ -1579,7 +1568,7 @@
           "properties": {
             "m_input0": {
               "type": "SEntityTemplateReference",
-              "value": "2d2390a0d532c601"
+              "value": "ad85598061889b70"
             }
           },
           "propertyAliases": {
@@ -1694,9 +1683,49 @@
               "type": "float32",
               "value": 5
             },
+            "m_fHDRLensFlareAttenuation": {
+              "type": "float32",
+              "value": 0
+            },
+            "m_fHDRLensFlareThresholdA": {
+              "type": "float32",
+              "value": 0.5
+            },
+            "m_VignetteColor": {
+              "type": "SColorRGB",
+              "value": "#000000"
+            },
+            "m_fVignetteStrength": {
+              "type": "float32",
+              "value": 1
+            },
             "m_bFogGlobal": {
               "type": "bool",
               "value": false
+            },
+            "m_fFogTurbulenceOpacity": {
+              "type": "float32",
+              "value": 0
+            },
+            "m_vFogTurbulenceNearScale": {
+              "type": "SVector3",
+              "value": {
+                "x": 10,
+                "y": 10,
+                "z": 10
+              }
+            },
+            "m_vFogTurbulenceVelocity": {
+              "type": "SVector3",
+              "value": {
+                "x": 2,
+                "y": 0.20000000298023224,
+                "z": 2
+              }
+            },
+            "m_fFogTurbulenceChaos": {
+              "type": "float32",
+              "value": 0
             },
             "m_fHDRBloomScale": {
               "type": "float32",
@@ -1708,7 +1737,7 @@
             },
             "m_fLensBlur": {
               "type": "float32",
-              "value": 3
+              "value": 5
             },
             "m_fHDRStarScale": {
               "type": "float32",
@@ -1778,9 +1807,21 @@
             },
             "m_input0": {
               "type": "SEntityTemplateReference",
-              "value": "2d2390a0d532c601"
+              "value": "ad85598061889b70"
             }
           }
+        }
+      ]
+    },
+    {
+      "SubEntityOperation": [
+        "cafe1ea44a66d419",
+        {
+          "AddEventConnection": [
+            "EventReceived",
+            "Get",
+            "cafe1ea44a66d42f"
+          ]
         }
       ]
     },
@@ -1823,6 +1864,223 @@
     {
       "SubEntityOperation": [
         "cafe1ea44a66d407",
+        {
+          "AddEventConnection": [
+            "EventReceived",
+            "DOFMediumBlendIn",
+            "78d19a084a9a8f8f"
+          ]
+        }
+      ]
+    },
+    {
+      "SubEntityOperation": [
+        "8148a4fae850e955",
+        {
+          "SetPropertyValue": {
+            "property_name": "m_input0",
+            "value": "cafe1ea44a66d428"
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d42d",
+        {
+          "parent": "78d19a084a9a8f8f",
+          "name": "ValueFloat_EntityProperty_DOFMediumDepthOfFieldBlurriness",
+          "factory": "[modules:/zvaluefloat_entityproperty.class].pc_entitytype",
+          "blueprint": "[modules:/zvaluefloat_entityproperty.class].pc_entityblueprint",
+          "properties": {
+            "m_rEntity": {
+              "type": "SEntityTemplateReference",
+              "value": "c635eba87f0fde01"
+            },
+            "m_sPropertyName": {
+              "type": "ZString",
+              "value": "m_fDepthOfFieldBlurriness"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d42e",
+        {
+          "parent": "78d19a084a9a8f8f",
+          "name": "ValueFloat_Set_DOFMediumDepthOfFieldBlurriness",
+          "factory": "[modules:/zvaluefloat_set.class].pc_entitytype",
+          "blueprint": "[modules:/zvaluefloat_set.class].pc_entityblueprint",
+          "properties": {
+            "m_rValueEntity": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d42d",
+              "postInit": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d42f",
+        {
+          "parent": "78d19a084a9a8f8f",
+          "name": "ValueFloat_Five_DOFMediumDepthOfFieldBlurriness",
+          "factory": "[assembly:/_pro/design/logic/valuefloat.template?/valuefloat_get.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic/valuefloat.template?/valuefloat_get.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_fValue": {
+              "type": "float32",
+              "value": 5
+            }
+          },
+          "events": {
+            "Value": {
+              "SetValue": [
+                "cafe1ea44a66d42e"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d430",
+        {
+          "parent": "78d19a084a9a8f8f",
+          "name": "ValueFloat_OnePointFive_DOFMediumDepthOfFieldBlurriness",
+          "factory": "[assembly:/_pro/design/logic/valuefloat.template?/valuefloat_get.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic/valuefloat.template?/valuefloat_get.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_fValue": {
+              "type": "float32",
+              "value": 1.5
+            }
+          },
+          "events": {
+            "Value": {
+              "SetValue": [
+                "cafe1ea44a66d42e"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "SubEntityOperation": [
+        "cafe1ea44a66d41f",
+        {
+          "AddEventConnection": [
+            "EventReceived",
+            "Get",
+            "cafe1ea44a66d42f"
+          ]
+        }
+      ]
+    },
+    {
+      "SubEntityOperation": [
+        "cafe1ea44a66d41f",
+        {
+          "AddEventConnection": [
+            "EventReceived",
+            "DOFMediumBlendIn",
+            "78d19a084a9a8f8f"
+          ]
+        }
+      ]
+    },
+    {
+      "SubEntityOperation": [
+        "cafe1ea44a66d407",
+        {
+          "AddEventConnection": [
+            "EventReceived",
+            "Get",
+            "cafe1ea44a66d42f"
+          ]
+        }
+      ]
+    },
+    {
+      "SubEntityOperation": [
+        "8148a4fae850e955",
+        {
+          "SetPropertyValue": {
+            "property_name": "m_input0",
+            "value": "ad85598061889b70"
+          }
+        }
+      ]
+    },
+    {
+      "SubEntityOperation": [
+        "cafe1ea44a66d410",
+        {
+          "AddEventConnection": [
+            "EventReceived",
+            "Get",
+            "cafe1ea44a66d430"
+          ]
+        }
+      ]
+    },
+    {
+      "SubEntityOperation": [
+        "cafe1ea44a66d410",
+        {
+          "AddEventConnection": [
+            "EventReceived",
+            "DOFMediumBlendIn",
+            "78d19a084a9a8f8f"
+          ]
+        }
+      ]
+    },
+    {
+      "SubEntityOperation": [
+        "cafe1ea44a66d413",
+        {
+          "AddEventConnection": [
+            "EventReceived",
+            "Get",
+            "cafe1ea44a66d42f"
+          ]
+        }
+      ]
+    },
+    {
+      "SubEntityOperation": [
+        "cafe1ea44a66d413",
+        {
+          "AddEventConnection": [
+            "EventReceived",
+            "DOFMediumBlendIn",
+            "78d19a084a9a8f8f"
+          ]
+        }
+      ]
+    },
+    {
+      "SubEntityOperation": [
+        "cafe1ea44a66d416",
+        {
+          "AddEventConnection": [
+            "EventReceived",
+            "Get",
+            "cafe1ea44a66d42f"
+          ]
+        }
+      ]
+    },
+    {
+      "SubEntityOperation": [
+        "cafe1ea44a66d416",
         {
           "AddEventConnection": [
             "EventReceived",
