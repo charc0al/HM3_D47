@@ -1464,54 +1464,15 @@
 		},
 		{
 			"SubEntityOperation": [
-				"cafe1ea44a66d410",
-				{ "AddEventConnection": ["EventReceived", "DOFMediumBlendOut", "78d19a084a9a8f8f"] }
-			]
-		},
-		{
-			"SubEntityOperation": [
 				"cafe1ea44a66d416",
 				{ "AddEventConnection": ["EventReceived", "DOFMediumBlendOut", "78d19a084a9a8f8f"] }
 			]
 		},
 		{
-			"SubEntityOperation": [
-				"cafe1ea44a66d41c",
-				{ "AddEventConnection": ["EventReceived", "DOFMediumBlendOut", "78d19a084a9a8f8f"] }
-			]
-		},
-		{
-			"SubEntityOperation": [
-				"cafe1ea44a66d407",
-				{ "AddEventConnection": ["EventReceived", "DOFMediumBlendOut", "78d19a084a9a8f8f"] }
-			]
-		},
-		{
-			"SubEntityOperation": [
-				"cafe1ea44a66d41f",
-				{ "AddEventConnection": ["EventReceived", "DOFMediumBlendOut", "78d19a084a9a8f8f"] }
-			]
-		},
-		{
-			"SubEntityOperation": [
-				"cafe1ea44a66d422",
-				{ "AddEventConnection": ["EventReceived", "DOFMediumBlendOut", "78d19a084a9a8f8f"] }
-			]
-		},
-		{
-			"SubEntityOperation": [
-				"cafe1ea44a66d425",
-				{ "AddEventConnection": ["EventReceived", "DOFMediumBlendOut", "78d19a084a9a8f8f"] }
-			]
-		},
-		{
-			"SubEntityOperation": [
-				"cafe1ea44a66d404",
-				{ "AddEventConnection": ["EventReceived", "DOFMediumBlendOut", "78d19a084a9a8f8f"] }
-			]
-		},
-		{
 			"SubEntityOperation": ["cafe1ea44a66d419", {"AddEventConnection":["EventReceived","DOFMediumBlendIn","78d19a084a9a8f8f"]}]
+		},
+		{
+			"SubEntityOperation": ["c635eba87f0fde01", {"SetPropertyValue":{"property_name":"m_fLensBlur","value":1.5}}]
 		}
 	],
 	"patchVersion": 6
