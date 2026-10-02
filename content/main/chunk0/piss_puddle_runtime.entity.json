@@ -590,7 +590,7 @@
 			"name": "Delay_Drunk47PuddleVariantSelection",
 			"factory": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entitytype",
 			"blueprint": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entityblueprint",
-			"properties": { "Delay time (ms)": { "type": "int32", "value": 250 } },
+			"properties": { "Delay time (ms)": { "type": "int32", "value": 1 } },
 			"events": { "Out": { "Get": ["d47b000000000104"] } }
 		},
 		"d47b000000000107": {

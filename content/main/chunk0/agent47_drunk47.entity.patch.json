@@ -863,8 +863,8 @@
               "SetItem": [
                 "cafe1ea44a66d727"
               ],
-              "Poll": [
-                "cafe1ea44a66d8ad"
+              "In": [
+                "cafe1ea44a66d8ae"
               ]
             },
             "Item": {
@@ -4943,6 +4943,72 @@
               "TransmitEvent": [
                 "cafe1ea44a66d746"
               ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d8ae",
+        {
+          "parent": "cafe1ea44a66d740",
+          "name": "Delay_Drunk47DrunkennessPoll_ForPuddleSize",
+          "factory": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "Delay time (ms)": {
+              "type": "int32",
+              "value": 1
+            }
+          },
+          "events": {
+            "Out": {
+              "Add": [
+                "cafe1ea44a66d8b0"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d8af",
+        {
+          "parent": "cafe1ea44a66d740",
+          "name": "ValueInt_Zero_Drunk47PuddleSizeBroadcast",
+          "factory": "[assembly:/_pro/design/logic/valueint.template?/valueint.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic/valueint.template?/valueint.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_nValue": {
+              "type": "int32",
+              "value": 0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AddEntity": [
+        "cafe1ea44a66d8b0",
+        {
+          "parent": "cafe1ea44a66d740",
+          "name": "AddZero_Drunk47Drunkenness_ForPuddleSizeBroadcast",
+          "factory": "[assembly:/_pro/design/logic/valueint.template?/valueint_operation.entitytemplate].pc_entitytype",
+          "blueprint": "[assembly:/_pro/design/logic/valueint.template?/valueint_operation.entitytemplate].pc_entityblueprint",
+          "properties": {
+            "m_rValue1": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d741"
+            },
+            "m_rValue2": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d8af"
+            },
+            "m_rResult": {
+              "type": "SEntityTemplateReference",
+              "value": "cafe1ea44a66d741"
             }
           }
         }
