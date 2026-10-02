@@ -541,10 +541,7 @@
 			"factory": "[assembly:/_pro/design/logic/signalpipes.template?/voidsignalonce_simple.entitytemplate].pc_entitytype",
 			"blueprint": "[assembly:/_pro/design/logic/signalpipes.template?/voidsignalonce_simple.entitytemplate].pc_entityblueprint",
 			"events": {
-				"Out": {
-					"EnableSlipping": ["6d7c0746337380e2"],
-					"Rig": ["cafe7a11c0ffee22"]
-				}
+				"Out": {}
 			}
 		},
 		"d47b000000000102": {
@@ -574,8 +571,8 @@
 				"m_eEvaluation": { "type": "ZValueInt_Comparator_Poll.EEvaluationType", "value": "HIGHER" }
 			},
 			"events": {
-				"GetTrue": { "Deactivate": ["d47b000000000100"], "Activate": ["d47b000000000108"] },
-				"GetFalse": { "Activate": ["d47b000000000100"] }
+				"GetTrue": { "Deactivate": ["d47b000000000100"], "Activate": ["d47b000000000108"], "EnableSlipping": ["d47b00000000010b"], "Rig": ["d47b00000000010d"] },
+				"GetFalse": { "Activate": ["d47b000000000100"], "EnableSlipping": ["6d7c0746337380e2"], "Rig": ["cafe7a11c0ffee22"] }
 			}
 		},
 		"d47b000000000105": {
@@ -615,7 +612,7 @@
 				},
 				"NPCKillVolumem_vGlobalSize": {
 					"type": "SVector3",
-					"value": { "x": 0.9, "y": 0.9, "z": 0.550000011920929 }
+					"value": { "x": 3.6, "y": 3.6, "z": 2.200000047683716 }
 				},
 				"m_sId": { "type": "ZGuid", "value": "d47fdd76-83e2-4b8c-936a-c6ba7bf22a53" },
 				"m_eRoomBehaviour": { "type": "ZSpatialEntity.ERoomBehaviour", "value": "ROOM_DYNAMIC" },
@@ -642,6 +639,44 @@
 			"events": {
 				"Out": { "In": ["d47b000000000106"] }
 			}
+		},
+		"d47b00000000010b": {
+			"parent": "975617a94a7708b2",
+			"name": "PropHelper_SlipperyFloors_PissPuddleLarge",
+			"factory": "[assembly:/_pro/design/gamecore/prophelpers.template?/prophelper_slipperyfloors.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/gamecore/prophelpers.template?/prophelper_slipperyfloors.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_mTransform": { "type": "SMatrix43", "value": { "rotation": { "x": 0, "y": 0, "z": 0 }, "position": { "x": 0, "y": 0, "z": 0 } } },
+				"m_eRoomBehaviour": { "type": "ZSpatialEntity.ERoomBehaviour", "value": "ROOM_DYNAMIC" },
+				"WaterPresent": { "type": "TArray<SEntityTemplateReference>", "value": [{ "ref": "dfac4441e9f822ff", "externalScene": null, "exposedEntity": "ItemVisible" }] },
+				"AllowSoap": { "type": "bool", "value": true },
+				"m_eidParent": { "type": "SEntityTemplateReference", "value": "d47b000000000108", "postInit": true },
+				"m_Boxes": { "type": "TArray<SEntityTemplateReference>", "value": [{ "ref": "d47b000000000108", "externalScene": null, "exposedEntity": "VolumeBox_electrify" }], "postInit": true }
+			}
+		},
+		"d47b00000000010c": {
+			"parent": "975617a94a7708b2",
+			"name": "WaterPuddleSlipVolume_Large",
+			"factory": "[modules:/zspherevolumeentity.class].pc_entitytype",
+			"blueprint": "[modules:/zspherevolumeentity.class].pc_entityblueprint",
+			"properties": {
+				"m_mTransform": { "type": "SMatrix43", "value": { "rotation": { "x": 0, "y": 0, "z": 0 }, "position": { "x": 0, "y": 0, "z": 0 } } },
+				"m_fRadius": { "type": "float32", "value": 1.8 },
+				"m_eidParent": { "type": "SEntityTemplateReference", "value": "d47b000000000108", "postInit": true }
+			}
+		},
+		"d47b00000000010d": {
+			"parent": "975617a94a7708b2",
+			"name": "ItemHelper_Logic_BananaSlip_Large",
+			"factory": "[assembly:/_pro/design/gamecore/itemhelpers.template?/itemhelper_logic_bananaslip.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/gamecore/itemhelpers.template?/itemhelper_logic_bananaslip.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_sId": { "type": "ZGuid", "value": "f6f514e4-82a2-4ed4-8999-df3e798a7c31" },
+				"m_Spheres": { "type": "TArray<SEntityTemplateReference>", "value": ["d47b00000000010c"], "postInit": true },
+				"m_rItem": { "type": "SEntityTemplateReference", "value": "dfac4441e9f822ff", "postInit": true },
+				"m_rGeomEntity": { "type": "SEntityTemplateReference", "value": { "ref": "d47b000000000101", "externalScene": null, "exposedEntity": "FX_Water_Leak_3x3m_A" } }
+			},
+			"events": { "OnSprung": { "TransmitEvent": ["cafe7a11c0ffee23"] } }
 		}
 	},
 	"propertyOverrides": [],
