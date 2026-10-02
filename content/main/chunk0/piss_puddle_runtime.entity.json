@@ -537,12 +537,12 @@
 		},
 		"d47b000000000008": {
 			"parent": "975617a94a7708b2",
-			"name": "VoidSignalOnce_Drunk47BathroomPuddleInitialActivation",
+			"name": "VoidSignalOnce_Drunk47BathroomPuddleVariantStart",
 			"factory": "[assembly:/_pro/design/logic/signalpipes.template?/voidsignalonce_simple.entitytemplate].pc_entitytype",
 			"blueprint": "[assembly:/_pro/design/logic/signalpipes.template?/voidsignalonce_simple.entitytemplate].pc_entityblueprint",
 			"events": {
 				"Out": {
-					"Activate": ["d47b000000000100"],
+					"In": ["d47b000000000106"],
 					"EnableSlipping": ["6d7c0746337380e2"],
 					"Rig": ["cafe7a11c0ffee22"]
 				}
@@ -553,8 +553,7 @@
 			"name": "ValueInt_Drunk47Drunkenness_PuddleSize",
 			"factory": "[assembly:/_pro/design/logic/valueint.template?/valueint_basic.entitytemplate].pc_entitytype",
 			"blueprint": "[assembly:/_pro/design/logic/valueint.template?/valueint_basic.entitytemplate].pc_entityblueprint",
-			"properties": { "m_nValue": { "type": "int32", "value": 0 }, "m_bSetValueAlwaysTriggerChangedEvent": { "type": "bool", "value": true } },
-			"events": { "OnValue": { "Get": ["d47b000000000104"] } }
+			"properties": { "m_nValue": { "type": "int32", "value": 0 }, "m_bSetValueAlwaysTriggerChangedEvent": { "type": "bool", "value": true } }
 		},
 		"d47b000000000103": {
 			"parent": "975617a94a7708b2",
@@ -574,7 +573,10 @@
 				"m_rSecondValueInt": { "type": "SEntityTemplateReference", "value": "d47b000000000105" },
 				"m_eEvaluation": { "type": "ZValueInt_Comparator_Poll.EEvaluationType", "value": "HIGHER" }
 			},
-			"events": { "GetTrue": { "Start": ["d47b000000000106"] } }
+			"events": {
+				"GetTrue": { "Activate": ["d47b000000000108"] },
+				"GetFalse": { "Activate": ["d47b000000000100"] }
+			}
 		},
 		"d47b000000000105": {
 			"parent": "975617a94a7708b2",
@@ -585,11 +587,11 @@
 		},
 		"d47b000000000106": {
 			"parent": "975617a94a7708b2",
-			"name": "Delay_Drunk47PuddleLargeVariantActivation",
+			"name": "Delay_Drunk47PuddleVariantSelection",
 			"factory": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entitytype",
 			"blueprint": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entityblueprint",
 			"properties": { "Delay time (ms)": { "type": "int32", "value": 250 } },
-			"events": { "Out": { "Deactivate": ["d47b000000000100"], "Activate": ["d47b000000000108"] } }
+			"events": { "Out": { "Get": ["d47b000000000104"] } }
 		},
 		"d47b000000000107": {
 			"parent": "d47b000000000103",
