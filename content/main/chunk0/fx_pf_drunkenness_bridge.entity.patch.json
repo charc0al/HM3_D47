@@ -63,7 +63,7 @@
 				{
 					"SetPropertyValue": {
 						"property_name": "m_HDRColorTint",
-						"value": "#000000"
+						"value": "#555544"
 					}
 				}
 			]
