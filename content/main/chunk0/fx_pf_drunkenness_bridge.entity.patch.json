@@ -30,8 +30,19 @@
 				{
 					"AddProperty": [
 						"m_vDistortionWobbleSpeed",
-						{ "type": "SVector2", "value": { "x": 2, "y": 2 } }
+						{ "type": "SVector2", "value": { "x": 3, "y": 3 } }
 					]
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"ce2e8f34e1d84920",
+				{
+					"SetPropertyValue": {
+						"property_name": "m_vDistortionWobbleWaveLength",
+						"value": { "x": 0.07, "y": 0.07 }
+					}
 				}
 			]
 		},
@@ -62,8 +73,8 @@
 				"ce2e8f34e1d84920",
 				{
 					"SetPropertyValue": {
-						"property_name": "m_vDistortionWobbleWaveLength",
-						"value": { "x": 0.05, "y": 0.05 }
+						"property_name": "m_fHDRExposureMeteringSize",
+						"value": 1.0
 					}
 				}
 			]
