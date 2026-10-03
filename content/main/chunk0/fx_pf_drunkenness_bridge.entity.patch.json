@@ -18,6 +18,17 @@
 				"ce2e8f34e1d84920",
 				{
 					"SetPropertyValue": {
+						"property_name": "m_bGaussianBlurEnabled",
+						"value": false
+					}
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"ce2e8f34e1d84920",
+				{
+					"SetPropertyValue": {
 						"property_name": "m_bHDRGlareEnabled",
 						"value": false
 					}
