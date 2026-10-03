@@ -18,9 +18,42 @@
 				"ce2e8f34e1d84920",
 				{
 					"SetPropertyValue": {
+						"property_name": "m_fHDRBloomScale",
+						"value": 0.0
+					}
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"ce2e8f34e1d84920",
+				{
+					"SetPropertyValue": {
 						"property_name": "m_bDoubleVisionEnabled",
 						"value": true
 					}
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"ce2e8f34e1d84920",
+				{
+					"SetPropertyValue": {
+						"property_name": "m_vDistortionWobbleWaveLength",
+						"value": { "x": 0.05, "y": 0.05 }
+					}
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"ce2e8f34e1d84920",
+				{
+					"AddProperty": [
+						"m_vDistortionWobbleSpeed",
+						{ "type": "SVector2", "value": { "x": 2, "y": 2 } }
+					]
 				}
 			]
 		},
